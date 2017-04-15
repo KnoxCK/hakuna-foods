@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'ourfood', to: 'pages#ourfood'
   get 'order', to: 'pages#order'
   get 'about', to: 'pages#about'
+  get 'orderform', to: 'pages#orderform'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
