@@ -1,0 +1,147 @@
+.navbar-hakuna {
+  padding: 0px 60px;
+  background-color: white;
+  border-color: transparent;
+  height: 70px;
+  border-bottom: 0.5px solid #E9E9E9;
+  position: relative;
+}
+#navbar-background {
+  background-color: black;
+}
+.navbar-hakuna-fixed {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1001;
+  width: 100%;
+}
+
+/* Navbar logo */
+.navbar-hakuna-brand img {
+    height: 50px;
+    top: -6px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/* Navbar main section (with form, links, button) */
+.navbar-hakuna-main {
+  position: absolute;
+  top: 12px;
+  right: calc(100vw - 73.5%);
+  display: flex;
+}
+.navbar-hakuna-link {
+  color: black;
+  font-size: 12px;
+  padding: 0 10px;
+  letter-spacing: 2px;
+  line-height: 0.5px;
+}
+.navbar-hakuna-link:hover {
+  color: grey;
+  text-decoration: none;
+}
+.social-links {
+  position: absolute;
+  top: 24px;
+  right: 50px;
+  display: flex;
+}
+.social-link {
+  color: grey;
+  font-size: 16px;
+  padding: 0 5px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  line-height: 0.5px;
+}
+.social-link:hover {
+  text-decoration: none;
+  color: grey;
+  opacity: 0.5;
+}
+
+/* Navbar dropdown menu */
+.navbar-hakuna-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+  z-index: 5000 !important;
+}
+.navbar-hakuna-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: white !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-hakuna-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-hakuna-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+.dropdown-toggle-black {
+  color: black;
+}
+.dropdown {
+  font-size: 25px;
+}
+.dropdown a {
+  text-decoration: none;
+}
+.dropdown.open a {
+  text-decoration: none;
+}
+.dropdown-toggle-black a {
+  color: black;
+}
+// On scroll only
+.navbar-hakuna-scroll {
+  display: flex;
+  height: 70px;
+  padding: 0px 60px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  opacity: 0.8;
+  box-shadow: 1px 1px 1px #D9D9D9;
+}
+.navbar-hakuna-link-scroll {
+  color: #565656;
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 0 10px;
+  letter-spacing: 2px;
+  line-height: 0.5px;
+}
+.navbar-hakuna-link-scroll:hover {
+  color: #8FF0E8;
+  text-decoration: none;
+}
+.dropdown-menu { 
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  text-align: center;
+  right: 6px;
+  li > a {
+    font-weight: 600px;
+    padding: 10px 10vw;
+  }
+}

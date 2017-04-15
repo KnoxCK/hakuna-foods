@@ -1,0 +1,27 @@
+.view-plan-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 50px 6px;
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    border: black 1px solid;
+}
+.view-plan-btn:hover {
+    background-color: #DE605F;
+    text-decoration: none;
+    color: black;
+}
