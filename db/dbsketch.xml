@@ -93,7 +93,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="363" y="23" name="addresses">
+<table x="383" y="49" name="addresses">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -141,7 +141,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="538" y="183" name="meal_plans">
+<table x="522" y="296" name="meal_plan_items">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -178,32 +178,6 @@
 <part>id</part>
 </key>
 </table>
-<table x="540" y="358" name="extras">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="users" row="id" />
-</row>
-<row name="product_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="products" row="id" />
-</row>
-<row name="quantity_per_week" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="monthly_price" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="order_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="orders" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
 <table x="817" y="283" name="orders">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
@@ -216,12 +190,11 @@
 <default>NULL</default></row>
 <row name="meal_plan_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="meal_plans" row="id" />
+<default>NULL</default><relation table="meal_plan_items" row="id" />
 </row>
 <row name="extras_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="extras" row="id" />
-</row>
+<default>NULL</default></row>
 <row name="state" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -229,6 +202,9 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="customer_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="amount" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
