@@ -11,7 +11,7 @@ class AddColumnsToUser < ActiveRecord::Migration[5.0]
     add_column :users, :occupation, :string
     add_column :users, :allergies, :text
     add_column :users, :preferences, :text
-    add_column :users, :phone, :stringg
+    add_column :users, :phone, :string
     add_column :users, :stripe_customer_id, :string
     add_column :users, :admin, :boolean, null: false, default: false
   end
