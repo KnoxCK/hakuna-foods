@@ -2,7 +2,12 @@ class CustomersController < ApplicationController
   skip_before_action :authenticate_user!
 
   def create
-    Customer.create(customer_params)
+    @customer = Customer.create(customer_params)
+    if @customer.check_postcode(customer_params[:postcode])
+      redirect_to about_path
+    else
+      @error = "Sorry we do not delivery to your area"
+    end
   end
 
   private
