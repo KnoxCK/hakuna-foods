@@ -5,10 +5,10 @@
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :gender, as: :radio_buttons, collection: ['Male', 'Female'] %>
-    <%= f.input :dob, as: :date %>
-    <%= f.input :height, as: :integer %>
-    <%= f.input :weight, as: :integer %>
-    <%= f.input :exercise, as: :integer %>
+    <%= f.input :dob, as: :date, label: 'DOB' %>
+    <%= f.input :height, as: :integer, label: 'Height (cm)', placeholder: 'cm' %>
+    <%= f.input :weight, as: :integer, label: 'Weight (kg)', placeholder: 'kg' %>
+    <%= f.input :exercise, as: :select, collection: ['0 - 2', '2 - 4', '4 - 6', '6+' ], label: 'Exercise (Times per week)' %>
     <%= f.input :occupation %>
     <%= f.input :allergies, as: :text %>
     <%= f.input :preferences, as: :text %>
