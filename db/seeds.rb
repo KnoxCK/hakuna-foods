@@ -7,9 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Category.destroy_all
 Product.destroy_all
-User.destroy_all
-
-User.create(email: 'guv@test.com', password: '123456')
 
 Category.create!(name: 'Meal Plan')
 Category.create!(name: 'Extras')

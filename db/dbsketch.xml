@@ -37,14 +37,11 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="165" y="191" name="users">
+</datatypes><table x="165" y="191" name="customers">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="email" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="password" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="postcode" null="1" autoincrement="0">
@@ -86,9 +83,6 @@
 <row name="stripe_customer_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="admin" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
@@ -114,7 +108,7 @@
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="users" row="id" />
+<default>NULL</default><relation table="customers" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -141,13 +135,13 @@
 <part>id</part>
 </key>
 </table>
-<table x="522" y="296" name="meal_plan_items">
+<table x="520" y="285" name="meal_plan_items">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="users" row="id" />
+<default>NULL</default><relation table="customers" row="id" />
 </row>
 <row name="product_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -178,7 +172,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="817" y="283" name="orders">
+<table x="929" y="315" name="orders">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -205,6 +199,31 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="amount" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="737" y="354" name="meal_plan???">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="180" y="33" name="users">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="password" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="admin" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
