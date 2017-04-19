@@ -6,7 +6,7 @@ class CreateAddressesTable < ActiveRecord::Migration[5.0]
       t.string :address_line3
       t.string :postcode
       t.text :delivery_instructions
-      t.references :user, index: true, foreign_key: true
+      t.references :customer, index: true, foreign_key: true
       t.timestamps
     end
   end
