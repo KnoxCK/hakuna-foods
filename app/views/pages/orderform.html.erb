@@ -4,3 +4,9 @@
 <h3>POSTCODE CHECKER</h3>
 
 <h3>FORM!!</h3>
+
+<%= simple_form_for @customer do |f| %>
+  <%= f.input :email %>
+  <%= f.input :postcode %>
+  <%= f.button :submit %>
+<% end %>
