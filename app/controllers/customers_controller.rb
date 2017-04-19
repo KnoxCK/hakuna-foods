@@ -5,17 +5,29 @@ class CustomersController < ApplicationController
     @customer = Customer.create(customer_params)
     if @customer.check_postcode(customer_params[:postcode])
       @customer.valid_postcode = true
-      redirect_to about_path
+      @customer.save
+
     else
       @customer.valid_postcode = false
-      @error = "Sorry we do not delivery to your area"
+      @error = "Sorry, we do not deliver to your area. Fuck Off."
+      @customer.save
     end
-    @customer.save
+
+
+  end
+
+  def edit
+
+  end
+
+  def update
   end
 
   private
 
   def customer_params
-    params.require(:customer).permit(:email, :postcode)
+    params.require(:customer).permit(:email, :postcode, :first_name, :last_name,
+     :gender, :dob, :height, :weight, :exercise, :occupation, :allergies,
+      :preferences, :phone)
   end
 end
