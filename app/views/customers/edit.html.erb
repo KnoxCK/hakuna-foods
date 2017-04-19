@@ -1,7 +1,18 @@
-<p>Form Part 2</p>
+<div class="form">
+  <p>Form Part 2</p>
 
-<%= simple_form_for @customer do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :height %>
-  <%= f.button :submit %>
-<% end %>
+  <%= simple_form_for @customer do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :gender, as: :radio_buttons, collection: ['Male', 'Female'] %>
+    <%= f.input :dob, as: :date, label: 'DOB' %>
+    <%= f.input :height, as: :integer, label: 'Height (cm)', placeholder: 'cm' %>
+    <%= f.input :weight, as: :integer, label: 'Weight (kg)', placeholder: 'kg' %>
+    <%= f.input :exercise, as: :select, collection: ['0 - 2', '2 - 4', '4 - 6', '6+' ], label: 'Exercise (Times per week)' %>
+    <%= f.input :occupation %>
+    <%= f.input :allergies, as: :text %>
+    <%= f.input :preferences, as: :text %>
+    <%= f.input :phone, as: :tel %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
