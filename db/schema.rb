@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419224459) do
+ActiveRecord::Schema.define(version: 20170420155345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,10 +58,15 @@ ActiveRecord::Schema.define(version: 20170419224459) do
     t.integer  "monthly_price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.integer  "order_id"
     t.index ["customer_id"], name: "index_meal_plan_items_on_customer_id", using: :btree
-    t.index ["order_id"], name: "index_meal_plan_items_on_order_id", using: :btree
     t.index ["product_id"], name: "index_meal_plan_items_on_product_id", using: :btree
+  end
+
+  create_table "meal_plans", force: :cascade do |t|
+    t.integer "meal_plan_item_id"
+    t.integer "total_price"
+    t.boolean "subscription"
+    t.index ["meal_plan_item_id"], name: "index_meal_plans_on_meal_plan_item_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
@@ -70,11 +75,11 @@ ActiveRecord::Schema.define(version: 20170419224459) do
     t.string   "plan"
     t.json     "payment"
     t.string   "state"
-    t.integer  "meal_plan_item_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.integer  "meal_plan_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "total_amount"
-    t.index ["meal_plan_item_id"], name: "index_orders_on_meal_plan_item_id", using: :btree
+    t.index ["meal_plan_id"], name: "index_orders_on_meal_plan_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -109,6 +114,7 @@ ActiveRecord::Schema.define(version: 20170419224459) do
   add_foreign_key "addresses", "customers"
   add_foreign_key "meal_plan_items", "customers"
   add_foreign_key "meal_plan_items", "products"
-  add_foreign_key "orders", "meal_plan_items"
+  add_foreign_key "meal_plans", "meal_plan_items"
+  add_foreign_key "orders", "meal_plans"
   add_foreign_key "products", "categories"
 end
