@@ -9,6 +9,7 @@ class ExtraItemsController < ApplicationController
 
   def create
     @customer_plan.extras(params)
+    @customer_plan.calculate_monthly_extras
     redirect_to about_path
   end
 

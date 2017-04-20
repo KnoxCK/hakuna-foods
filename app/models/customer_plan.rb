@@ -19,4 +19,12 @@ class CustomerPlan < ApplicationRecord
         quantity_per_week: params["Sweet Treat"].to_i, customer_plan_id: self.id)
     end
   end
+
+  def calculate_monthly_extras
+    self.extra_items.each do |item|
+      item.monthly_price = (Product.find(item.product_id).daily_price * item.quantity_per_week * 52) / 12
+      item.save
+    end
+  end
+
 end
