@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'orderform', to: 'pages#orderform'
 
   resources :customers, only: [:create, :edit, :update] do
-    resources :meal_plans, only: [:new, :create]
+    resources :customer_plans, only: [:new, :create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
