@@ -8,7 +8,8 @@ class ExtraItemsController < ApplicationController
   end
 
   def create
-
+    @customer_plan.extras(params)
+    redirect_to about_path
   end
 
   private
@@ -20,6 +21,5 @@ class ExtraItemsController < ApplicationController
   def set_customer_plan
     @customer_plan = CustomerPlan.find(params[:customer_plan_id])
   end
-
 
 end
