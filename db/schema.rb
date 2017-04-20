@@ -31,6 +31,17 @@ ActiveRecord::Schema.define(version: 20170420155345) do
     t.string "name"
   end
 
+  create_table "customer_plans", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "meal_plan_id"
+    t.integer "extra_item_id"
+    t.integer "total_price"
+    t.boolean "subscription"
+    t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
+    t.index ["extra_item_id"], name: "index_customer_plans_on_extra_item_id", using: :btree
+    t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string   "postcode"
     t.string   "first_name"
@@ -51,22 +62,15 @@ ActiveRecord::Schema.define(version: 20170420155345) do
     t.boolean  "valid_postcode"
   end
 
-  create_table "meal_plan_items", force: :cascade do |t|
+  create_table "extra_items", force: :cascade do |t|
     t.integer  "customer_id"
     t.integer  "product_id"
     t.integer  "quantity_per_week"
     t.integer  "monthly_price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["customer_id"], name: "index_meal_plan_items_on_customer_id", using: :btree
-    t.index ["product_id"], name: "index_meal_plan_items_on_product_id", using: :btree
-  end
-
-  create_table "meal_plans", force: :cascade do |t|
-    t.integer "meal_plan_item_id"
-    t.integer "total_price"
-    t.boolean "subscription"
-    t.index ["meal_plan_item_id"], name: "index_meal_plans_on_meal_plan_item_id", using: :btree
+    t.index ["customer_id"], name: "index_extra_items_on_customer_id", using: :btree
+    t.index ["product_id"], name: "index_extra_items_on_product_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
@@ -75,11 +79,11 @@ ActiveRecord::Schema.define(version: 20170420155345) do
     t.string   "plan"
     t.json     "payment"
     t.string   "state"
-    t.integer  "meal_plan_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "customer_plan_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "total_amount"
-    t.index ["meal_plan_id"], name: "index_orders_on_meal_plan_id", using: :btree
+    t.index ["customer_plan_id"], name: "index_orders_on_customer_plan_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -112,9 +116,11 @@ ActiveRecord::Schema.define(version: 20170420155345) do
   end
 
   add_foreign_key "addresses", "customers"
-  add_foreign_key "meal_plan_items", "customers"
-  add_foreign_key "meal_plan_items", "products"
-  add_foreign_key "meal_plans", "meal_plan_items"
-  add_foreign_key "orders", "meal_plans"
+  add_foreign_key "customer_plans", "customers"
+  add_foreign_key "customer_plans", "extra_items"
+  add_foreign_key "customer_plans", "products", column: "meal_plan_id"
+  add_foreign_key "extra_items", "customers"
+  add_foreign_key "extra_items", "products"
+  add_foreign_key "orders", "customer_plans"
   add_foreign_key "products", "categories"
 end

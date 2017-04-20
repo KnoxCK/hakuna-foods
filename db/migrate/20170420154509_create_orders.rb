@@ -6,7 +6,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.string :plan
       t.json :payment
       t.string :state
-      t.references :meal_plan, index: true, foreign_key: true
+      t.references :customer_plan, index: true, foreign_key: true
       t.timestamps
     end
   end
