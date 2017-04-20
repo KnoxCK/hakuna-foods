@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'meal_plans/create'
+
   get 'customers/create'
 
   devise_for :users
@@ -10,8 +12,7 @@ Rails.application.routes.draw do
   get 'orderform', to: 'pages#orderform'
 
   resources :customers, only: [:create, :edit, :update] do
-    resources :meal_plans, only: [:create]
-
+    resources :customer_plans, only: [:new, :create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
