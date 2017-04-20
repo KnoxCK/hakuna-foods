@@ -13,8 +13,6 @@ class CustomersController < ApplicationController
       @error = "Sorry, we do not deliver to your area. Fuck Off."
       @customer.save
     end
-
-
   end
 
   def edit

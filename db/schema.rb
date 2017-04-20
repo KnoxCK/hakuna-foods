@@ -34,12 +34,10 @@ ActiveRecord::Schema.define(version: 20170420155346) do
   create_table "customer_plans", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "meal_plan_id"
-    t.integer "extra_item_id"
-    t.integer "total_price"
+    t.float   "total_price"
     t.boolean "subscription"
     t.integer "days_per_week"
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
-    t.index ["extra_item_id"], name: "index_customer_plans_on_extra_item_id", using: :btree
     t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
   end
 
@@ -64,13 +62,13 @@ ActiveRecord::Schema.define(version: 20170420155346) do
   end
 
   create_table "extra_items", force: :cascade do |t|
-    t.integer  "customer_id"
+    t.integer  "customer_plan_id"
     t.integer  "product_id"
     t.integer  "quantity_per_week"
-    t.integer  "monthly_price"
+    t.float    "monthly_price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["customer_id"], name: "index_extra_items_on_customer_id", using: :btree
+    t.index ["customer_plan_id"], name: "index_extra_items_on_customer_plan_id", using: :btree
     t.index ["product_id"], name: "index_extra_items_on_product_id", using: :btree
   end
 
@@ -90,7 +88,7 @@ ActiveRecord::Schema.define(version: 20170420155346) do
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.string   "sku"
-    t.integer  "daily_price"
+    t.float    "daily_price"
     t.integer  "category_id"
     t.text     "description"
     t.text     "detailed_description"
@@ -118,9 +116,8 @@ ActiveRecord::Schema.define(version: 20170420155346) do
 
   add_foreign_key "addresses", "customers"
   add_foreign_key "customer_plans", "customers"
-  add_foreign_key "customer_plans", "extra_items"
   add_foreign_key "customer_plans", "products", column: "meal_plan_id"
-  add_foreign_key "extra_items", "customers"
+  add_foreign_key "extra_items", "customer_plans"
   add_foreign_key "extra_items", "products"
   add_foreign_key "orders", "customer_plans"
   add_foreign_key "products", "categories"
