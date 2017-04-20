@@ -25,6 +25,9 @@ class CustomersController < ApplicationController
     redirect_to about_path
   end
 
+  def create_meal_plan
+  end
+
   private
 
   def customer_params
