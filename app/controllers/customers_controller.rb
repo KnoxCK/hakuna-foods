@@ -22,10 +22,7 @@ class CustomersController < ApplicationController
 
   def update
     @customer.update(customer_edit_params)
-    redirect_to about_path
-  end
-
-  def create_meal_plan
+    redirect_to new_customer_meal_plan_path(@customer)
   end
 
   private

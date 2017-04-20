@@ -1,0 +1,8 @@
+
+<%= simple_form_for([@customer, @meal_plan]) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.association :products, as: :radio_buttons, collection: Product.where(category_id: Category.where(name: 'Meal Plan').first.id), prompt: 'Choose a meal plan', label: 'Select your meal plan:' %>
+
+  <%= f.button :submit %>
+<% end %>
