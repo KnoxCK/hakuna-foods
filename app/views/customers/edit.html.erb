@@ -10,8 +10,8 @@
     <%= f.input :weight, as: :integer, label: 'Weight (kg)', placeholder: 'kg' %>
     <%= f.input :exercise, as: :select, collection: ['0 - 2', '2 - 4', '4 - 6', '6+' ], label: 'Exercise (Times per week)' %>
     <%= f.input :occupation %>
-    <%= f.input :allergies, as: :text %>
-    <%= f.input :preferences, as: :text %>
+    <%= f.input :allergies, as: :text , label: 'Food allergies/intolerances? Do any food groups cause you anaphylactic shock?' %>
+    <%= f.input :preferences, as: :text, label: 'Food dislikes? (Max 3)' %>
     <%= f.input :phone, as: :tel %>
     <%= f.button :submit %>
   <% end %>
