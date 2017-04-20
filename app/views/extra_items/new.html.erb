@@ -1,0 +1,22 @@
+<div class="form">
+  <%= form_tag customer_customer_plan_extra_items_path(@extras), method: :post, remote: true %>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity per week</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @extra_items.each do |product| %>
+      <tr>
+        <td><h4><%= product.name %></h4></td>
+        <td><p>Price per day:<%= product.daily_price %></p></td>
+        <td><%= number_field_tag "#{product.name}", nil %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= submit_tag 'Submit' %>
+</div>
