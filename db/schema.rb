@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20170420155346) do
     t.integer  "customer_plan_id"
     t.integer  "product_id"
     t.integer  "quantity_per_week"
-    t.integer  "monthly_price"
+    t.float    "monthly_price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["customer_plan_id"], name: "index_extra_items_on_customer_plan_id", using: :btree
