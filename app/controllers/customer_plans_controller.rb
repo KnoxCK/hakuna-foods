@@ -7,8 +7,11 @@ class CustomerPlansController < ApplicationController
   end
 
   def create
-    @customer_plan = CustomerPlan.create(customer_id: @customer.id, meal_plan_id: meal_plan_params[:product_ids])
-    meal_plan_params[:subscription] == "Yes - Monthly" ? @customer_plan.subscription = true : @customer_plan.subscription = false
+    @customer_plan = CustomerPlan.create(customer_id: @customer.id,
+      meal_plan_id: meal_plan_params[:product_ids], days_per_week:
+        meal_plan_params[:days_per_week])
+    meal_plan_params[:subscription] == "Yes - Monthly" ?
+      @customer_plan.subscription = true : @customer_plan.subscription = false
     @customer_plan.save
     redirect_to about_path
   end

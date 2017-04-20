@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420155345) do
+ActiveRecord::Schema.define(version: 20170420155346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170420155345) do
     t.integer "extra_item_id"
     t.integer "total_price"
     t.boolean "subscription"
+    t.integer "days_per_week"
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
     t.index ["extra_item_id"], name: "index_customer_plans_on_extra_item_id", using: :btree
     t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
