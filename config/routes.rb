@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'extra_items/new'
+
+  get 'extra_items/create'
+
   get 'meal_plans/create'
 
   get 'customers/create'
@@ -12,7 +16,9 @@ Rails.application.routes.draw do
   get 'orderform', to: 'pages#orderform'
 
   resources :customers, only: [:create, :edit, :update] do
-    resources :customer_plans, only: [:new, :create]
+    resources :customer_plans, only: [:new, :create] do
+      resources :extra_items, only: [:new, :create]
+    end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

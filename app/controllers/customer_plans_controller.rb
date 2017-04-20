@@ -13,7 +13,7 @@ class CustomerPlansController < ApplicationController
     meal_plan_params[:subscription] == "Yes - Monthly" ?
       @customer_plan.subscription = true : @customer_plan.subscription = false
     @customer_plan.save
-    redirect_to about_path
+    redirect_to new_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
   end
 
   def edit

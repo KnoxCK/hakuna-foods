@@ -1,5 +1,5 @@
 class ExtraItem < ApplicationRecord
-  belongs_to :customer, through: :customer_plan
+  belongs_to :customer
   has_one :product
   belongs_to :customer_plan
 end
