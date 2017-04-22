@@ -16,9 +16,9 @@
 <h3>Order details:</h3>
 <p>Meal Plan: <%= Product.find(@customer.customer_plan.first.meal_plan_id) %> - <%= @customer.customer_plan.first.days_per_week %> days per week.</p>
 <ul>Extras: <% @customer.customer_plan.first.extra_items.each do |extra| %>
-  <li><strong><%= Product.find(index.product_id).name %></strong> - <%= extra.quantity_per_week %> per week</li>
+  <li><strong><%= Product.find(extra.product_id).name %></strong> - <%= extra.quantity_per_week %> per week</li>
   <% end %>
 </ul>
 <strong><%= @customer.customer_plan.first.subscription ? "Monthly subscription" : "One month only" %>
 
-<%= link_to "Edit order details", edit_customer_path(@customer) %>
+<%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
