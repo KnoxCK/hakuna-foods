@@ -10,7 +10,7 @@ class AddressesController < ApplicationController
     @address = Address.create(address_params)
     @address.customer_id = @customer.id
     @address.save
-    redirect_to about_path
+    redirect_to customer_path(@customer)
   end
 
   private

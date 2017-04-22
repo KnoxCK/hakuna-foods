@@ -17,6 +17,7 @@ class CustomerPlansController < ApplicationController
   end
 
   def edit
+    @customer_plan = CustomerPlan.where(customer_id: params[:customer_id]).first
   end
 
   def update
@@ -26,6 +27,10 @@ class CustomerPlansController < ApplicationController
 
   def set_customer
     @customer = Customer.find(params[:customer_id])
+  end
+
+  def set_customer_plan
+    @customer_plan = CustomerPlan.where(customer_id: params[:customer_id]).first
   end
 
   def meal_plan_params

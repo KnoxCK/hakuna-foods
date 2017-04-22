@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   #   end
   # end
 
-  resources :customers, only: [:create, :edit, :update] do
-    resources :addresses, only: [:new, :create]
-    resources :customer_plans, only: [:new, :create] do
-      resources :extra_items, only: [:new, :create]
+  resources :customers, only: [:create, :edit, :update, :show] do
+    resources :addresses, only: [:new, :create, :edit, :update]
+    resources :customer_plans, only: [:new, :create, :edit, :update] do
+      resources :extra_items, only: [:new, :create, :edit, :update]
     end
   end
 
