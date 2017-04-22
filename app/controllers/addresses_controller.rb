@@ -8,6 +8,8 @@ class AddressesController < ApplicationController
 
   def create
     @address = Address.create(address_params)
+    @address.customer_id = @customer.id
+    @address.save
     redirect_to about_path
   end
 
@@ -18,8 +20,8 @@ class AddressesController < ApplicationController
   end
 
   def address_params
-    params.require(:address).permit(:id, :address_line1, :address_line2,
-      :address_line2, :postcode, :delivery_instructions)
+    params.require(:address).permit(:customer_id, :address_line1, :address_line2,
+      :address_line3, :postcode, :delivery_instructions)
   end
 
 end

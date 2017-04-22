@@ -1,11 +1,11 @@
 <div class="form">
   <p>Please fill out your details</p>
-  <%= simple_form_for @address do |f| %>
+  <%= simple_form_for [@customer, @address] do |f| %>
     <%= f.input :address_line1, label: 'Address Line 1' %>
     <%= f.input :address_line2, label: 'Address Line 2' %>
     <%= f.input :address_line3, label: 'Address Line 3' %>
     <%= f.input :postcode, label: 'Postcode' %>
-    <%= f.input :address_line3, as: :text, label: 'Delivery Instructions' %>
+    <%= f.input :delivery_instructions, as: :text, label: 'Delivery Instructions' %>
     <%= f.button :submit, 'Submit', class: 'view-plan-btn' %>
   <% end %>
 </div>
