@@ -11,7 +11,7 @@ class ExtraItemsController < ApplicationController
     @customer_plan.extras(params)
     @customer_plan.calculate_monthly_extras
     @customer_plan.calculate_total_price
-    redirect_to about_path
+    redirect_to "customers/#{@customer.id}/address"
   end
 
   private

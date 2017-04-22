@@ -20,5 +20,6 @@ Rails.application.routes.draw do
       resources :extra_items, only: [:new, :create]
     end
   end
+  post 'customers/:id/create_address', to: 'customers#create_address'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

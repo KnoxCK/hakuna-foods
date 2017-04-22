@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action :set_customer, only: [:update, :edit]
+  before_action :set_customer, only: [:update, :edit, :create_address]
 
   def create
     @customer = Customer.create(customer_params)
