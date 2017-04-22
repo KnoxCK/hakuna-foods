@@ -27,4 +27,14 @@ class CustomerPlan < ApplicationRecord
     end
   end
 
+  def calculate_total_price
+    monthly_meal_plan_price = (Product.find(self.meal_plan_id).daily_price * self.days_per_week * 52) / 12
+    total_monthly_extras_price = 0
+    self.extra_items.each do |item|
+      total_monthly_extras_price += item.monthly_price
+    end
+    total_monthly_price = monthly_meal_plan_price + total_monthly_extras_price
+    self.total_price = total_monthly_price
+    self.save
+  end
 end
