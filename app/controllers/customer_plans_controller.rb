@@ -17,7 +17,7 @@ class CustomerPlansController < ApplicationController
   end
 
   def edit
-    set_customer_plan
+    @customer_plan = CustomerPlan.where(customer_id: params[:customer_id]).first
   end
 
   def update

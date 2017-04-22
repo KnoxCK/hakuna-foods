@@ -1,24 +1,28 @@
-<h3>Personal Details:</h3>
-<p>Name: <%= @customer.full_name %></p>
-<p>Email: <%= @customer.email %></p>
-<p>Gender: <%= @customer.gender %></p>
-<p>DOB:<%= @customer.dob %></p>
-<p>Height: <%= @customer.height %>cm</p>
-<p>Weight: <%= @customer.weight %>kg</p>
-<p>Exercise: <%= @customer.exercise %> times per week</p>
-<p>Occupation: <%= @customer.occupation %></p>
-<p>Allergies: <%= @customer.allergies %></p>
-<p>Food dislikes: <%= @customer.preferences %></p>
-<p>Phone: <%= @customer.phone %></p>
+<div class="form">
+  <h3>Personal Details:</h3>
+  <p>Name: <%= @customer.full_name %></p>
+  <p>Email: <%= @customer.email %></p>
+  <p>Gender: <%= @customer.gender %></p>
+  <p>DOB:<%= @customer.dob %></p>
+  <p>Height: <%= @customer.height %>cm</p>
+  <p>Weight: <%= @customer.weight %>kg</p>
+  <p>Exercise: <%= @customer.exercise %> times per week</p>
+  <p>Occupation: <%= @customer.occupation %></p>
+  <p>Allergies: <%= @customer.allergies %></p>
+  <p>Food dislikes: <%= @customer.preferences %></p>
+  <p>Phone: <%= @customer.phone %></p>
 
-<%= link_to "Edit personal details", edit_customer_path(@customer) %>
-<br>
-<h3>Order details:</h3>
-<p>Meal Plan: <%= Product.find(@customer.customer_plan.first.meal_plan_id) %> - <%= @customer.customer_plan.first.days_per_week %> days per week.</p>
-<ul>Extras: <% @customer.customer_plan.first.extra_items.each do |extra| %>
-  <li><strong><%= Product.find(extra.product_id).name %></strong> - <%= extra.quantity_per_week %> per week</li>
-  <% end %>
-</ul>
-<strong><%= @customer.customer_plan.first.subscription ? "Monthly subscription" : "One month only" %>
+  <%= link_to "Edit personal details", edit_customer_path(@customer) %>
+  <br>
+  <h3>Order details:</h3>
+  <p>Meal Plan: <%= Product.find(@customer.customer_plan.first.meal_plan_id).name %> - <%= @customer.customer_plan.first.days_per_week %> days per week.</p>
+  <ul>Extras: <% @customer.customer_plan.first.extra_items.each do |extra| %>
+    <li><strong><%= Product.find(extra.product_id).name %></strong> - <%= extra.quantity_per_week %> per week</li>
+    <% end %>
+  </ul>
+  <p><strong><%= @customer.customer_plan.first.subscription ? "Monthly subscription" : "One month only" %></strong></p>
 
-<%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
+  <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
+  <br>
+  <%= link_to "Confirm", edit_customer_customer_plan_path(@customer, @customer.customer_plan), class: 'view-plan-btn' %>
+</div>
