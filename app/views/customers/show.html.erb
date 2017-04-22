@@ -1,13 +1,17 @@
 <h3>Personal Details:</h3>
 <p>Name: <%= @customer.full_name %></p>
 <p>Email: <%= @customer.email %></p>
-<p><%= @customer.full_name %></p>
-<p><%= @customer.full_name %></p>
-<p><%= @customer.full_name %></p>
-<p><%= @customer.full_name %></p>
-<p><%= @customer.full_name %></p>
-<p><%= @customer.full_name %></p>
+<p>Gender: <%= @customer.gender %></p>
+<p>DOB:<%= @customer.dob %></p>
+<p>Height: <%= @customer.height %>cm</p>
+<p>Weight: <%= @customer.weight %>kg</p>
+<p>Exercise: <%= @customer.exercise %> times per week</p>
+<p>Occupation: <%= @customer.occupation %></p>
+<p>Allergies: <%= @customer.allergies %></p>
+<p>Food dislikes: <%= @customer.preferences %></p>
+<p>Phone: <%= @customer.phone %></p>
+
 <%= link_to "Edit personal details", edit_customer_path(@customer) %>
 <br>
 <h3>Order details:</h3>
-<%= @customer.customer_plan %>
+<p>Meal Plan: <%= Product.find(@customer.customer_plan.first.meal_plan_id) %>

@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action :set_customer
+  before_action :set_customer, except: [:create]
 
   def show
   end
