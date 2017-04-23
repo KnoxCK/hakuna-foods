@@ -5,19 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Category.destroy_all
-Product.destroy_all
 
-Category.create!(name: 'Meal Plan')
-Category.create!(name: 'Extras')
+MealPlan.destroy_all
+Extra.destroy_all
 
-Product.create!(name: 'Maintain', sku: "maintain-monthly-plan", daily_price: 39, category_id: Category.where(name: 'Meal Plan').first.id)
-Product.create!(name: 'Train', sku: "train-monthly-plan", daily_price: 41, category_id: Category.where(name: 'Meal Plan').first.id)
-Product.create!(name: 'Trim', sku: "trim-monthly-plan", daily_price: 36, category_id: Category.where(name: 'Meal Plan').first.id)
-Product.create!(name: 'Postnatal', sku: "postnatal-monthly-plan", daily_price: 39, category_id: Category.where(name: 'Meal Plan').first.id)
-Product.create!(name: 'Vegetarian', sku: "vegetarian-monthly-plan", daily_price: 39, category_id: Category.where(name: 'Meal Plan').first.id)
-Product.create!(name: 'Bespoke', sku: "bespoke-monthly-plan", daily_price: 0, category_id: Category.where(name: 'Meal Plan').first.id)
+MealPlan.create!(name: 'Maintain', sku: "maintain-monthly-plan", daily_price: 39)
+MealPlan.create!(name: 'Train', sku: "train-monthly-plan", daily_price: 41)
+MealPlan.create!(name: 'Trim', sku: "trim-monthly-plan", daily_price: 36)
+MealPlan.create!(name: 'Postnatal', sku: "postnatal-monthly-plan", daily_price: 39)
+MealPlan.create!(name: 'Vegetarian', sku: "vegetarian-monthly-plan", daily_price: 39)
+MealPlan.create!(name: 'Bespoke', sku: "bespoke-monthly-plan", daily_price: 0)
 
-Product.create!(name: 'Kombucha', sku: "kombucha-extra", daily_price: 2.5, category_id: Category.where(name: 'Extras').first.id)
-Product.create!(name: 'Cold Press Coffee', sku: "coffee-extra", daily_price: 2.5, category_id: Category.where(name: 'Extras').first.id)
-Product.create!(name: 'Sweet Treat', sku: "sweet-extra", daily_price: 2.5, category_id: Category.where(name: 'Extras').first.id)
+Extra.create!(name: 'Kombucha', sku: "kombucha-extra", unit_price: 2.5)
+Extra.create!(name: 'Cold Press Coffee', sku: "coffee-extra", unit_price: 2.5)
+Extra.create!(name: 'Sweet Treat', sku: "sweet-extra", unit_price: 2.5)
