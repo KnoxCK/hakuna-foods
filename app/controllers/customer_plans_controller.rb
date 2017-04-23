@@ -8,7 +8,7 @@ class CustomerPlansController < ApplicationController
 
   def create
     @customer_plan = CustomerPlan.create(customer_id: @customer.id,
-      meal_plan_id: meal_plan_params[:product_ids], days_per_week:
+      meal_plan_id: meal_plan_params[:meal_plan_ids], days_per_week:
         meal_plan_params[:days_per_week])
     meal_plan_params[:subscription] == "Yes - Monthly" ?
       @customer_plan.subscription = true : @customer_plan.subscription = false
@@ -34,6 +34,6 @@ class CustomerPlansController < ApplicationController
   end
 
   def meal_plan_params
-    params.require(:customer_plan).permit(:product_ids, :days_per_week, :subscription)
+    params.require(:customer_plan).permit(:meal_plan_ids, :days_per_week, :subscription)
   end
 end

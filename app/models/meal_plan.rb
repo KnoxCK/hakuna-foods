@@ -1,5 +1,5 @@
 class MealPlan < ApplicationRecord
 
-  belongs_to :customer_plan
+has_many :customer_plans
 
 end

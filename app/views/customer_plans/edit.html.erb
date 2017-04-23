@@ -2,7 +2,7 @@
   <%= simple_form_for([@customer, @customer_plan]) do |f| %>
     <%= f.error_notification %>
 
-    <%= f.association :products, as: :radio_buttons, collection: Product.where(category_id: Category.where(name: 'Meal Plan').first.id), label: 'Select your meal plan:' %>
+    <%= f.association :meal_plans, as: :radio_buttons, collection: MealPlan.all, label: 'Select your meal plan:' %>
 
     <%= f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
 

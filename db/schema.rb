@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170423105045) do
+ActiveRecord::Schema.define(version: 20170420154509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,19 +27,13 @@ ActiveRecord::Schema.define(version: 20170423105045) do
     t.index ["customer_id"], name: "index_addresses_on_customer_id", using: :btree
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-  end
-
   create_table "customer_plans", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "meal_plan_id"
+    t.integer "days_per_week"
     t.float   "total_price"
     t.boolean "subscription"
-    t.integer "days_per_week"
-    t.integer "extra_items_id"
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
-    t.index ["extra_items_id"], name: "index_customer_plans_on_extra_items_id", using: :btree
     t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
   end
 
@@ -65,38 +59,43 @@ ActiveRecord::Schema.define(version: 20170423105045) do
 
   create_table "extra_items", force: :cascade do |t|
     t.integer  "customer_plan_id"
-    t.integer  "product_id"
+    t.integer  "extra_id"
     t.integer  "quantity_per_week"
     t.float    "monthly_price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["customer_plan_id"], name: "index_extra_items_on_customer_plan_id", using: :btree
-    t.index ["product_id"], name: "index_extra_items_on_product_id", using: :btree
+    t.index ["extra_id"], name: "index_extra_items_on_extra_id", using: :btree
+  end
+
+  create_table "extras", force: :cascade do |t|
+    t.string  "name"
+    t.string  "sku"
+    t.integer "unit_price"
+    t.text    "description"
+  end
+
+  create_table "meal_plans", force: :cascade do |t|
+    t.string   "name"
+    t.string   "sku"
+    t.float    "daily_price"
+    t.text     "description"
+    t.text     "detailed_description"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "orders", force: :cascade do |t|
     t.string   "sku"
     t.string   "customer"
     t.string   "plan"
+    t.integer  "total_amount"
     t.json     "payment"
     t.string   "state"
     t.integer  "customer_plan_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "total_amount"
     t.index ["customer_plan_id"], name: "index_orders_on_customer_plan_id", using: :btree
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.string   "name"
-    t.string   "sku"
-    t.float    "daily_price"
-    t.integer  "category_id"
-    t.text     "description"
-    t.text     "detailed_description"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.index ["category_id"], name: "index_products_on_category_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -118,10 +117,8 @@ ActiveRecord::Schema.define(version: 20170423105045) do
 
   add_foreign_key "addresses", "customers"
   add_foreign_key "customer_plans", "customers"
-  add_foreign_key "customer_plans", "extra_items", column: "extra_items_id"
-  add_foreign_key "customer_plans", "products", column: "meal_plan_id"
+  add_foreign_key "customer_plans", "meal_plans"
   add_foreign_key "extra_items", "customer_plans"
-  add_foreign_key "extra_items", "products"
+  add_foreign_key "extra_items", "extras"
   add_foreign_key "orders", "customer_plans"
-  add_foreign_key "products", "categories"
 end
