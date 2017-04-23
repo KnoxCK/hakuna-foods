@@ -8,7 +8,7 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
       t.date :dob
       t.integer :height
       t.integer :weight
-      t.integer :exercise
+      t.string :exercise
       t.string :occupation
       t.string :allergies
       t.string :preferences

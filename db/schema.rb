@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420155346) do
+ActiveRecord::Schema.define(version: 20170423105045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,9 @@ ActiveRecord::Schema.define(version: 20170420155346) do
     t.float   "total_price"
     t.boolean "subscription"
     t.integer "days_per_week"
+    t.integer "extra_items_id"
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
+    t.index ["extra_items_id"], name: "index_customer_plans_on_extra_items_id", using: :btree
     t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
   end
 
@@ -116,6 +118,7 @@ ActiveRecord::Schema.define(version: 20170420155346) do
 
   add_foreign_key "addresses", "customers"
   add_foreign_key "customer_plans", "customers"
+  add_foreign_key "customer_plans", "extra_items", column: "extra_items_id"
   add_foreign_key "customer_plans", "products", column: "meal_plan_id"
   add_foreign_key "extra_items", "customer_plans"
   add_foreign_key "extra_items", "products"

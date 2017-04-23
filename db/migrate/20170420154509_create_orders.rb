@@ -4,6 +4,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.string :sku
       t.string :customer
       t.string :plan
+      t.integer :total_amount
       t.json :payment
       t.string :state
       t.references :customer_plan, index: true, foreign_key: true
