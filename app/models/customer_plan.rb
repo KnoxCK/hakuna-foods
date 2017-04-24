@@ -25,7 +25,7 @@ class CustomerPlan < ApplicationRecord
     extras = Extra.pluck(:name)
     extra_items = []
     params.each do |key, value|
-      if extras.include?(key) && (value != "0" && value != "")
+      if extras.include?(key)
         extra_items << [Extra.where(name: key).first.id, value]
       end
     end
