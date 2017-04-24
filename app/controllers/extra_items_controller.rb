@@ -19,7 +19,7 @@ class ExtraItemsController < ApplicationController
   end
 
   def update
-    @customer_plan.extras(@extra_item.build_extras(params))
+    @customer_plan.extras(@extra_item.update_extras(params))
     @customer_plan.calculate_monthly_extras
     @customer_plan.calculate_total_price
     redirect_to customer_path(@customer)
