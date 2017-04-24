@@ -32,7 +32,7 @@ class CustomerPlansController < ApplicationController
   end
 
   def set_customer_plan
-    @customer_plan = CustomerPlan.where(customer_id: params[:customer_id])
+    @customer_plan = CustomerPlan.where(customer_id: params[:customer_id]).first
   end
 
   def meal_plan_params

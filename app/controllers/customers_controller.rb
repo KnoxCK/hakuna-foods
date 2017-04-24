@@ -23,7 +23,7 @@ class CustomersController < ApplicationController
 
   def update
     @customer.update(customer_edit_params)
-    if @customer.customer_plan != []
+    if @customer.customer_plan
       redirect_to customer_path(@customer)
     else
       redirect_to new_customer_customer_plan_path(@customer)
