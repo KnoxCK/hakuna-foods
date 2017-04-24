@@ -23,7 +23,6 @@ class CustomersController < ApplicationController
 
   def update
     @customer.update(customer_edit_params)
-    # if come from confirmation page then
     if @customer.customer_plan != []
       redirect_to customer_path(@customer)
     else

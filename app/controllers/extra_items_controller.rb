@@ -7,7 +7,6 @@ class ExtraItemsController < ApplicationController
   end
 
   def create
-    # @customer_plan.extras(params)
     @customer_plan.extras(params)
     @customer_plan.calculate_monthly_extras
     @customer_plan.calculate_total_price

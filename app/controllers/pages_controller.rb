@@ -19,6 +19,4 @@ class PagesController < ApplicationController
   def orderform
     @customer = Customer.new
   end
-
-
 end
