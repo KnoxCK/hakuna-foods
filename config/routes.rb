@@ -20,6 +20,6 @@ Rails.application.routes.draw do
       resources :extra_items, only: [:new, :create, :edit, :update]
     end
   end
-
+  patch '/customers/:customer_id/customer_plans/:customer_plan_id/extra_items', to: 'extra_items#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
