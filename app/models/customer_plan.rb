@@ -16,7 +16,7 @@ class CustomerPlan < ApplicationRecord
     end
 
     extra_items.each do |extra|
-      ExtraItem.create!(customer_plan_id: self.id, extra_id: extra[0],
+      ExtraItem.create(customer_plan_id: self.id, extra_id: extra[0],
        quantity_per_week: extra[1].to_i)
     end
   end
@@ -34,7 +34,7 @@ class CustomerPlan < ApplicationRecord
       if ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0])
         ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0]).update(quantity_per_week: extra[1].to_i)
       else
-        ExtraItem.create!(customer_plan_id: self.id, extra_id: extra[0],
+        ExtraItem.create(customer_plan_id: self.id, extra_id: extra[0],
        quantity_per_week: extra[1].to_i)
       end
     end
