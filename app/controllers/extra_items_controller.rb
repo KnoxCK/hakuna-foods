@@ -3,11 +3,11 @@ class ExtraItemsController < ApplicationController
   before_action :set_customer, :set_customer_plan
 
   def new
-    @extra_items = Extra.all
-    @extras = []
+    @extras = Extra.all
   end
 
   def create
+    binding.pry
     # @customer_plan.extras(params)
     @customer_plan.calculate_monthly_extras
     @customer_plan.calculate_total_price

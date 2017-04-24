@@ -3,7 +3,7 @@ class CustomerPlan < ApplicationRecord
   has_one :order
   has_many :extra_items
   has_many :extras, through: :extra_items
-  has_many :meal_plans
+  belongs_to :meal_plan
 
 
   def extras(params)

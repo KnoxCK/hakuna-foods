@@ -9,11 +9,11 @@
       </tr>
     </thead>
     <tbody>
-    <% @extra_items.each do |product| %>
+    <% @extras.each do |extra| %>
       <tr>
-        <td><h4><%= product.name %></h4></td>
-        <td><p><%= product.unit_price.to_f %></p></td>
-        <td><%= number_field_tag "#{product.name}", nil %></td>
+        <td><h4><%= extra.name %></h4></td>
+        <td><p><%= extra.unit_price.to_f %></p></td>
+        <td><%= number_field_tag "#{extra.name}", nil %></td>
       </tr>
     <% end %>
     </tbody>
