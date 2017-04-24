@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   before_action :set_customer, :set_customer_plan
 
   def show
+    @order = Order.where(state: 'paid').find(params[:id])
   end
 
   def create
