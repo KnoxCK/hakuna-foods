@@ -3,7 +3,7 @@ class CreateCustomerPlans < ActiveRecord::Migration[5.0]
     create_table :customer_plans do |t|
       t.references :customer, index: true, foreign_key: true
       t.references :meal_plan, index: true, foreign_key: true
-      t.integer :days_per_week
+      t.integer :days_per_week, default: 5
       t.float :total_price
       t.boolean :subscription
     end

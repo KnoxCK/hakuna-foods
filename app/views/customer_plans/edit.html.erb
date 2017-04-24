@@ -4,7 +4,7 @@
 
     <%= f.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, label: 'Select your meal plan:' %>
 
-    <%= f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
+    <%# f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
 
     <%= f.input :subscription, as: :radio_buttons, collection: [ 'Yes - Monthly' , 'No - One month only' ], label: 'Would you like a monthly subscription?' %>
 
