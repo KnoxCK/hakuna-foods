@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420154509) do
+ActiveRecord::Schema.define(version: 20170424163227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170420154509) do
   create_table "customer_plans", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "meal_plan_id"
-    t.integer "days_per_week"
+    t.integer "days_per_week", default: 5
     t.float   "total_price"
     t.boolean "subscription"
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
@@ -89,12 +89,12 @@ ActiveRecord::Schema.define(version: 20170420154509) do
     t.string   "sku"
     t.string   "customer"
     t.string   "plan"
-    t.integer  "total_amount"
     t.json     "payment"
     t.string   "state"
     t.integer  "customer_plan_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "total_price_pennies", default: 0, null: false
     t.index ["customer_plan_id"], name: "index_orders_on_customer_plan_id", using: :btree
   end
 

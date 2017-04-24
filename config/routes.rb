@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'payments/new'
+
+  get 'payments/create'
+
+  get 'orders/show'
+
+  get 'orders/create'
+
   devise_for :users
   root to: 'pages#home'
   get 'mealplans', to: 'pages#mealplans'
