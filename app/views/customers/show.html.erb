@@ -31,7 +31,7 @@
     <% end %>
   <% end %>
   </ul>
-  <p><strong><%= @customer.customer_plan.subscription ? "Monthly subscription" : "One month only" %></strong></p>
+  <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
   <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
   <br>
