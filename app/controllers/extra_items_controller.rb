@@ -7,8 +7,18 @@ class ExtraItemsController < ApplicationController
   end
 
   def create
-    binding.pry
     # @customer_plan.extras(params)
+    @customer_plan.extras(params)
+    @customer_plan.calculate_monthly_extras
+    @customer_plan.calculate_total_price
+    redirect_to new_customer_address_path(@customer)
+  end
+
+  def edit
+  end
+
+  def update
+    @customer_plan.extras(@extra_item.build_extras(params))
     @customer_plan.calculate_monthly_extras
     @customer_plan.calculate_total_price
     redirect_to new_customer_address_path(@customer)

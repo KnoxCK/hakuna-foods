@@ -19,11 +19,23 @@ class CustomerPlan < ApplicationRecord
     #   ExtraItem.create!(product_id: Product.where(name: 'Sweet Treat').first.id,
     #     quantity_per_week: params["Sweet Treat"].to_i, customer_plan_id: self.id)
     # end
+    extras = Extra.pluck(:name)
+    extra_items = []
+    params.each do |key, value|
+      if extras.include?(key) && (value != "0" && value != "")
+        extra_items << [Extra.where(name: key).first.id, value]
+      end
+    end
+
+    extra_items.each do |extra|
+      ExtraItem.create!(customer_plan_id: self.id, extra_id: extra[0],
+       quantity_per_week: extra[1].to_i)
+    end
   end
 
   def calculate_monthly_extras
     self.extra_items.each do |item|
-      item.monthly_price = (Extra.find(item.extra_id).daily_price * item.quantity_per_week * 52) / 12
+      item.monthly_price = (Extra.find(item.extra_id).unit_price * item.quantity_per_week * 52) / 12
       item.save
     end
   end
@@ -35,7 +47,7 @@ class CustomerPlan < ApplicationRecord
       total_monthly_extras_price += item.monthly_price
     end
     total_monthly_price = monthly_meal_plan_price + total_monthly_extras_price
-    self.total_price = total_monthly_price
+    self.total_price = total_monthly_price.round(2)
     self.save
   end
 end

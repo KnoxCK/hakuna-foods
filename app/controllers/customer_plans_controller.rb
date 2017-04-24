@@ -22,7 +22,7 @@ class CustomerPlansController < ApplicationController
 
   def update
     @customer_plan.update(meal_plan_params)
-    redirect_to new_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
+    redirect_to edit_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
   end
 
   private
@@ -36,6 +36,6 @@ class CustomerPlansController < ApplicationController
   end
 
   def meal_plan_params
-    params.require(:customer_plan).permit(:meal_plan_ids, :days_per_week, :subscription)
+    params.require(:customer_plan).permit(:meal_plan_id, :days_per_week, :subscription)
   end
 end
