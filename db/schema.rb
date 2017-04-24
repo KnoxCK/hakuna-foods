@@ -69,10 +69,10 @@ ActiveRecord::Schema.define(version: 20170420154509) do
   end
 
   create_table "extras", force: :cascade do |t|
-    t.string  "name"
-    t.string  "sku"
-    t.integer "unit_price"
-    t.text    "description"
+    t.string "name"
+    t.string "sku"
+    t.float  "unit_price"
+    t.text   "description"
   end
 
   create_table "meal_plans", force: :cascade do |t|
