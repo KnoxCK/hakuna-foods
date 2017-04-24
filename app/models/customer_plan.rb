@@ -42,19 +42,19 @@ class CustomerPlan < ApplicationRecord
 
   def calculate_monthly_extras
     self.extra_items.each do |item|
-      item.monthly_price = (Extra.find(item.extra_id).unit_price * item.quantity_per_week * 52) / 12
+      item.weekly_price = Extra.find(item.extra_id).unit_price * item.quantity_per_week
       item.save
     end
   end
 
   def calculate_total_price
-    monthly_meal_plan_price = (MealPlan.find(self.meal_plan_id).daily_price * self.days_per_week * 52) / 12
-    total_monthly_extras_price = 0
+    weekly_meal_plan_price = MealPlan.find(self.meal_plan_id).daily_price * self.days_per_week
+    total_weekly_extras_price = 0
     self.extra_items.each do |item|
-      total_monthly_extras_price += item.monthly_price
+      total_weekly_extras_price += item.weekly_price
     end
-    total_monthly_price = monthly_meal_plan_price + total_monthly_extras_price
-    self.total_price = total_monthly_price.round(2)
+    total_weekly_price = weekly_meal_plan_price + total_weekly_extras_price
+    self.total_price = total_weekly_price.round(2)
     self.save
   end
 end
