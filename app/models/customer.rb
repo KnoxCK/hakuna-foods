@@ -6,7 +6,7 @@ class Customer < ApplicationRecord
 
   def check_postcode(postcode)
     valid_postcodes = ['SW6', 'SW19']
-    valid_postcodes.include?(postcode)
+    valid_postcodes.include?(postcode.upcase)
   end
 
   def full_name

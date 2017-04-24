@@ -13,7 +13,7 @@ class CustomersController < ApplicationController
       redirect_to edit_customer_path(@customer)
     else
       @customer.valid_postcode = false
-      @error = "Sorry, we do not deliver to your area. Fuck Off."
+      @error = "We're terribly sorry, but we do not deliver to your area. Fuck Off."
       @customer.save
     end
   end
@@ -23,7 +23,12 @@ class CustomersController < ApplicationController
 
   def update
     @customer.update(customer_edit_params)
-    redirect_to new_customer_customer_plan_path(@customer)
+    # if come from confirmation page then
+    if @customer.customer_plan
+      redirect_to customer_path(@customer)
+    else
+      redirect_to new_customer_customer_plan_path(@customer)
+    end
   end
 
   private

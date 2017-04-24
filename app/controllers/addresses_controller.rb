@@ -13,6 +13,15 @@ class AddressesController < ApplicationController
     redirect_to customer_path(@customer)
   end
 
+  def edit
+    @address = @customer.address
+  end
+
+  def update
+    @customer.address.update(address_params)
+    redirect_to customer_path(@customer)
+  end
+
   private
 
   def set_customer

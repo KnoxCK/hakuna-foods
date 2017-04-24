@@ -14,6 +14,14 @@
 
   <%= link_to "Edit personal details", edit_customer_path(@customer) %>
   <br>
+  <h3>Delivery Address:</h3>
+  <p><%= @customer.address.address_line1 %></p>
+  <p><%= @customer.address.address_line2 %></p>
+  <p><%= @customer.address.address_line3 %></p>
+  <p><%= @customer.address.postcode %></p>
+  <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
+  <%= link_to "Edit delivery address", edit_customer_address_path(@customer) %>
+  <br>
   <h3>Order details:</h3>
   <p>Meal Plan: <%= MealPlan.find(@customer.customer_plan.first.meal_plan_id).name %> - <%= @customer.customer_plan.first.days_per_week %> days per week.</p>
   <ul>Extras: <% @customer.customer_plan.first.extra_items.each do |extra| %>
