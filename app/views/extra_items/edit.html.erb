@@ -1,5 +1,5 @@
 <div class="form">
-  <%= form_tag customer_customer_plan_extra_items_path(@customer.id), method: :post %>
+  <%= form_tag customer_customer_plan_extra_items_path(@customer.id), method: :patch %>
   <table>
     <thead>
       <tr>
@@ -12,7 +12,7 @@
     <% @extras.each do |extra| %>
       <tr>
         <td><h4><%= extra.name %></h4></td>
-        <td><p><%= extra.unit_price.to_f %></p></td>
+        <td><p><%= extra.unit_price %></p></td>
         <td><%= number_field_tag "#{extra.name}", nil %></td>
       </tr>
     <% end %>

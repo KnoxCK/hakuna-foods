@@ -3,7 +3,7 @@ class CreateExtras < ActiveRecord::Migration[5.0]
     create_table :extras do |t|
       t.string :name
       t.string :sku
-      t.integer :unit_price
+      t.float :unit_price
       t.text :description
     end
   end

@@ -1,8 +1,9 @@
 <div class="form">
+  <p>Please choose your meal plan options:</p>
   <%= simple_form_for([@customer, @customer_plan]) do |f| %>
     <%= f.error_notification %>
 
-    <%= f.association :meal_plans, as: :radio_buttons, collection: MealPlan.all, value_method: :id, include_blank: false, prompt: 'Choose a meal plan', label: 'Select your meal plan:' %>
+    <%= f.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, value_method: :id, include_blank: false, prompt: 'Choose a meal plan', label: 'Select your meal plan:' %>
 
     <%= f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
 
