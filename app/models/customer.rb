@@ -1,7 +1,7 @@
 class Customer < ApplicationRecord
 
   has_one :address, dependent: :destroy
-  has_many :customer_plan
+  has_one :customer_plan
   has_many :orders, through: :meal_plan_items
 
   def check_postcode(postcode)
