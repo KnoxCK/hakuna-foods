@@ -40,7 +40,7 @@ class CustomerPlan < ApplicationRecord
     end
   end
 
-  def calculate_monthly_extras
+  def calculate_weekly_extras
     self.extra_items.each do |item|
       item.weekly_price = Extra.find(item.extra_id).unit_price * item.quantity_per_week
       item.save

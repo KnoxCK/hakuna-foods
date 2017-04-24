@@ -7,7 +7,7 @@
 
     <%# f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
 
-    <%= f.input :subscription, as: :radio_buttons, collection: [ 'Yes - Monthly' , 'No - One month only' ], label: 'Would you like a monthly subscription?' %>
+    <%= f.input :subscription, as: :radio_buttons, collection: [ 'Yes' , 'No - One week only' ], label: 'Would you like a weekly subscription?' %>
 
     <%= f.button :submit, class: 'view-plan-btn' %>
   <% end %>

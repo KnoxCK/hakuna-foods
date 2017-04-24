@@ -8,7 +8,7 @@ class ExtraItemsController < ApplicationController
 
   def create
     @customer_plan.extras(params)
-    @customer_plan.calculate_monthly_extras
+    @customer_plan.calculate_weekly_extras
     @customer_plan.calculate_total_price
     redirect_to new_customer_address_path(@customer)
   end
@@ -19,7 +19,7 @@ class ExtraItemsController < ApplicationController
 
   def update
     @customer_plan.update_extras(params)
-    @customer_plan.calculate_monthly_extras
+    @customer_plan.calculate_weekly_extras
     @customer_plan.calculate_total_price
     redirect_to customer_path(@customer)
   end
