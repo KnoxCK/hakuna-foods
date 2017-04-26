@@ -1,12 +1,13 @@
 /* Main class */
-.navbar-hakuna-homepage {
+.navbar-hakuna-landing {
   padding: 0px 60px;
   background-color: white;
   border-color: transparent;
-  height: 200px;
+  height: 120px;
   opacity: 0.8;
   box-shadow: 1px 1px 1px #D9D9D9;
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 #navbar-background {
   background-color: black;
@@ -22,33 +23,32 @@
 }
 
 /* Navbar logo */
-.navbar-hakuna-brand-homepage img {
-    height: 50px;
+.navbar-hakuna-brand-landing img {
+    height: 60px;
     top: -6px;
     padding-left: 60px;
     padding-right: 60px;
 }
 
 /* Navbar main section (with form, links, button) */
-.navbar-hakuna-main-homepage {
-  position: absolute;
-  top: 12px;
-  right: calc(100vw - 73.5%);
+.navbar-hakuna-main-landing {
   display: flex;
+  align-items: center;
   
 }
-.navbar-hakuna-link {
+.navbar-hakuna-link-landing {
   color: black;
-  padding: 0 10px;
+  padding: 0 40px;
+  font-size: 14px;
   font-weight: lighter;
   letter-spacing: 2px;
   line-height: 0.5px;
 }
-.navbar-hakuna-link:hover {
+.navbar-hakuna-link-landing:hover {
   color: grey;
   text-decoration: none;
 }
-.social-links-homepage {
+.social-links-landing {
   position: absolute;
   top: 150px;
   right: 50px;
@@ -123,42 +123,5 @@
 .navbar-hakuna-link-scroll:hover {
   color: #8FF0E8;
   text-decoration: none;
-}
-
-@media only screen and (max-width:1025px){
-  .navbar-hakuna-main-homepage {
-    right: calc(100vw - 73.5%);
-  }
-}
-// IPAD - portrait 767 - 768
-@media only screen and (min-width: 767px) and (max-width:768px){
-  .navbar-hakuna-brand-homepage img {
-    top: 5%;
-    right: calc(100vw - 62.3%);
-  }
-}
-// Galaxy/Nexus - landscape 600 - 766
-@media only screen and (max-width:766px){ 
-  .navbar-hakuna-brand-homepage img {
-    top: 5%;
-    right: calc(100vw - 64.3%);
-  }
-}
-// IPHONE 5 – landscape 500 - 600
-@media only screen and (max-width:600px){ 
-}
-// IPHONE 6 & Plus– portrait 360 - 500
-@media only screen and (max-width:500px){ 
-  .navbar-hakuna-brand-homepage img {
-    top: 5%;
-    right: calc(100vw - 75.3%);
-  }
-}
-// IPHONE 5 & smaller – portrait max 359
-@media only screen and (max-width:359px){ 
-  .navbar-hakuna-brand-homepage img {
-    top: 10%;
-    right: calc(100vw - 79.3%);
-  }
 }
 
