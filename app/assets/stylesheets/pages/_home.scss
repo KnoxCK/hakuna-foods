@@ -9,7 +9,8 @@
 	margin: 70px 0 50px 0;
 }
 .icon {
-	margin: 0 90px;
+	width: 198px;
+    margin: 0 63px;
 	img {
 		margin-bottom: 20px;
 		height: 70px;
@@ -18,13 +19,19 @@
 		font-weight: lighter;
 	}
 }
-
 .landing-image img {
 	height: 230px;
 	margin: 0 10px;
 }
-.what-we-do p {
-	padding: 0 266px;
+.what-we-do {
+	p {
+		padding: 0 266px;
+		font-weight: lighter;
+	}
+	hr {
+		border-bottom: 3px solid #FED309;
+    	margin: 28px 581px;
+	}
 }
 .landing-order-now {
 	display: flex;
@@ -52,6 +59,10 @@
 	p {
 		padding-top: 40px;
 		font-weight: lighter;
+	}
+	hr {
+		border-bottom: 3px solid #5DB035;
+    	margin: 28px 581px 32px 581px;
 	}
 }
 .menu-scroll {
