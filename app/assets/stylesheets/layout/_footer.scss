@@ -1,1 +1,31 @@
-// Your footer style
+.footer {
+	background-color: #333332;
+	display: flex;
+	justify-content: center;
+	h6 {
+		color: white;
+	}
+	p {
+		font-size: 14px;
+		font-weight: lighter;
+		color: #D6D7D8;
+	}
+}
+.footer-child {
+	padding: 40px;
+}
+.footer-goto {
+	display: flex;
+}
+.col-one {
+	padding-right: 30px;
+	padding-left: 50px;
+}
+.col-two {
+	padding-left: 30px;
+	padding-top: 36px;
+}
+.footer-hakuna-brand img {
+	margin-top: 18px;
+    height: 80px;
+}
