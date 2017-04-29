@@ -22,19 +22,19 @@
 .landing-image img {
 	height: 280px;
 	margin: 0;
-	z-index: 2000;
+	z-index: 300;
 }
 #first-landing-image {
-	margin-top: -100px;
-}
-#third-landing-image {
 	margin-top: -430px;
 }
+#third-landing-image {
+	margin-top: -300px;
+}
 .what-we-do {
-	margin-top: 150px;
+	margin: 100px 0 120px 0;
 	z-index: 20;
 	p {
-		padding: 0 266px;
+		padding: 0 366px;
 		font-weight: lighter;
 	}
 	hr {
