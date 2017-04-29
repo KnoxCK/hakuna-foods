@@ -1,15 +1,11 @@
-.landing-images {
-	display: flex;
-	justify-content: center;
-	margin: 0 20px;
-}
 .icons {
 	display: flex;
 	justify-content: center;
 	margin: 70px 0 50px 0;
 }
 .icon {
-	margin: 0 90px;
+	width: 198px;
+    margin: 0 63px;
 	img {
 		margin-bottom: 20px;
 		height: 70px;
@@ -18,13 +14,36 @@
 		font-weight: lighter;
 	}
 }
-
-.landing-image img {
-	height: 230px;
-	margin: 0 10px;
+.landing-images {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
 }
-.what-we-do p {
-	padding: 0 266px;
+.landing-image img {
+	height: 280px;
+	margin: 0;
+	z-index: 300;
+}
+#first-landing-image {
+	margin-top: -430px;
+}
+#third-landing-image {
+	margin-top: -300px;
+}
+.what-we-do {
+	margin: 100px 0 120px 0;
+	z-index: 20;
+	p {
+		padding: 0 366px;
+		font-weight: lighter;
+	}
+	hr {
+		border-bottom: 3px solid #FED309;
+    	margin: 28px 581px;
+	}
+}
+.border {
+	width: 100%;
 }
 .landing-order-now {
 	display: flex;
@@ -53,16 +72,20 @@
 		padding-top: 40px;
 		font-weight: lighter;
 	}
+	hr {
+		border-bottom: 3px solid #5DB035;
+    	margin: 28px 581px 32px 581px;
+	}
 }
 .menu-scroll {
 	background-color: white;
+	background: rgba(255, 255, 255, 0.7);
     padding: 10px 0;
     position: absolute;
     bottom: 52px;
     left: 436px;
     z-index: 100;
     display: flex;
-    opacity: 0.7	;
     z-index: 10;
     h4 {
     	padding: 0 90px;

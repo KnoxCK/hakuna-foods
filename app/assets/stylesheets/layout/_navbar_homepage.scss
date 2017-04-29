@@ -4,7 +4,7 @@
   background-color: white;
   border-color: transparent;
   height: 120px;
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.7);
   box-shadow: 1px 1px 1px #D9D9D9;
   display: flex;
   justify-content: center;
@@ -34,13 +34,12 @@
 .navbar-hakuna-main-landing {
   display: flex;
   align-items: center;
-  
+  margin-right: 20px;
 }
 .navbar-hakuna-link-landing {
-  color: black;
+  color: #333332;
   padding: 0 40px;
   font-size: 14px;
-  font-weight: lighter;
   letter-spacing: 2px;
   line-height: 0.5px;
 }
@@ -102,26 +101,15 @@
   color: black;
 }
 // On scroll only
-.navbar-hakuna-scroll {
-  display: flex;
-  height: 70px;
-  padding: 0px 60px;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  opacity: 0.8;
-  box-shadow: 1px 1px 1px #D9D9D9;
+@media(min-width: 980px){
+  .smooth-scroll {
+    top: -100px;
+    transition: top 2s ease;
+  }
+  .navbar-hakuna {
+    transition: top 2s ease;
+  }
 }
-.navbar-hakuna-link-scroll {
-  color: #565656;
-  font-size: 14px;
-  font-weight: lighter;
-  padding: 0 10px;
-  letter-spacing: 2px;
-  line-height: 0.5px;
-}
-.navbar-hakuna-link-scroll:hover {
-  color: #8FF0E8;
-  text-decoration: none;
-}
+ 
+
 
