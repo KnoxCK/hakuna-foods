@@ -2,7 +2,7 @@
   background-image: url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');
   color: white;
   text-align: center;
-  height: 100vh;
+  height: calc(100vh - 25.78px);
   width: 100%;
   background-size: cover !important;
   display: flex;
