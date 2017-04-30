@@ -9,7 +9,6 @@
 	</div>
 	<%= link_to "ORDER NOW", "", class: "landing-btn-red" %>
 </div>
-<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
 <div class="icons">
 	<div class="icon text-center" id="icon-1">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396159/ChoosePlan_hhsyyv.png" %>
@@ -24,6 +23,7 @@
 		<p>3. FRESHLY PREPARED AND<br>DELIVERED STRAIGHT<br>TO YOUR DOOR</p>
 	</div>
 </div>
+<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
 <div class="what-we-do text-center">
 	<h3>WHAT WE DO?</h3>
 	<hr>
@@ -33,11 +33,11 @@
 </div>
 <div class="landing-images hidden">
 	<div class="landing-image slideRight" id="first-landing-image">
-		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493456416/Tuna_zo1bwy.png" %>
+		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493554764/Tuna_daoetr.png" %>
 	</div>
 	
 	<div class="landing-image slideLeft" id="third-landing-image">
-		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493456416/Berries_ddho49.png" %>
+		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493554569/Berries_p1wmlh.png" %>
 	</div>
 </div>
 <%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
@@ -45,12 +45,16 @@
 	<div class="one-week-programme">
 		<h3>ONE WEEK PROGRAMME</h3>
 		<p>Eat a HAKUNA meal plan for 5 days</p>
-		<%= link_to "ORDER NOW", "", class: "landing-btn-clear" %>
+		<%= link_to "", class: "landing-btn-clear" do %>
+  			ORDER NOW  &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+		<% end %>
 	</div>
 	<div class="weekly-subscription">
 		<h3>WEEKLY SUBSCRIPTION</h3>
 		<p>Enjoy a HAKUNA meals 5 days a week on a rolling basis</p>
-		<%= link_to "ORDER NOW", "", class: "landing-btn-clear" %>
+		<%= link_to "", class: "landing-btn-clear" do %>
+  			ORDER NOW  &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+		<% end %>
 	</div>
 </div>
 <%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
@@ -59,9 +63,13 @@
 	<hr>
 	<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493374913/Asset_4_ibmpqh.jpg" %>
 	<div class="menu-scroll">
-		<i class="fa fa-angle-left"></i>
+		<%= link_to "" do %>
+  			<i class="fa fa-angle-left"></i>
+		<% end %>
 		<h4>MEAL NAME</h4>
-		<i class="fa fa-angle-right"></i>
+		<%= link_to "" do %>
+  			<i class="fa fa-angle-right"></i>
+		<% end %>
 	</div>
 	<p>Ingredient, ingredient, ingredient</p>
 </div>
