@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
-  belongs_to :customer, through: :meal_plan
-  has_one :meal_plan
+  belongs_to :customer, through: :customer_plan
+  has_one :customer_plan
 
   monetize :price_pennies
 
