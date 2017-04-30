@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  skip_before_action :authenticate_user
+  skip_before_action :authenticate_user!
   before_action :set_customer, :set_customer_plan
 
   def show
