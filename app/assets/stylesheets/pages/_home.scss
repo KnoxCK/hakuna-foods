@@ -1,4 +1,107 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+.icons {
+	background-color: #F7F7F7;
+	display: flex;
+	justify-content: center;
+	padding: 60px 0 30px 0;
+}
+.icon {
+	width: 198px;
+    margin: 0 63px;
+	img {
+		margin-bottom: 20px;
+		height: 70px;
+	}
+	p {
+		font-weight: lighter;
+	}
+}
+.landing-images {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+}
+.landing-image img {
+	height: 280px;
+	margin: 0;
+	z-index: 300;
+}
+#first-landing-image {
+	margin-top: -430px;
+}
+#third-landing-image {
+	margin-top: -300px;
+}
+.what-we-do {
+	margin: 100px 0 120px 0;
+	z-index: 20;
+	p {
+		padding: 0 366px;
+		font-weight: lighter;
+	}
+	hr {
+		border-bottom: 3px solid #FED309;
+    	margin: 28px 581px;
+	}
+}
+.border {
+	width: 100%;
+}
+.landing-order-now {
+	display: flex;
+	justify-content: center;
+	background-color: #F7F7F7;
+	padding: 80px 0;
+	p {
+		font-weight: lighter;
+		margin-top: 25px;
+	}
+} 
+.one-week-programme {
+	padding-right: 60px;
+}
+.weekly-subscription {
+	padding-left: 60px;
+}
+.example-menus {
+	margin-top: 70px;
+	position: relative;
+	img {
+		height: 35vw;
+		z-index: -10;
+	}
+	p {
+		padding-top: 40px;
+		font-weight: lighter;
+	}
+	hr {
+		border-bottom: 3px solid #5DB035;
+    	margin: 28px 581px 32px 581px;
+	}
+}
+.menu-scroll {
+	background-color: white;
+	background: rgba(255, 255, 255, 0.7);
+    padding: 10px 0;
+    position: absolute;
+    bottom: 52px;
+    left: 436px;
+    z-index: 100;
+    display: flex;
+    z-index: 10;
+    h4 {
+    	padding: 0 90px;
+    	letter-spacing: 1px;
+    	z-index: 100;
+    }	
+    i {
+    	font-size: 24px;
+    	margin-top: 9px;
+    	margin-bottom: 11px;
+    	padding: 0 20px;
+    	text-decoration: none;
+    	color: #333332;
+    }
+    i:hover {
+    	opacity: 0.5;
+    }
+}

@@ -1,20 +1,37 @@
 <%= render 'shared/navbar_general' %>
-<br></br>
-<br></br>
-<h3>MAINTAIN</h3>
-<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
-
-<h3>TRAIN</h3>
-<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
-
-<h3>TRIM</h3>
-<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
-
-<h3>POSTNATAL</h3>
-<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
-
-<h3>VEGETARIAN</h3>
-<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
-
-<h3>BESPOKE</h3>
-<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+<div class="meal-plans">
+	<div class="meal-plans-first">
+		<div class="meal-plan">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+			<h3>MAINTAIN</h3>
+			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		</div>
+		<div class="meal-plan">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+			<h3>TRAIN</h3>
+			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		</div>
+		<div class="meal-plan">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+			<h3>TRIM</h3>
+			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		</div>
+	</div>
+	<div class="meal-plans-second">
+		<div class="meal-plan">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+			<h3>POSTNATAL</h3>
+			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		</div>
+		<div class="meal-plan">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+			<h3>VEGETARIAN</h3>
+			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		</div>
+		<div class="meal-plan">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+			<h3>BESPOKE</h3>
+			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		</div>
+	</div>
+</div>
