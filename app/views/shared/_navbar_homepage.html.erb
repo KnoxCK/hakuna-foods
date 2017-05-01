@@ -5,9 +5,9 @@
 
 <!-- Navbar menu -->
     <!-- Meal Plans link -->
-    <h4><%= link_to "MEAL PLANS", "", class: "navbar-hakuna-link-landing" %></h4>
+    <h4><%= link_to "MEAL PLANS", mealplans_path, class: "navbar-hakuna-link-landing" %></h4>
     <!-- The About link -->
-    <h4><%= link_to "ABOUT", "", class: "navbar-hakuna-link-landing" %></h4>
+    <h4><%= link_to "ABOUT", about_path, class: "navbar-hakuna-link-landing" %></h4>
 
     <!-- Logo -->
   <%= link_to root_path, class: "navbar-hakuna-brand-landing" do %>
@@ -15,9 +15,9 @@
   <% end %>
     
     <!-- Our Food link -->
-    <h4><%= link_to "OUR FOOD", "", class: "navbar-hakuna-link-landing" %></h4>
+    <h4><%= link_to "OUR FOOD", ourfood_path, class: "navbar-hakuna-link-landing" %></h4>
     <!-- Order link -->
-    <h4><%= link_to "ORDER", "", class: "navbar-hakuna-link-landing" %></h4>
+    <h4><%= link_to "ORDER", order_path, class: "navbar-hakuna-link-landing" %></h4>
   </div>
       
   <!-- Dropdown list appearing on mobile only -->
@@ -25,10 +25,10 @@
       <div class="dropdown dropdown-toggle-black"> 
         <a class="fa fa-bars dropdown-toggle" data-toggle="dropdown" href="#"></a>
         <ul class="dropdown-menu dropdown-menu-main .navbar-hakuna-dropdown-menu">
-          <li><%= link_to "MEAL PLANS", "", class: "navbar-hakuna-link-landing" %></li> 
-           <li><%= link_to "ABOUT", "", class: "navbar-hakuna-link-landing" %></li> 
-          <li><%= link_to "OUR FOOD", "", class: "navbar-hakuna-link-landing" %></li>  
-          <li><%= link_to "ORDER", "", class: "navbar-hakuna-link-landing" %></li>  
+          <li><%= link_to "MEAL PLANS", mealplans_path, class: "navbar-hakuna-link-landing" %></li> 
+           <li><%= link_to "ABOUT", about_path, class: "navbar-hakuna-link-landing" %></li> 
+          <li><%= link_to "OUR FOOD", ourfood_path, class: "navbar-hakuna-link-landing" %></li>  
+          <li><%= link_to "ORDER", order_path, class: "navbar-hakuna-link-landing" %></li>  
           <li><%= link_to "FACEBOOK", "https://www.facebook.com/", class: "navbar-hakuna-link-landing", target: "blank" %></li>
           <li><%= link_to "INSTAGRAM", "https://www.instagram.com/", class: "navbar-hakuna-link-landing", target: "blank" %></li>  
           <li><%= link_to "TWITTER", "https://www.twitter.com/", class: "navbar-hakuna-link-landing", target: "blank" %></li>
