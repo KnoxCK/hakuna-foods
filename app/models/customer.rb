@@ -13,4 +13,8 @@ class Customer < ApplicationRecord
     "#{self.first_name} #{self.last_name}"
   end
 
+  def formatted_dob
+    self.dob.strftime("%d %B %Y")
+  end
+
 end
