@@ -37,7 +37,9 @@ class PaymentsController < ApplicationController
 
     end
 
-    @order.update(payment: charge.to_json, state: 'Paid')
+    @customer.update(stripe_customer_id: customer.id)
+
+    @order.update(payment: charge.to_json, customer: customer, state: 'Paid')
     redirect_to customer_customer_plan_order_path(@customer, @customer_plan, @order)
 
 

@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @order = Order.create(customer_plan_id: @customer_plan.id,
       state: 'Pending', total_price_pennies: @customer_plan.total_price)
 
-    redirect_to customer_customer_plan_order_path(@customer.id, @customer_plan.id, @order.id)
+    redirect_to new_customer_customer_plan_order_payment_path(@customer.id, @customer_plan.id, @order.id)
   end
 
   private
