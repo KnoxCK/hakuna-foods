@@ -14,8 +14,8 @@ class PaymentsController < ApplicationController
     if @customer_plan.subscription
 
       plan = Stripe::Plan.create(
-      :name => "#{@customer.full_name}",
-      :id =>"#{@customer.email}",
+      :name => "#{@customer.full_name}-#{@customer_plan.meal_plan.name}",
+      :id =>"#{@customer.email}-#{@order.id}",
       :interval => "week",
       :currency => "gbp",
       :amount => @order.total_price_pennies,
@@ -39,7 +39,7 @@ class PaymentsController < ApplicationController
 
     @customer.update(stripe_customer_id: customer.id)
 
-    @order.update(payment: charge.to_json, customer: customer, state: 'Paid')
+    @order.update(payment: charge.to_json, state: 'Paid')
     redirect_to customer_customer_plan_order_path(@customer, @customer_plan, @order)
 
 

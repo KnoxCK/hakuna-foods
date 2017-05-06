@@ -23,14 +23,14 @@
   </ul>
   <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
-  <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price_pennies) %></h3>
+  <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3>
 
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-name="<%= @customer.full_name %>"
     data-description="<%= @customer.email %>"
-    data-amount="<%= @order.total_price_pennies * 100 %>"
+    data-amount="<%= @order.total_price_pennies %>"
     data-currency="gbp"></script>
 
 <% end %>
