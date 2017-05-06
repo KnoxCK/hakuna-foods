@@ -7,6 +7,8 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @order = Order.create(customer_id: @customer.id, customer_plan_id: @customer_plan.id
+      state: 'Pending', )
   end
 
   private

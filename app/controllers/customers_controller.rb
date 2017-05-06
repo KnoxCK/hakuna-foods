@@ -13,7 +13,7 @@ class CustomersController < ApplicationController
       redirect_to edit_customer_path(@customer)
     else
       @customer.valid_postcode = false
-      @error = "We're terribly sorry, but we do not deliver to your area. Fuck Off."
+      @error = "We're terribly sorry, but we do not deliver to your area. Now Fuck Off."
       @customer.save
     end
   end
