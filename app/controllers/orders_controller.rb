@@ -21,6 +21,6 @@ class OrdersController < ApplicationController
   end
 
   def set_customer_plan
-    @customer_plan = CustomerPlan.where(customer_id: params[:customer_id]).first
+    @customer_plan = CustomerPlan.find(params[:customer_plan_id])
   end
 end
