@@ -3,12 +3,15 @@ class OrdersController < ApplicationController
   before_action :set_customer, :set_customer_plan
 
   def show
-    @order = Order.where(state: 'paid').find(params[:id])
+    # @order = Order.where(state: 'paid').find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   def create
-    @order = Order.create(customer_id: @customer.id, customer_plan_id: @customer_plan.id
-      state: 'Pending', )
+    @order = Order.create(customer_plan_id: @customer_plan.id,
+      state: 'Pending', total_price_pennies: @customer_plan.total_price)
+
+    redirect_to customer_customer_plan_order_path(@customer.id, @customer_plan.id, @order.id)
   end
 
   private
