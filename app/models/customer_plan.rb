@@ -7,7 +7,7 @@ class CustomerPlan < ApplicationRecord
 
   monetize :total_price_pennies
 
-  def extras(params)
+  def add_extras(params)
     extras = Extra.pluck(:name)
     extra_items = []
     params.each do |key, value|
@@ -23,7 +23,6 @@ class CustomerPlan < ApplicationRecord
   end
 
   def update_extras(params)
-    binding.pry
     extras = Extra.pluck(:name)
     extra_items = []
     params.each do |key, value|
