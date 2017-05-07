@@ -14,12 +14,12 @@ class PaymentsController < ApplicationController
     if @customer_plan.subscription
 
       plan = Stripe::Plan.create(
-      :name => "#{@customer.full_name}-#{@customer_plan.meal_plan.name}",
-      :id =>"#{@customer.email}-#{@order.id}",
-      :interval => "week",
-      :currency => "gbp",
-      :amount => @order.total_price_pennies,
-      )
+        name:     "#{@customer.full_name}-#{@customer_plan.meal_plan.name}",
+        id:       "#{@customer.email}-#{@order.id}",
+        interval: "week",
+        currency: "gbp",
+        amount:   @order.total_price_pennies,
+        )
 
       Stripe::Subscription.create(
         customer: customer.id,
