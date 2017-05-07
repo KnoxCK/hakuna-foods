@@ -4,7 +4,7 @@
   <p>Name: <%= @customer.full_name %></p>
   <p>Email: <%= @customer.email %></p>
   <p>Gender: <%= @customer.gender %></p>
-  <p>DOB:<%= @customer.dob %></p>
+  <p>DOB: <%= @customer.formatted_dob %></p>
   <p>Height: <%= @customer.height %>cm</p>
   <p>Weight: <%= @customer.weight %>kg</p>
   <p>Exercise: <%= @customer.exercise %> times per week</p>
@@ -35,5 +35,5 @@
 
   <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
   <br>
-  <%= link_to "Confirm", about_path, class: 'view-plan-btn' %>
+  <%= link_to "Confirm and proceed to payment", customer_customer_plan_orders_path(@customer, @customer.customer_plan), method: :post, class: 'view-plan-btn' %>
 </div>

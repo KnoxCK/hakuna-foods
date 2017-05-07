@@ -1,2 +1,29 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+<div class="form">
+  <h1>Your Order:</h1>
+  <p>Name: <%= @customer.full_name %></p>
+  <p>Email: <%= @customer.email %></p>
+  <p>Phone: <%= @customer.phone %></p>
+
+  <h4><strong>Delivery Address:</strong></h4>
+  <p><%= @customer.address.address_line1 %></p>
+  <p><%= @customer.address.address_line2 %></p>
+  <p><%= @customer.address.address_line3 %></p>
+  <p><%= @customer.address.postcode %></p>
+  <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
+  <br>
+
+  <p>Meal Plan: <%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
+  <ul>Extras: <% @customer.customer_plan.extra_items.each do |extra| %>
+    <% if extra.quantity_per_week != 0 %>
+      <li><%= Extra.find(extra.extra_id).name %> - <%= extra.quantity_per_week %> per week</li>
+    <% end %>
+  <% end %>
+  </ul>
+  <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
+
+  <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3>
+
+  <h2><%= @order.state %></h2>
+
+
+</div>

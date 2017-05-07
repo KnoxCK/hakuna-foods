@@ -5,6 +5,7 @@ class CustomerPlan < ApplicationRecord
   has_many :extras, through: :extra_items
   belongs_to :meal_plan
 
+  monetize :total_price_pennies
 
   def extras(params)
     extras = Extra.pluck(:name)
@@ -22,6 +23,7 @@ class CustomerPlan < ApplicationRecord
   end
 
   def update_extras(params)
+    binding.pry
     extras = Extra.pluck(:name)
     extra_items = []
     params.each do |key, value|

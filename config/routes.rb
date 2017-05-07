@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'payments/new'
-
-  get 'payments/create'
-
-  get 'orders/show'
-
-  get 'orders/create'
-
   devise_for :users
   root to: 'pages#home'
   get 'mealplans', to: 'pages#mealplans'
@@ -20,6 +12,9 @@ Rails.application.routes.draw do
     resources :addresses, only: [:new, :create, :edit, :update]
     resources :customer_plans, only: [:new, :create, :edit, :update] do
       resources :extra_items, only: [:new, :create, :edit, :update]
+      resources :orders, only: [:show, :create] do
+        resources :payments, only: [:new, :create]
+      end
     end
   end
   patch '/customers/:customer_id/customer_plans/:customer_plan_id/extra_items', to: 'extra_items#update'
