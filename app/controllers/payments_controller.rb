@@ -14,7 +14,8 @@ class PaymentsController < ApplicationController
     if @customer_plan.subscription
 
       plan = Stripe::Plan.create(
-        name:     "#{@customer.full_name}-#{@customer_plan.meal_plan.name}",
+        name:     "#{@customer.full_name}-#{@customer_plan.meal_plan.name}
+                    Plan - Order No. #{@order.id}",
         id:       "#{@customer.email}-#{@order.id}",
         interval: "week",
         currency: "gbp",
