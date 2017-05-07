@@ -21,6 +21,9 @@ gem 'coffee-script'
 gem 'money-rails'
 gem 'stripe'
 
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
