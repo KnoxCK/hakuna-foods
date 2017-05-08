@@ -2,7 +2,7 @@ class Customer < ApplicationRecord
 
   has_one :address, dependent: :destroy
   has_one :customer_plan
-  has_many :orders, through: :meal_plan_items
+  has_many :orders, through: :customer_plan
 
   def check_postcode(postcode)
     valid_postcodes = ['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',

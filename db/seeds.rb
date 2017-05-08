@@ -2,14 +2,17 @@
 
 MealPlan.destroy_all
 Extra.destroy_all
+User.destroy_all
 
-MealPlan.create!(name: 'Maintain', sku: "maintain-monthly-plan", daily_price: 39)
-MealPlan.create!(name: 'Train', sku: "train-monthly-plan", daily_price: 41)
-MealPlan.create!(name: 'Trim', sku: "trim-monthly-plan", daily_price: 36)
-MealPlan.create!(name: 'Postnatal', sku: "postnatal-monthly-plan", daily_price: 39)
-MealPlan.create!(name: 'Vegetarian', sku: "vegetarian-monthly-plan", daily_price: 39)
-MealPlan.create!(name: 'Bespoke', sku: "bespoke-monthly-plan", daily_price: 0)
+User.create!(email: "guv@test.com", password: "123456", admin: true)
 
-Extra.create!(name: 'Kombucha', sku: "kombucha-extra", unit_price: 2.5)
-Extra.create!(name: 'Cold Press Coffee', sku: "coffee-extra", unit_price: 2.5)
-Extra.create!(name: 'Sweet Treat', sku: "sweet-extra", unit_price: 2.5)
+MealPlan.create!(name: 'Maintain', daily_price: 39)
+MealPlan.create!(name: 'Train', daily_price: 41)
+MealPlan.create!(name: 'Trim', daily_price: 36)
+MealPlan.create!(name: 'Postnatal', daily_price: 39)
+MealPlan.create!(name: 'Vegetarian', daily_price: 39)
+MealPlan.create!(name: 'Bespoke', daily_price: 0)
+
+Extra.create!(name: 'Kombucha', unit_price: 2.5)
+Extra.create!(name: 'Cold Press Coffee',  unit_price: 2.5)
+Extra.create!(name: 'Sweet Treat', unit_price: 2.5)
