@@ -1,37 +1,120 @@
 <%= render 'shared/navbar_general' %>
-<div class="meal-plans">
-	<div class="meal-plans-first">
-		<div class="meal-plan">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
-			<h3>MAINTAIN</h3>
-			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+<div class="mealplans_banner">
+</div>
+<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
+<div class="icon-large text-center padded">
+	<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396159/ChoosePlan_hhsyyv.png" %>
+	<h4>1. CHOOSE YOUR MEAL PLAN</h4>
+</div>
+<div class="meal-plans-section">
+	<div class="meal-plans meal-plans-line-one">
+		<div class="meal-plan-maintain-box">
+			<div class="meal-plan-maintain">
+				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+				<h4>MAINTAIN</h4>
+			</div>
+			<div class="meal-plan-read-more">
+				<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+				<%= link_to "", class: "view-plan-btn" do %>
+					VIEW PLAN &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<% end %>
+			</div>
 		</div>
-		<div class="meal-plan">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
-			<h3>TRAIN</h3>
-			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		<div class="meal-plan-train-box">
+			<div class="meal-plan-train">
+				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+				<h4>TRAIN</h4>
+			</div>
+			<div class="meal-plan-read-more">
+				<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+				<%= link_to "", class: "view-plan-btn" do %>
+					VIEW PLAN &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<% end %>
+			</div>
 		</div>
-		<div class="meal-plan">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
-			<h3>TRIM</h3>
-			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		<div class="meal-plan-trim-box">
+			<div class="meal-plan-trim">
+				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+				<h4>TRIM</h4>
+			</div>
+			<div class="meal-plan-read-more">
+				<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+				<%= link_to "", class: "view-plan-btn" do %>
+					VIEW PLAN &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<% end %>
+			</div>
 		</div>
 	</div>
-	<div class="meal-plans-second">
-		<div class="meal-plan">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
-			<h3>POSTNATAL</h3>
-			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+	<div class="meal-plans meal-plans-line-two">
+		<div class="meal-plan-maintain-box">
+			<div class="meal-plan-postnatal">
+				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+				<h4>POSTNATAL</h4>
+			</div>
+			<div class="meal-plan-read-more">
+				<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+				<%= link_to "", class: "view-plan-btn" do %>
+					VIEW PLAN &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<% end %>
+			</div>
 		</div>
-		<div class="meal-plan">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
-			<h3>VEGETARIAN</h3>
-			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		<div class="meal-plan-train-box">
+			<div class="meal-plan-vegetarian">
+				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+				<h4>VEGETARIAN</h4>
+			</div>
+			<div class="meal-plan-read-more">
+				<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+				<%= link_to "", class: "view-plan-btn" do %>
+					VIEW PLAN &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<% end %>
+			</div>
 		</div>
-		<div class="meal-plan">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
-			<h3>BESPOKE</h3>
-			<%= link_to "VIEW PLAN", order_path, class: "view-plan-btn" %>
+		<div class="meal-plan-trim-box">
+			<div class="meal-plan-bespoke">
+				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg" %>
+				<h4>BESPOKE</h4>
+			</div>
+			<div class="meal-plan-read-more">
+				<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+				<%= link_to "", class: "view-plan-btn" do %>
+					VIEW PLAN &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<% end %>
+			</div>
 		</div>
 	</div>
+</div>
+<div class="prepare-section">
+	<div class="icon-large text-center padded">
+		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396196/Tailor_jfrk1a.png" %>
+		<h4>2. WE EXPERTLY PREPARE FRESH <br>AND TASTY FOOD</h4>
+		<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+		<br>
+		<p>Learn more about our food</p>
+	</div>
+	<div class="prepare-images">
+		<div class="top">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg", class: "prepare-image" %>
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg", class: "prepare-image" %>
+		</div>
+		<div class="bottom">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg", class: "prepare-image" %>
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg", class: "prepare-image" %>
+		</div>
+	</div>
+</div>
+<div class="deliver-section">
+	<div class="deliver-image">
+		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378151/Asset_2_zmhv9m.jpg", class: "deliver-image" %>
+	</div>
+	<div class="icon-large text-center padded">
+		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396196/Tailor_jfrk1a.png" %>
+		<h4>3. WE DELIVER STRAIGHT TO YOUR DOOR</h4>
+		<p>A nourishing plan for maintaining a healthy active lifestyle</p>
+		<br>
+		<p>Learn more about our food</p>
+	</div>
+</div>
+<div class="choose-plan-btn">
+	<%= link_to "ORDER NOW", "", class: "landing-btn-red" %>
 </div>
