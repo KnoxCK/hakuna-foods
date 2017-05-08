@@ -23,7 +23,6 @@ class CustomerPlan < ApplicationRecord
   end
 
   def update_extras(params)
-    binding.pry
     extras = Extra.pluck(:name)
     extra_items = []
     params.each do |key, value|

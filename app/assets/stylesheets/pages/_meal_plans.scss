@@ -1,12 +1,109 @@
-.meal-plans img {
-	height: 100px;
-	margin: 20px;
+.icon-large {
+    margin: 0 63px;
+	img {
+		margin-bottom: 20px;
+		height: 100px;
+	}
+	p {
+		font-weight: lighter;
+	}
 }
-.meal-plans-first { 
+.meal-plans-section img {
+	width: 330px;
+    margin: 10px;
+}
+.meal-plan-read-more {
+	width: 350px;
+	text-align: center;
+	p { 
+		padding: 15px 25px
+	}
+}
+.meal-plans-line-one { 
 	display: flex;
 	justify-content: center;
 }
-.meal-plans-second { 
+.meal-plans-line-two { 
 	display: flex;
 	justify-content: center;
+	margin-top: 30px;
+}
+
+// each meal plan
+.meal-plan-maintain {
+	position: relative;
+	h4 {
+		position: absolute;
+	    top: 97px;
+	    left: 22%;
+	    background-color: white;
+	    padding: 15px 44px;
+	}
+}
+.meal-plan-train {
+	position: relative;
+	h4 {
+		position: absolute;
+	    top: 97px;
+	    left: 29%;
+	    background-color: white;
+	    padding: 15px 44px;
+	}
+}
+.meal-plan-trim {
+	position: relative;
+	h4 {
+		position: absolute;
+	    top: 97px;
+	    left: 30%;
+	    background-color: white;
+	    padding: 15px 44px;
+	}
+}
+.meal-plan-postnatal {
+	position: relative;
+	h4 {
+		position: absolute;
+	    top: 97px;
+	    left: 21%;
+	    background-color: white;
+	    padding: 15px 44px;
+	}
+}
+.meal-plan-vegetarian {
+	position: relative;
+	h4 {
+		position: absolute;
+	    top: 97px;
+	    left: 20%;
+	    background-color: white;
+	    padding: 15px 44px;
+	}
+}
+.meal-plan-bespoke {
+	position: relative;
+	h4 {
+		position: absolute;
+	    top: 97px;
+	    left: 24%;
+	    background-color: white;
+	    padding: 15px 44px;
+	}
+}
+.prepare-section {
+	display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.prepare-image {
+	width: 250px;
+	margin: 5px 4px;
+}
+.deliver-section {
+	display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.deliver-image {
+	width: 512px;
 }
