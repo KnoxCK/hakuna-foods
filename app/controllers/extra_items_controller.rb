@@ -7,7 +7,7 @@ class ExtraItemsController < ApplicationController
   end
 
   def create
-    @customer_plan.extras(params)
+    @customer_plan.create_extras(params)
     @customer_plan.calculate_weekly_extras
     @customer_plan.calculate_total_price
     redirect_to new_customer_address_path(@customer)

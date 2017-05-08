@@ -15,7 +15,7 @@ class PaymentsController < ApplicationController
 
       plan = Stripe::Plan.create(
         name:     "#{@customer.full_name}-#{@customer_plan.meal_plan.name}
-                    Plan - Order No. #{@order.id}",
+                    Plan - Order ##{@order.id}",
         id:       "#{@customer.email}-#{@order.id}",
         interval: "week",
         currency: "gbp",
@@ -32,7 +32,7 @@ class PaymentsController < ApplicationController
       charge = Stripe::Charge.create(
         customer: customer.id,
         amount: @order.total_price_pennies,
-        description:  "Payment from #{@customer.full_name} for order #{@order.id}",
+        description:  "Payment from #{@customer.full_name} for order ##{@order.id}",
         currency:     "gbp",
         )
 
