@@ -45,7 +45,7 @@ class PaymentsController < ApplicationController
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to new_customer_customer_plan_order_payment(@customer, @customer_plan, @order)
+    redirect_to new_customer_customer_plan_order_payment_path(@customer, @customer_plan, @order)
   end
 
   protect_from_forgery
