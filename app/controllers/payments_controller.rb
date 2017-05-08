@@ -50,8 +50,6 @@ class PaymentsController < ApplicationController
 
   protect_from_forgery
 
-  end
-
   private
 
   def set_customer
