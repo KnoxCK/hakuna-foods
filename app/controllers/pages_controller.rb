@@ -19,4 +19,7 @@ class PagesController < ApplicationController
   def orderform
     @customer = Customer.new
   end
+
+  def bespoke
+  end
 end
