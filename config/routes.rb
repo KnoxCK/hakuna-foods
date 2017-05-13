@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'order', to: 'pages#order'
   get 'about', to: 'pages#about'
   get 'orderform', to: 'pages#orderform'
+  get 'bespoke', to: 'pages#bespoke'
 
   resources :customers, only: [:create, :edit, :update, :show] do
     resources :addresses, only: [:new, :create, :edit, :update]
