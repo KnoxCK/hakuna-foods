@@ -20,7 +20,10 @@ class CustomerPlansController < ApplicationController
   end
 
   def update
-    @customer_plan.update(meal_plan_params)
+    @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id]
+    meal_plan_params[:subscription] == "Yes" ?
+      @customer_plan.subscription = true : @customer_plan.subscription = false
+    @customer_plan.save
     redirect_to edit_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
   end
 

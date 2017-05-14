@@ -1,6 +1,7 @@
+<div class="form">
 <h1>Purchase of Hakuna Meal Plan</h1>
 <%= form_tag customer_customer_plan_order_payments_path(@customer, @customer_plan, @order) do %>
-<div class="form">
+
   <h1>Your Order:</h1>
   <p>Name: <%= @customer.full_name %></p>
   <p>Email: <%= @customer.email %></p>
@@ -34,3 +35,4 @@
     data-currency="gbp"></script>
 
 <% end %>
+</div>
