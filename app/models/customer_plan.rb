@@ -23,22 +23,37 @@ class CustomerPlan < ApplicationRecord
   end
 
   def update_extras(params)
+    # extras = Extra.pluck(:name)
+    # extra_items = []
+    # params.each do |key, value|
+    #   if extras.include?(key)
+    #     extra_items << [Extra.where(name: key).first.id, value]
+    #   end
+    # end
+
+    # extra_items.each do |extra|
+    #   if ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0])
+    #     ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0]).update(quantity_per_week: extra[1].to_i)
+    #   else
+    #     ExtraItem.create(customer_plan_id: self.id, extra_id: extra[0],
+    #    quantity_per_week: extra[1].to_i)
+    #   end
+    # end
+    ExtraItem.where(customer_plan_id: self.id).destroy_all
+
     extras = Extra.pluck(:name)
     extra_items = []
     params.each do |key, value|
-      if extras.include?(key)
+      if extras.include?(key) && (value != "0" && value != "")
         extra_items << [Extra.where(name: key).first.id, value]
       end
     end
 
     extra_items.each do |extra|
-      if ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0])
-        ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0]).update(quantity_per_week: extra[1].to_i)
-      else
-        ExtraItem.create(customer_plan_id: self.id, extra_id: extra[0],
+      ExtraItem.create(customer_plan_id: self.id, extra_id: extra[0],
        quantity_per_week: extra[1].to_i)
-      end
     end
+
   end
 
   def calculate_weekly_extras
