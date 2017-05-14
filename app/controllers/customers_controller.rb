@@ -6,7 +6,8 @@ class CustomersController < ApplicationController
   end
 
   def create
-    @customer = Customer.create(customer_params)
+    Customer.where(email: customer_params[:email]) ? @customer = Customer.where(email: customer_params[:email]).first : @customer = Customer.create(customer_params)
+
     if @customer.check_postcode(customer_params[:postcode])
       @customer.valid_postcode = true
       @customer.save
