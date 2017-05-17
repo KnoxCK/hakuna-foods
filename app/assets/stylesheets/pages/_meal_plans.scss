@@ -100,28 +100,26 @@
 }
 .prepare-section {
 	display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 80px;
-}
-.prepare-images {
-	padding-right: 66px;
+    margin-left: 60px;
 }
 .prepare-image {
-	width: 250px;
-	margin: 5px 4px;
+	width: 400px;
+	margin-right: 80px;
 }
 .deliver-section {
 	display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 80px;
+    margin-left: 115px;
+	margin-right: 50px;
 }
 .icon-deliver {
 	padding-left: 42px;
 	padding-right: 42px;
 }
 .deliver-image {
-	width: 512px;
-	padding-left: 30px;
-	padding-top: 10px;
+	width: 400px;
 }
