@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(version: 20170508204100) do
   create_table "customer_plans", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "meal_plan_id"
-    t.integer "days_per_week",       default: 5
+    t.integer "days_per_week", default: 5
+    t.float   "total_price"
     t.boolean "subscription"
-    t.integer "total_price_pennies", default: 0, null: false
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
     t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
   end
@@ -61,29 +61,33 @@ ActiveRecord::Schema.define(version: 20170508204100) do
     t.integer  "customer_plan_id"
     t.integer  "extra_id"
     t.integer  "quantity_per_week"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.integer  "weekly_price_pennies", default: 0, null: false
+    t.float    "weekly_price"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.index ["customer_plan_id"], name: "index_extra_items_on_customer_plan_id", using: :btree
     t.index ["extra_id"], name: "index_extra_items_on_extra_id", using: :btree
   end
 
   create_table "extras", force: :cascade do |t|
-    t.string  "name"
-    t.text    "description"
-    t.integer "unit_price_pennies", default: 0, null: false
+    t.string "name"
+    t.string "sku"
+    t.float  "unit_price"
+    t.text   "description"
   end
 
   create_table "meal_plans", force: :cascade do |t|
     t.string   "name"
+    t.string   "sku"
+    t.float    "daily_price"
     t.text     "description"
     t.text     "detailed_description"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.integer  "daily_price_pennies",  default: 0, null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string   "sku"
+    t.string   "plan"
     t.string   "state"
     t.integer  "customer_plan_id"
     t.datetime "created_at",                      null: false
