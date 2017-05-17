@@ -59,7 +59,7 @@
     background-color: #DE605F;
     color: white;
 }
-.view-plan-btn {
+.small-red-btn {
     display: inline-block;
     text-align: center;
     margin-bottom: 0;
@@ -75,14 +75,14 @@
     font-size: 12px;
     line-height: 1.4;
     border-radius: 2px;
-    margin: 0 6px;
+    margin: 20px 6px;
     text-decoration: none;
     color: black;
     background-color: transparent;
     border: black 1px solid;
 }
-.view-plan-btn:hover {
+.small-red-btn:hover {
     background-color: #DE605F;
     text-decoration: none;
-    color: black;
+    color: white;
 }
