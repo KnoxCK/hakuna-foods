@@ -6,16 +6,21 @@ class CustomersController < ApplicationController
   end
 
   def create
-    Customer.where(email: customer_params[:email]) ? @customer = Customer.where(email: customer_params[:email]).first : @customer = Customer.create(customer_params)
-
-    if @customer.check_postcode(customer_params[:postcode])
-      @customer.valid_postcode = true
-      @customer.save
-      redirect_to edit_customer_path(@customer)
+    # Customer.where(email: customer_params[:email]) ? @customer = Customer.where(email: customer_params[:email]).first :
+    @customer = Customer.create(customer_params)
+    if @customer.save
+      if @customer.check_postcode(customer_params[:postcode])
+        @customer.valid_postcode = true
+        @customer.save
+        redirect_to edit_customer_path(@customer)
+      else
+        @customer.valid_postcode = false
+        @error = "We're terribly sorry, but we do not deliver to your area. Now Fuck Off."
+        @customer.save
+      end
     else
-      @customer.valid_postcode = false
-      @error = "We're terribly sorry, but we do not deliver to your area. Now Fuck Off."
-      @customer.save
+      @error = "You must provide a valide email and first part of your postcode"
+      redirect_to orderform_path({error: @error})
     end
   end
 
