@@ -16,7 +16,7 @@
 			<div class="meal-plan-description">
 				<p>A nourishing plan to boost energy and support optimal well being</p>
 				<div class="maintain-read-more meal-plan-read-more slideDown hidden" id="maintain">
-					<p>Providing a rich source of nutrients and energy, our maintenance plan is based on a 2000k cal daily intake. Packed full of wholefoods and lean protein, this packet is perfect for those who would like to begin or maintain a healthy diet.
+					<p>Providing a rich source of nutrients and energy, our maintenance plan is based on a 2000kcal daily intake. Packed full of wholefoods and lean protein, this packet is perfect for those who would like to begin or maintain a healthy diet.
 					<br></br>
 					<i>From £39.00 a day</i></p>
 				</div>
@@ -61,9 +61,9 @@
 					<i>From £36.00 a day</i>
 					</p>
 				</div>
-				<%= link_to "", class: "view-trim-btn small-red-btn" do %>
-					VIEW PLAN
-				<% end %>
+				<button class="small-red-btn" id="view-plan" data-button=".book-trim-btn" data-target="#trim">
+          VIEW PLAN
+        </button>
 				<%= link_to "", class: "book-trim-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
@@ -83,9 +83,9 @@
 					<br></br>
 					<i>From £39.00 a day</i></p>
 				</div>
-				<%= link_to "", class: "view-postnatal-btn small-red-btn" do %>
-					VIEW PLAN
-				<% end %>
+				<button class="small-red-btn" id="view-plan" data-button=".book-postnatal-btn" data-target="#postnatal">
+          VIEW PLAN
+        </button>
 				<%= link_to "", class: "book-postnatal-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
@@ -104,9 +104,9 @@
 					<i>From £39.00 a day</i>
 					</p>
 				</div>
-				<%= link_to "", class: "view-veg-btn small-red-btn" do %>
-					VIEW PLAN
-				<% end %>
+				<button class="small-red-btn" id="view-plan" data-button=".book-veg-btn" data-target="#veg">
+          VIEW PLAN
+        </button>
 				<%= link_to "", class: "book-veg-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
@@ -124,9 +124,9 @@
 					<br></br>
 					<i>Price on application</i></p>
 				</div>
-				<%= link_to "", class: "view-bespoke-btn small-red-btn" do %>
-					VIEW PLAN
-				<% end %>
+				<button class="small-red-btn" id="view-plan" data-button=".book-bespoke-btn" data-target="#bespoke">
+          VIEW PLAN
+        </button>
 				<%= link_to "", class: "book-bespoke-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
