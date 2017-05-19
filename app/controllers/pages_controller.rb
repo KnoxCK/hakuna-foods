@@ -18,6 +18,7 @@ class PagesController < ApplicationController
 
   def orderform
     @customer = Customer.new
+    @error = params[:error]
   end
 
   def bespoke
