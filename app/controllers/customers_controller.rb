@@ -19,7 +19,7 @@ class CustomersController < ApplicationController
         @customer.save
       end
     else
-      @error = "You must provide a valide email and first part of your postcode"
+      @error = "You must provide a valid email and first part of your postcode"
       redirect_to orderform_path({error: @error})
     end
   end
