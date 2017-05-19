@@ -15,14 +15,14 @@
 			</div>
 			<div class="meal-plan-description">
 				<p>A nourishing plan to boost energy and support optimal well being</p>
-				<div class="maintain-read-more meal-plan-read-more slideDown hidden">
-					<p>Providing a rich source of nutrients and energy, our maintenance plan is based on a 2000k cal daily intake. Packed full of wholefoods and lean protein, this packet is perfect for those who would like to begin or maintain a healthy diet.  
+				<div class="maintain-read-more meal-plan-read-more slideDown hidden" id="maintain">
+					<p>Providing a rich source of nutrients and energy, our maintenance plan is based on a 2000k cal daily intake. Packed full of wholefoods and lean protein, this packet is perfect for those who would like to begin or maintain a healthy diet.
 					<br></br>
 					<i>From £39.00 a day</i></p>
 				</div>
-				<%= link_to "", class: "view-maintain-btn small-red-btn" do %>
-					VIEW PLAN
-				<% end %>
+        <button class="small-red-btn" id="view-plan" data-target="#maintain" data-button=".book-maintain-btn">
+          VIEW PLAN
+        </button>
 				<%= link_to "", class: "book-maintain-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
@@ -35,14 +35,14 @@
 			</div>
 			<div class="meal-plan-description">
 				<p>A higher protein plan for very active people</p>
-				<div class="train-read-more meal-plan-read-more slideDown hidden">
-					<p>To support your workouts we help you focus on gaining lean muscle mass, reducing body fat and fuelling your body for optimal training. Our training plan is designed around a 2500kcal daily intake, with an increased level of protein. 
+				<div class="train-read-more meal-plan-read-more slideDown hidden" id="train">
+					<p>To support your workouts we help you focus on gaining lean muscle mass, reducing body fat and fuelling your body for optimal training. Our training plan is designed around a 2500kcal daily intake, with an increased level of protein.
 					<br></br>
 					<i>From £41.00 a day</i></p>
 				</div>
-				<%= link_to "", class: "view-train-btn small-red-btn" do %>
-					VIEW PLAN
-				<% end %>
+				<button class="small-red-btn" id="view-plan" data-button=".book-train-btn" data-target="#train">
+          VIEW PLAN
+        </button>
 				<%= link_to "", class: "book-train-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
@@ -55,8 +55,8 @@
 			</div>
 			<div class="meal-plan-description">
 				<p>A fat busting plan to aid towards weight loss</p>
-				<div class="trim-read-more meal-plan-read-more slideDown hidden">
-					<p>This is a lifestyle change programme rather than quick fix diet. It helps you take control of your food intake which will put you in the best position to hit your fat loss targets. Our daily meal plans are designed around a 1500kcal daily intake to keep you feeling fuller for longer whilst stabilizing your blood sugars and providing all the nutrients you need to stay healthy and well. 
+				<div class="trim-read-more meal-plan-read-more slideDown hidden" id="trim">
+					<p>This is a lifestyle change programme rather than quick fix diet. It helps you take control of your food intake which will put you in the best position to hit your fat loss targets. Our daily meal plans are designed around a 1500kcal daily intake to keep you feeling fuller for longer whilst stabilizing your blood sugars and providing all the nutrients you need to stay healthy and well.
 					<br></br>
 					<i>From £36.00 a day</i>
 					</p>
@@ -78,7 +78,7 @@
 			</div>
 			<div class="meal-plan-description">
 				<p>A healthy, balanced plan to give time, energy and nourishment to new mums</p>
-				<div class="postnatal-read-more meal-plan-read-more slideDown hidden">
+				<div class="postnatal-read-more meal-plan-read-more slideDown hidden" id="postnatal">
 					<p>Our postnatal plan provides a healthy and balanced diet which is so important to new mums. Providing a daily intake of 2200kcal, with a focus on energy rich, nutrient dense foods, our plan helps lighten the stress of having a baby and gives you much needed time to spend with your little ones.
 					<br></br>
 					<i>From £39.00 a day</i></p>
@@ -98,7 +98,7 @@
 			</div>
 			<div class="meal-plan-description">
 				<p>A plant based plan in accordance with one of our other plans</p>
-				<div class="veg-read-more meal-plan-read-more slideDown hidden">
+				<div class="veg-read-more meal-plan-read-more slideDown hidden" id="veg">
 					<p>A plant based plan which provides a nourishing and balanced diet, consisting of wholegrains, slow energy release carbohydrates, healthy fats and plant based proteins.
 					<br></br>
 					<i>From £39.00 a day</i>
@@ -119,7 +119,7 @@
 			</div>
 			<div class="meal-plan-description">
 				<p>We can provide meals directly in line with personal requirements</p>
-				<div class="bespoke-read-more meal-plan-read-more slideDown hidden">
+				<div class="bespoke-read-more meal-plan-read-more slideDown hidden" id="bespoke">
 					<p>Know your macros and calorie guidelines? Or want us to calculate them for you? We can provide meals directly in line with personal requirements. Or, if you have a focused diet plan in mind, we can help tailor a plan for you. Please email us at info@hakunafoods.co.uk for a telephone consultation for further information.
 					<br></br>
 					<i>Price on application</i></p>
@@ -152,7 +152,7 @@
 	<div class="icon-large icon-deliver text-center padded">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378724/Delivered_zpiail.png" %>
 		<h4>3. WE DELIVER STRAIGHT TO YOUR DOOR</h4>
-		<p>Your meals are served in a variety of tamper proof, microwaveable safe, biodegradable containers and delivered within insulated chiller bags with ice packs. 
+		<p>Your meals are served in a variety of tamper proof, microwaveable safe, biodegradable containers and delivered within insulated chiller bags with ice packs.
 
 		Deliveries are made between 00.00 – 06.00 either to your work or home in accordance with your delivery instructions.</p>
 	</div>
