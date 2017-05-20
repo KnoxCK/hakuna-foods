@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def mealplans
+    @meal_plans = MealPlan.all
   end
 
   def about

@@ -11,14 +11,14 @@
 		<div class="meal-plan-maintain-box">
 			<div class="meal-plan-maintain">
 				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494324592/Burger_and_Chips_ox3jej.jpg" %>
-				<h4>MAINTAIN</h4>
+				<h4><%= @meal_plans.first.name.upcase %></h4>
 			</div>
 			<div class="meal-plan-description">
-				<p>A nourishing plan to boost energy and support optimal well being</p>
+				<p><%= @meal_plans.first.description %></p>
 				<div class="maintain-read-more meal-plan-read-more slideDown hidden" id="maintain">
-					<p>Providing a rich source of nutrients and energy, our maintenance plan is based on a 2000kcal daily intake. Packed full of wholefoods and lean protein, this packet is perfect for those who would like to begin or maintain a healthy diet.
+					<p><%= @meal_plans.first.detailed_description %>
 					<br></br>
-					<i>From £39.00 a day</i></p>
+					<i>From £<%= @meal_plans.first.daily_price %> a day</i></p>
 				</div>
         <button class="small-red-btn" id="view-plan" data-target="#maintain" data-button=".book-maintain-btn">
           VIEW PLAN
