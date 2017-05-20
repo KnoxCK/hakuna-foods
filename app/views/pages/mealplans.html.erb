@@ -26,7 +26,7 @@
         <button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase}-btn" %>>
           VIEW PLAN
         </button>
-				<%= link_to "", class: <%= "book-#{meal_plan.name.downcase}-btn small-red-btn hidden" %> do %>
+				<%= link_to "", class: "book-#{meal_plan.name.downcase}-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
