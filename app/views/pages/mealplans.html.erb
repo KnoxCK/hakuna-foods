@@ -7,132 +7,45 @@
 	<h4>1. CHOOSE YOUR MEAL PLAN</h4>
 </div>
 <div class="meal-plans-section">
-	<div class="meal-plans meal-plans-line-one">
-		<div class="meal-plan-maintain-box">
-			<div class="meal-plan-maintain">
+
+  <div class="meal-plans meal-plans-line-one">
+  <% meal_plan_index = 1 %>
+  <% @meal_plans.each do |meal_plan| %>
+		<div class=<%= "meal-plan-#{meal_plan.name.downcase}-box" %>>
+			<div class=<%= "meal-plan-#{meal_plan.name.downcase}" %>>
 				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494324592/Burger_and_Chips_ox3jej.jpg" %>
-				<h4><%= @meal_plans.first.name.upcase %></h4>
+				<h4><%= meal_plan.name.upcase %></h4>
 			</div>
 			<div class="meal-plan-description">
-				<p><%= @meal_plans.first.description %></p>
-				<div class="maintain-read-more meal-plan-read-more slideDown hidden" id="maintain">
-					<p><%= @meal_plans.first.detailed_description %>
+				<p><%= meal_plan.description %></p>
+				<div class=<%= "#{meal_plan.name.downcase}-read-more meal-plan-read-more slideDown hidden" %> id=<%= "#{meal_plan.name.downcase}" %>>
+					<p><%= meal_plan.detailed_description %>
 					<br></br>
-					<i>From £<%= @meal_plans.first.daily_price %> a day</i></p>
+					<i>From £<%= meal_plan.daily_price %> a day</i></p>
 				</div>
-        <button class="small-red-btn" id="view-plan" data-target="#maintain" data-button=".book-maintain-btn">
+        <button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase}-btn" %>>
           VIEW PLAN
         </button>
-				<%= link_to "", class: "book-maintain-btn small-red-btn hidden" do %>
+				<%= link_to "", class: <%= "book-#{meal_plan.name.downcase}-btn small-red-btn hidden" %> do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
-		<div class="meal-plan-train-box">
-			<div class="meal-plan-train">
-				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495027117/Salmon_qwvc4j.jpg" %>
-				<h4>TRAIN</h4>
-			</div>
-			<div class="meal-plan-description">
-				<p>A higher protein plan for very active people</p>
-				<div class="train-read-more meal-plan-read-more slideDown hidden" id="train">
-					<p>To support your workouts we help you focus on gaining lean muscle mass, reducing body fat and fuelling your body for optimal training. Our training plan is designed around a 2500kcal daily intake, with an increased level of protein.
-					<br></br>
-					<i>From £41.00 a day</i></p>
-				</div>
-				<button class="small-red-btn" id="view-plan" data-button=".book-train-btn" data-target="#train">
-          VIEW PLAN
-        </button>
-				<%= link_to "", class: "book-train-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-				<% end %>
-			</div>
-		</div>
-		<div class="meal-plan-trim-box">
-			<div class="meal-plan-trim">
-				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494323536/Poke_Bowl_sv7bne.jpg" %>
-				<h4>TRIM</h4>
-			</div>
-			<div class="meal-plan-description">
-				<p>A fat busting plan to aid towards weight loss</p>
-				<div class="trim-read-more meal-plan-read-more slideDown hidden" id="trim">
-					<p>This is a lifestyle change programme rather than quick fix diet. It helps you take control of your food intake which will put you in the best position to hit your fat loss targets. Our daily meal plans are designed around a 1500kcal daily intake to keep you feeling fuller for longer whilst stabilizing your blood sugars and providing all the nutrients you need to stay healthy and well.
-					<br></br>
-					<i>From £36.00 a day</i>
-					</p>
-				</div>
-				<button class="small-red-btn" id="view-plan" data-button=".book-trim-btn" data-target="#trim">
-          VIEW PLAN
-        </button>
-				<%= link_to "", class: "book-trim-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-				<% end %>
-			</div>
-		</div>
-	</div>
-	<div class="meal-plans meal-plans-line-two">
-		<div class="meal-plan-postnatal-box">
-			<div class="meal-plan-postnatal">
-				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494324177/Asset_2_zmhv9m_copy_ei27gg.jpg" %>
-				<h4>POSTNATAL</h4>
-			</div>
-			<div class="meal-plan-description">
-				<p>A healthy, balanced plan to give time, energy and nourishment to new mums</p>
-				<div class="postnatal-read-more meal-plan-read-more slideDown hidden" id="postnatal">
-					<p>Our postnatal plan provides a healthy and balanced diet which is so important to new mums. Providing a daily intake of 2200kcal, with a focus on energy rich, nutrient dense foods, our plan helps lighten the stress of having a baby and gives you much needed time to spend with your little ones.
-					<br></br>
-					<i>From £39.00 a day</i></p>
-				</div>
-				<button class="small-red-btn" id="view-plan" data-button=".book-postnatal-btn" data-target="#postnatal">
-          VIEW PLAN
-        </button>
-				<%= link_to "", class: "book-postnatal-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-				<% end %>
-			</div>
-		</div>
-		<div class="meal-plan-veg-box">
-			<div class="meal-plan-vegetarian">
-				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494324459/Butternut_Squash_Roasted_Fennel_and_Pumpkin_Seed_Fritatta_bpyqtj.jpg" %>
-				<h4>VEGETARIAN AND VEGAN</h4>
-			</div>
-			<div class="meal-plan-description">
-				<p>A plant based plan in accordance with one of our other plans</p>
-				<div class="veg-read-more meal-plan-read-more slideDown hidden" id="veg">
-					<p>A plant based plan which provides a nourishing and balanced diet, consisting of wholegrains, slow energy release carbohydrates, healthy fats and plant based proteins.
-					<br></br>
-					<i>From £39.00 a day</i>
-					</p>
-				</div>
-				<button class="small-red-btn" id="view-plan" data-button=".book-veg-btn" data-target="#veg">
-          VIEW PLAN
-        </button>
-				<%= link_to "", class: "book-veg-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-				<% end %>
-			</div>
-		</div>
-		<div class="meal-plan-bespoke-box">
-			<div class="meal-plan-bespoke">
-				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494323473/Sweetcorn_Fritters_g5ujuj.jpg" %>
-				<h4>BESPOKE</h4>
-			</div>
-			<div class="meal-plan-description">
-				<p>We can provide meals directly in line with personal requirements</p>
-				<div class="bespoke-read-more meal-plan-read-more slideDown hidden" id="bespoke">
-					<p>Know your macros and calorie guidelines? Or want us to calculate them for you? We can provide meals directly in line with personal requirements. Or, if you have a focused diet plan in mind, we can help tailor a plan for you. Please email us at info@hakunafoods.co.uk for a telephone consultation for further information.
-					<br></br>
-					<i>Price on application</i></p>
-				</div>
-				<button class="small-red-btn" id="view-plan" data-button=".book-bespoke-btn" data-target="#bespoke">
-          VIEW PLAN
-        </button>
-				<%= link_to "", class: "book-bespoke-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-				<% end %>
-			</div>
-		</div>
-	</div>
+    <% meal_plan_index += 1 %>
+    <% case meal_plan_index %>
+      <% when 4 %>
+        </div>
+        <div class="meal-plans meal-plans-line-two">
+      <% when 7 %>
+        </div>
+        <div class="meal-plans meal-plans-line-three">
+    <% end %>
+    <% end %>
+  </div>
+
+
+
+
 </div>
 <div class="prepare-section">
 	<div class="icon-large text-center padded">
