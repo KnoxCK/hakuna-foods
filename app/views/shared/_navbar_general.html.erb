@@ -4,9 +4,9 @@
 
 <!-- Navbar menu -->
     <!-- Meal plans link -->
-    <h4><%= link_to "MEAL PLANS", "", class: "navbar-hakuna-link" %></h4>
+    <h4><%= link_to "MEAL PLANS", mealplans_path, class: "navbar-hakuna-link" %></h4>
      <!-- About link -->
-    <h4><%= link_to "ABOUT", "", class: "navbar-hakuna-link" %></h4>
+    <h4><%= link_to "ABOUT", ourfood_path(:anchor => "about"), class: "navbar-hakuna-link" %></h4>
 
     <!-- Logo -->
   <%= link_to root_path, class: "navbar-hakuna-brand" do %>
@@ -14,7 +14,7 @@
   <% end %>
     
     <!-- Our Food link -->
-    <h4><%= link_to "OUR FOOD", "", class: "navbar-hakuna-link" %></h4>
+    <h4><%= link_to "OUR FOOD", ourfood_path, class: "navbar-hakuna-link" %></h4>
     <!-- Order link -->
     <h4><%= link_to "ORDER", "", class: "navbar-hakuna-link" %></h4>
   </div>
