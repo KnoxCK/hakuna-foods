@@ -23,8 +23,8 @@
         <button class="small-red-btn" id="view-plan" data-target="#maintain" data-button=".book-maintain-btn">
           VIEW PLAN
         </button>
-				<%= link_to "", class: "book-maintain-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<%= link_to orderform_path, class: "book-maintain-btn small-red-btn hidden" do %>
+					ORDER NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
@@ -43,8 +43,8 @@
 				<button class="small-red-btn" id="view-plan" data-button=".book-train-btn" data-target="#train">
           VIEW PLAN
         </button>
-				<%= link_to "", class: "book-train-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<%= link_to orderform_path, class: "book-train-btn small-red-btn hidden" do %>
+					ORDER NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
@@ -64,8 +64,8 @@
 				<button class="small-red-btn" id="view-plan" data-button=".book-trim-btn" data-target="#trim">
           VIEW PLAN
         </button>
-				<%= link_to "", class: "book-trim-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<%= link_to orderform_path, class: "book-trim-btn small-red-btn hidden" do %>
+					ORDER NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
@@ -86,8 +86,8 @@
 				<button class="small-red-btn" id="view-plan" data-button=".book-postnatal-btn" data-target="#postnatal">
           VIEW PLAN
         </button>
-				<%= link_to "", class: "book-postnatal-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<%= link_to orderform_path, class: "book-postnatal-btn small-red-btn hidden" do %>
+					ORDER NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
@@ -107,8 +107,8 @@
 				<button class="small-red-btn" id="view-plan" data-button=".book-veg-btn" data-target="#veg">
           VIEW PLAN
         </button>
-				<%= link_to "", class: "book-veg-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<%= link_to orderform_path, class: "book-veg-btn small-red-btn hidden" do %>
+					ORDER NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
@@ -127,8 +127,8 @@
 				<button class="small-red-btn" id="view-plan" data-button=".book-bespoke-btn" data-target="#bespoke">
           VIEW PLAN
         </button>
-				<%= link_to "", class: "book-bespoke-btn small-red-btn hidden" do %>
-					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+				<%= link_to orderform_path, class: "book-bespoke-btn small-red-btn hidden" do %>
+					ORDER NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
@@ -139,7 +139,7 @@
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396196/Tailor_jfrk1a.png" %>
 		<h4>2. WE EXPERTLY PREPARE FRESH <br>AND TASTY FOOD</h4>
 		<p>We use a selection of trusted suppliers who supply the highest quality produce.</p>
-		<p>Learn more about our food</p>
+		<p><%= link_to "Learn more about our food", ourfood_path %></p>
 	</div>
 	<div class="prepare-images">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495016410/miso_v6g0zh.png", class: "prepare-image" %>
@@ -158,5 +158,5 @@
 	</div>
 </div>
 <div class="choose-plan-btn">
-	<%= link_to "ORDER NOW", "", class: "landing-btn-red" %>
+	<%= link_to "ORDER NOW", orderform_path, class: "landing-btn-red" %>
 </div>
