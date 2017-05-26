@@ -1,14 +1,27 @@
-<div class="form">
-  <p>Please choose your meal plan options:</p>
-  <%= simple_form_for([@customer, @customer_plan]) do |f| %>
-    <%= f.error_notification %>
+<%= render 'shared/navbar_general' %>
+<div class="order-form-image" style="background-image: linear-gradient(
+  rgba(0, 0, 0, 0.75),
+  rgba(0, 0, 0, 0.75)), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');">
+  	<div class="order-form order-form-choose-plan">
+    	<div class="back-link">
+      	<p><i class="fa fa-arrow-left">&nbsp; </i>
+        <%= link_to "  Back to homepage", root_path %></p>
+      	</div>
+      	<div class="text-center order-form-title">
+	        <h2>Please select your plan</h2>
+          <h4></h4>
+      	</div>
+	  	<%= simple_form_for([@customer, @customer_plan]) do |f| %>
+		    <%= f.error_notification %>
 
-    <%= f.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, value_method: :id, include_blank: false, prompt: 'Choose a meal plan', label: 'Select your meal plan:' %>
+		    <%= f.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, label: 'Select your meal plan:' %>
 
-    <%# f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
+		    <%# f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
 
-    <%= f.input :subscription, as: :radio_buttons, collection: [ 'Yes' , 'No - One week only' ], label: 'Would you like a weekly subscription?' %>
+		    <%= f.input :subscription, as: :radio_buttons, collection: [ 'Yes' , 'No - One week only' ], label: 'Would you like a weekly subscription?' %>
 
-    <%= f.button :submit, class: 'view-plan-btn' %>
-  <% end %>
+		    <%= f.button :submit, class: 'view-plan-btn' %>
+	  	<% end %>
+  	</div>
 </div>
+
