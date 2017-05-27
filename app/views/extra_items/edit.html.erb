@@ -12,7 +12,7 @@
       <h4>Please select any extras below</h4>
     </div>
     <div class="form">
-      <%= form_tag customer_customer_plan_extra_items_path(@customer.id), method: :post %>
+      <%= form_tag customer_customer_plan_extra_item_path(@customer.id), method: :patch %>
       <table>
         <thead>
           <tr>
