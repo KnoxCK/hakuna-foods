@@ -9,13 +9,13 @@
       </div>
       <div class="text-center order-form-title">
         <h2>Order now</h2>
-        <h4>Please enter your email and postcode and we'll check to see if we deliver to your area!</h4>
+        <h4>Please enter your email and postcode for us to check if we deliver to your area</h4>
       </div>
       <span style="color: #DE605F;"><%= @error if @error %></span>
       <%= simple_form_for @customer do |f| %>
         <%= f.error_notification %>
         <%= f.input :email, required: true %>
-        <%= f.input :postcode, required: true, label: 'Enter the first part of your postcode' %>
+        <%= f.input :postcode, required: true, label: 'Enter the FIRST PART of your postcode' %>
         <%= f.button :submit, 'Search postcode', class: 'view-plan-btn' %>
       <% end %>
   </div>
