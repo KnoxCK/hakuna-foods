@@ -10,7 +10,7 @@ class CustomerPlansController < ApplicationController
   def create
     @customer_plan = CustomerPlan.create(customer_id: @customer.id,
       meal_plan_id: meal_plan_params[:meal_plan_id], days_per_week: 5)
-    meal_plan_params[:subscription] == "Yes - Monthly" ?
+    meal_plan_params[:subscription] == "Yes" ?
       @customer_plan.subscription = true : @customer_plan.subscription = false
     @customer_plan.save
     redirect_to new_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)

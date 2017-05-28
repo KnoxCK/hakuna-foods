@@ -1,0 +1,127 @@
+.our-food {
+    margin: 100px 0 49px 0;
+    z-index: 20;
+    p {
+        font-weight: lighter;
+        padding: 0 200px;
+    }
+    hr {
+        border-bottom: 3px solid #DE4C4B;
+        margin: 28px 581px;
+    }
+}
+.balanced-diet-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 115px;
+    margin-right: 50px;
+}
+.nutrition-section {
+    margin: 100px 0 49px 0;
+    z-index: 20;
+    p {
+        font-weight: lighter;
+        padding: 0 200px;
+    }
+    hr {
+        border-bottom: 3px solid #5DB035;
+        margin: 28px 581px;
+    }
+}
+.nutrition-images-top {
+    display: flex;
+    justify-content: center;
+    margin: 0 100px;
+}
+.nutrition-images-bottom {
+    display: flex;
+    justify-content: center;
+    margin: 10px 100px;
+}
+.nutrition-box {
+    width: auto;
+    margin: 0 5px;
+    position: relative;
+}
+.nutrition-image {
+    z-index: -100;
+    height: 48vh;
+    width: auto;
+}
+.nutrition-text {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    h6 {
+        letter-spacing: 1px;
+        background-color: white;
+        background: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        margin: 0;
+        padding: 20px 10px;
+    }
+    p {
+        display: none;
+    }
+}
+.nutrition-text:hover {
+    background-color: white;
+    background: rgba(255, 255, 255, 0.7);
+    p {
+        display: block;
+        font-weight: lighter;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+.about-intro {
+    margin: 100px 0 49px 0;
+    z-index: 20;
+    p {
+        padding: 0 350px;
+        font-weight: lighter;
+    }
+    hr {
+        border-bottom: 3px solid #FED309;
+        margin: 28px 581px;
+    }
+}
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    font-weight: lighter;
+}
+.our-phil {
+    padding: 40px;
+    margin-left: 20px;
+    border: solid 2px #FED309;
+    h4 {
+        letter-spacing: 2px;
+        padding: 10px 0;
+    }
+    h5 {
+        padding: 30px 0 10px 0;
+    }
+}
+.our-founder {
+    padding: 0 70px 0 100px;
+    h4 {
+        margin: 40px 0 30px 0;
+        letter-spacing: 2px;
+    }
+}
+.annabel-img {
+    height: 40vh;
+    width: auto;
+}

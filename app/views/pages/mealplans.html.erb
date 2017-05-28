@@ -49,7 +49,7 @@
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396196/Tailor_jfrk1a.png" %>
 		<h4>2. WE EXPERTLY PREPARE FRESH <br>AND TASTY FOOD</h4>
 		<p>We use a selection of trusted suppliers who supply the highest quality produce.</p>
-		<p>Learn more about our food</p>
+		<p><%= link_to "Learn more about our food", ourfood_path %></p>
 	</div>
 	<div class="prepare-images">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495016410/miso_v6g0zh.png", class: "prepare-image" %>
@@ -68,5 +68,5 @@
 	</div>
 </div>
 <div class="choose-plan-btn">
-	<%= link_to "ORDER NOW", "", class: "landing-btn-red" %>
+	<%= link_to "ORDER NOW", orderform_path, class: "landing-btn-red" %>
 </div>
