@@ -34,10 +34,15 @@
 }
 .navbar-hakuna-link {
   color: #333332;
-  padding: 0 40px;
+  width: 200px;
+  padding: 0 10px 5px;
+  margin: 0 30px;
   font-size: 14px;
   letter-spacing: 2px;
   line-height: 0.5px;
+  &.active {
+  border-bottom: solid 4px #DE605F;
+  }
 }
 .navbar-hakuna-link:hover {
   color: grey;
@@ -134,7 +139,7 @@
   color: #8FF0E8;
   text-decoration: none;
 }
-.dropdown-menu { 
+.dropdown-menu {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #fff;
