@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $(".meal-plans-section #view-plan").click(function(e) {
     e.preventDefault();
+    console.log($(this).data("target"));
     $($(this).data("target")).toggleClass("hidden");
     $(this).text(function(i, text) {
       return text === "HIDE PLAN" ? "VIEW PLAN" : "HIDE PLAN";

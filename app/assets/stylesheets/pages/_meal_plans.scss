@@ -34,14 +34,10 @@
 		padding-top: 10px;
 	}
 }
-.meal-plans-line-one { 
+.meal-plans-row {
 	display: flex;
 	justify-content: center;
-}
-.meal-plans-line-two { 
-	display: flex;
-	justify-content: center;
-	margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 // each meal plan

@@ -8,7 +8,7 @@
 </div>
 <div class="meal-plans-section">
 
-  <div class="meal-plans meal-plans-line-one">
+  <div class="meal-plans meal-plans-row">
   <% meal_plan_index = 1 %>
   <% @meal_plans.each do |meal_plan| %>
 		<div class=<%= "meal-plan-#{meal_plan.name.downcase}-box" %>>
@@ -18,7 +18,7 @@
 			</div>
 			<div class="meal-plan-description">
 				<p><%= meal_plan.description %></p>
-				<div class=<%= "#{meal_plan.name.downcase}-read-more meal-plan-read-more slideDown hidden" %> id=<%= "#{meal_plan.name.downcase}" %>>
+				<div class="meal-plan-read-more slideDown hidden" id=<%= "#{meal_plan.name.downcase}" %>>
 					<p><%= meal_plan.detailed_description %>
 					<br></br>
 					<i>From £<%= meal_plan.daily_price %> a day</i></p>
@@ -35,18 +35,15 @@
     <% case meal_plan_index %>
       <% when 4 %>
         </div>
-        <div class="meal-plans meal-plans-line-two">
+        <div class="meal-plans meal-plans-row">
       <% when 7 %>
         </div>
-        <div class="meal-plans meal-plans-line-three">
+        <div class="meal-plans meal-plans-row">
     <% end %>
     <% end %>
   </div>
-
-
-
-
 </div>
+
 <div class="prepare-section">
 	<div class="icon-large text-center padded">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396196/Tailor_jfrk1a.png" %>
