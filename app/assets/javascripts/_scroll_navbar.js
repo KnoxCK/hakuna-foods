@@ -1,4 +1,4 @@
-$(window).scroll(function() {    
+$(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll > $(window).height() * 0.10) {
@@ -10,3 +10,11 @@ $(window).scroll(function() {
     }
 });
 
+$(function(){
+ var pathname = (window.location.pathname);
+  $('.navbar-hakuna-main a').each(function() {
+    if ($(this).attr('href') == pathname) {
+      $(this).addClass('active');
+    }
+  });
+});
