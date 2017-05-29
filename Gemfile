@@ -24,6 +24,8 @@ gem 'stripe'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
+gem 'carrierwave', '~> 0.11.2'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
