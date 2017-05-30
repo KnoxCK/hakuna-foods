@@ -40,7 +40,7 @@ class PaymentsController < ApplicationController
 
     @customer.update(stripe_customer_id: customer.id)
     @order.update(state: 'Paid')
-
+    OrderMailer.order_confirmation(@customer).deliver_now
     redirect_to customer_customer_plan_order_path(@customer, @customer_plan, @order)
 
   rescue Stripe::CardError => e
