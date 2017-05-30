@@ -1,3 +1,4 @@
 <p>Hi <%= @customer.first_name %>,
 Your order with hakuna has been confirmed.
-<%= @customer.customer_plan.meal_plan.name %></p>
+You have ordered <%= if @customer.customer_plan.subscription ? "a weekly subscription to the " : "one week of the " %><%= @customer.customer_plan.meal_plan.name %>plan</p>
+<p>To <%= @customer.address.address_line1 %>,<%= @customer.address.postcode %></p>
