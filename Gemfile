@@ -24,7 +24,12 @@ gem 'stripe'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
+
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
+
 gem "letter_opener", group: :development
+
 
 group :development, :test do
   gem 'binding_of_caller'
