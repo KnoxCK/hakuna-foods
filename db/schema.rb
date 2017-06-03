@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20170529161910) do
     t.string  "name"
     t.text    "description"
     t.integer "unit_price_pennies", default: 0, null: false
+    t.string  "photo"
   end
 
   create_table "meal_plans", force: :cascade do |t|

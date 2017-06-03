@@ -3,5 +3,5 @@ class Extra < ApplicationRecord
   has_many :customer_plans, through: :extra_items
 
   monetize :unit_price_pennies
-
+  mount_uploader :photo, PhotoUploader
 end
