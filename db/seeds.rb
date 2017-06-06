@@ -13,5 +13,5 @@ MealPlan.create!(name: 'Vegetarian and Vegan', daily_price: 39, description: 'A 
 MealPlan.create!(name: 'Bespoke', daily_price: 0, description: 'We can provide meals directly in line with personal requirements', detailed_description: 'Know your macros and calorie guidelines? Or want us to calculate them for you? We can provide meals directly in line with personal requirements. Or, if you have a focused diet plan in mind, we can help tailor a plan for you. Please email us at info@hakunafoods.co.uk for a telephone consultation for further information.')
 
 Extra.create!(name: 'Kombucha', unit_price: 2.5)
-Extra.create!(name: 'Cold Press Coffee',  unit_price: 2.5)
+Extra.create!(name: 'Cold Brew Coffee',  unit_price: 2.5)
 Extra.create!(name: 'Sweet Treat', unit_price: 2.5)

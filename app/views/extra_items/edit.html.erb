@@ -26,7 +26,7 @@
           <tr>
             <td><h5><%= extra.name %></h4></td>
             <td><p><%= extra.unit_price.to_f %></p></td>
-            <td><%= number_field_tag "#{extra.name}", nil %></td>
+            <td><%= number_field_tag "#{extra.name}", nil, min: 0 %></td>
           </tr>
         <% end %>
         </tbody>
