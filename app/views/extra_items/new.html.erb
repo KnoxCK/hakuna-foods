@@ -26,7 +26,7 @@
           <tr>
             <td><h5><%= extra.name %></h4></td>
             <td><p><%= humanized_money_with_symbol(extra.unit_price) %></p></td>
-            <td><%= number_field_tag "#{extra.name}", nil %></td>
+            <td><%= number_field_tag "#{extra.name}", nil, min: 0 %></td>
           </tr>
         <% end %>
         </tbody>
