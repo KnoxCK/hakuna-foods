@@ -13,10 +13,17 @@ $(window).scroll(function() {
 $(function(){
  var pathname = (window.location.pathname);
   $('.navbar-hakuna-main a').each(function() {
-    if (window.location.hash == "#about") {
-      $('#navbar-about').addClass('active');
-    } else if ($(this).attr('href') === pathname) {
+    if ($(this).attr('href') === pathname) {
       $(this).addClass('active');
     }
+  });
+});
+
+$(function(){
+  $('#navbar-about').click(function(e){
+    $('.navbar-hakuna-main a').each(function() {
+      $(this).removeClass('active');
+    });
+    $(this).addClass('active');
   });
 });
