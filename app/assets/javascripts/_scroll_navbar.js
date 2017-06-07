@@ -13,7 +13,9 @@ $(window).scroll(function() {
 $(function(){
  var pathname = (window.location.pathname);
   $('.navbar-hakuna-main a').each(function() {
-    if ($(this).attr('href') == pathname) {
+    if (window.location.hash == "#about") {
+      $('#navbar-about').addClass('active');
+    } else if ($(this).attr('href') === pathname) {
       $(this).addClass('active');
     }
   });
