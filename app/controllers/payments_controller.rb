@@ -6,21 +6,25 @@ class PaymentsController < ApplicationController
   end
 
   def create
-      customer = Stripe::Customer.create(
-        source: params[:stripeToken],
-        email:  @customer.email,
-        )
+    customer = Stripe::Customer.create(
+      source: params[:stripeToken],
+      email:  @customer.email,
+      )
 
     if @customer_plan.subscription
 
-      plan = Stripe::Plan.create(
-        name:     "#{@customer.full_name}-#{@customer_plan.meal_plan.name}
-                    Plan - Order ##{@order.id}",
-        id:       "#{@customer.email}-#{@order.id}",
-        interval: "week",
-        currency: "gbp",
-        amount:   @order.total_price_pennies,
-        )
+      if @order.state == 'Error'
+        plan = Stripe::Plan.retrieve("#{@customer.email}-#{@order.id}")
+      else
+        plan = Stripe::Plan.create(
+          name:     "#{@customer.full_name}-#{@customer_plan.meal_plan.name}
+                      Plan - Order ##{@order.id}",
+          id:       "#{@customer.email}-#{@order.id}",
+          interval: "week",
+          currency: "gbp",
+          amount:   @order.total_price_pennies,
+          )
+      end
 
       Stripe::Subscription.create(
         customer: customer.id,
@@ -41,10 +45,12 @@ class PaymentsController < ApplicationController
     @customer.update(stripe_customer_id: customer.id)
     @order.update(state: 'Paid')
     # OrderMailer.order_confirmation(@customer).deliver_now
+    flash[:notice] = "Thank you, your payment was successful."
     redirect_to customer_customer_plan_order_path(@customer, @customer_plan, @order)
 
   rescue Stripe::CardError => e
-    flash[:error] = e.message
+    @order.update(state: 'Error')
+    flash[:alert] = "#{e.message} Please try again."
     redirect_to new_customer_customer_plan_order_payment_path(@customer, @customer_plan, @order)
   end
 
@@ -61,7 +67,7 @@ class PaymentsController < ApplicationController
   end
 
   def set_order
-    @order = Order.where(state: 'Pending').find(params[:order_id])
+    @order = Order.where.not(state: 'Paid').find(params[:order_id])
   end
 
 end
