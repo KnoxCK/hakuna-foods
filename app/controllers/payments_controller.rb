@@ -6,16 +6,16 @@ class PaymentsController < ApplicationController
   end
 
   def create
-      customer = Stripe::Customer.create(
-        source: params[:stripeToken],
-        email:  @customer.email,
-        )
+    customer = Stripe::Customer.create(
+      source: params[:stripeToken],
+      email:  @customer.email,
+      )
 
     if @customer_plan.subscription
 
-      # if Stripe::Plan.retrieve("#{@customer.email}-#{@order.id}").exists?
-      #   plan = Stripe::Plan.retrieve("#{@customer.email}-#{@order.id}")
-      # else
+      if @order.state == 'Error'
+        plan = Stripe::Plan.retrieve("#{@customer.email}-#{@order.id}")
+      else
         plan = Stripe::Plan.create(
           name:     "#{@customer.full_name}-#{@customer_plan.meal_plan.name}
                       Plan - Order ##{@order.id}",
@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
           currency: "gbp",
           amount:   @order.total_price_pennies,
           )
-
+      end
 
       Stripe::Subscription.create(
         customer: customer.id,
@@ -48,8 +48,9 @@ class PaymentsController < ApplicationController
     redirect_to customer_customer_plan_order_path(@customer, @customer_plan, @order)
 
   rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to new_customer_customer_plan_order_payment_path(@customer, @customer_plan, @order)
+    @order.update(state: 'Error')
+    flash[:alert] = "#{e.message} Please try again"
+    redirect_to customer_path(@customer)
   end
 
   protect_from_forgery
