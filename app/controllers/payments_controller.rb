@@ -45,12 +45,13 @@ class PaymentsController < ApplicationController
     @customer.update(stripe_customer_id: customer.id)
     @order.update(state: 'Paid')
     # OrderMailer.order_confirmation(@customer).deliver_now
+    flash[:notice] = "Thank you, your payment was successful."
     redirect_to customer_customer_plan_order_path(@customer, @customer_plan, @order)
 
   rescue Stripe::CardError => e
     @order.update(state: 'Error')
-    flash[:alert] = "#{e.message} Please try again"
-    redirect_to customer_path(@customer)
+    flash[:alert] = "#{e.message} Please try again."
+    redirect_to new_customer_customer_plan_order_payment_path(@customer, @customer_plan, @order)
   end
 
   protect_from_forgery
@@ -66,7 +67,7 @@ class PaymentsController < ApplicationController
   end
 
   def set_order
-    @order = Order.where(state: 'Pending').find(params[:order_id])
+    @order = Order.where.not(state: 'Paid').find(params[:order_id])
   end
 
 end
