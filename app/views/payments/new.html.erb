@@ -1,4 +1,5 @@
 <%= render 'shared/navbar_general' %>
+<%= render 'shared/flashes' %>
 <div class="order-form-image" style="background-image: linear-gradient(
   rgba(0, 0, 0, 0.75),
   rgba(0, 0, 0, 0.75)), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');">
@@ -31,7 +32,7 @@
         <% end %>
         </ul>
         <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
-        
+
         <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3>
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
