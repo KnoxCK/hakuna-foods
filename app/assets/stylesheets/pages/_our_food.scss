@@ -7,7 +7,7 @@
     }
     hr {
         border-bottom: 3px solid #DE4C4B;
-        margin: 28px 581px;
+        width: 100px;
     }
 }
 .balanced-diet-section {
@@ -31,7 +31,7 @@
     }
     hr {
         border-bottom: 3px solid #5DB035;
-        margin: 28px 581px;
+        width: 100px;
     }
 }
 .nutrition-images-top {
@@ -45,15 +45,44 @@
     margin: 10px 100px;
 }
 .nutrition-box {
-    width: auto;
     margin: 0 5px;
     position: relative;
 }
-.nutrition-image {
-    z-index: -100;
-    height: 48vh;
-    width: auto;
+.meat-box {
+    background-color: #DE4C4B;
+    width: 280px;
+    height: 300px;
 }
+.fish-box {
+    background-color: #36A9E0;
+    width: 280px;
+    height: 300px;
+}
+.dairy-box {
+    background-color: #DDDDDD;
+    width: 280px;
+    height: 300px;
+}
+.flavour-box {
+    background-color: #FED309;
+    width: 280px;
+    height: 300px;
+}
+.grains-box {
+    background-color: #FED309;
+    width: 760px;
+    height: 300px;
+}
+.fruit-box {
+    background-color: #5DB035;
+    width: 760px;
+    height: 300px;
+}
+// .nutrition-image {
+//     z-index: -100;
+//     height: 48vh;
+//     width: auto;
+// }
 .nutrition-text {
     text-align: center;
     position: absolute;
@@ -65,25 +94,31 @@
     h6 {
         letter-spacing: 1px;
         background-color: white;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.9);
         width: 100%;
         margin: 0;
         padding: 20px 10px;
     }
     p {
-        display: none;
-    }
-}
-.nutrition-text:hover {
-    background-color: white;
-    background: rgba(255, 255, 255, 0.7);
-    p {
+        background-color: white;
+        background: rgba(255, 255, 255, 0.5);
         display: block;
         font-weight: lighter;
         font-size: 14px;
         padding: 10px;
+        height: 245px;
     }
 }
+// .nutrition-text:hover {
+//     background-color: white;
+//     background: rgba(255, 255, 255, 0.7);
+//     p {
+//         display: block;
+//         font-weight: lighter;
+//         font-size: 14px;
+//         padding: 10px;
+//     }
+// }
 .about-intro {
     margin: 100px 0 49px 0;
     z-index: 20;
@@ -93,7 +128,7 @@
     }
     hr {
         border-bottom: 3px solid #FED309;
-        margin: 28px 581px;
+        width: 100px;
     }
 }
 .about-section {
