@@ -32,15 +32,22 @@
 	margin-top: -300px;
 }
 .what-we-do {
-	margin: 100px 0 120px 0;
+	margin: 60px 0 90px 0;
 	z-index: 20;
+	display: flex;
+    align-items: center;
+    flex-direction: column;
 	p {
 		font-weight: lighter;
-		padding: 0 288px;
+		/* padding: 0 288px; */
+    	width: 600px;
+    	display: flex;
+		justify-content: center;
+		align-content: center;
 	}
 	hr {
 		border-bottom: 3px solid #FED309;
-		margin: 28px 581px;
+		width: 100px;
 	}
 }
 
@@ -76,7 +83,7 @@
 	}
 	hr {
 		border-bottom: 3px solid #5DB035;
-    	margin: 28px 581px 32px 581px;
+    	width: 100px;
 	}
 }
 .menu-scroll {
