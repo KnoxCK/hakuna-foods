@@ -3,29 +3,29 @@
 	<div class="footer-child footer-goto">
 		<div class="col-one">
 			<h6>GO TO</h6>
-			<p>Meal Plans<br>
-			About Us<br>
-			Our Food</p>
+			<p><%= link_to "Meal Plans", mealplans_path %><br>
+			<%= link_to "About Us", ourfood_path(:anchor => "about") %><br>
+			<%= link_to "Our Food", ourfood_path %></p>
 		</div>
 		<div class="col-two">
-			<p>Order<br>
+			<p><%= link_to "Order", orderform_path %><br>
 			FAQS<br>
 			Privacy Policy</p>
 		</div>
 	</div>
 	<%= link_to root_path, class: "footer-hakuna-brand footer-child" do %>
-    <%= image_tag "hakuna_logo_white.png" %>
-  <% end %>
+    	<%= image_tag "hakuna_logo_white.png" %>
+  	<% end %>
 	<div class="footer-child footer-connect">
 		<h6>CONNECT</h6>
-		<p>Facebook<br>
-		Twitter<br>
-		Instagram
+		<p><%= link_to "Facebook", "https://www.facebook.com" %><br>
+		<%= link_to "Twitter", "https://www.twitter.com/" %><br>
+		<%= link_to "Instagram", "https://www.instagram.com/" %>
 		</p>
 	</div>
 	<div class="footer-child footer-contact">
 		<h6>CONTACT</h6>
-		<p>info@<br>hakunafoods.co.uk
+		<p><%= link_to "info@hakunafoods.co.uk", "mailto:info@addingtoncapital.com" %>
 		</p>
 	</div>
 </div>

@@ -6,16 +6,18 @@
 <!-- Navbar menu -->
     <!-- Meal Plans link -->
     <h4><%= link_to "MEAL PLANS", mealplans_path, class: "navbar-hakuna-link-landing" %></h4>
-    <!-- The About link -->
-    <h4><%= link_to "ABOUT", ourfood_path(:anchor => "about"), class: "navbar-hakuna-link-landing" %></h4>
+    
+    <!-- Our Food link -->
+    <h4><%= link_to "OUR FOOD", ourfood_path, class: "navbar-hakuna-link-landing" %></h4>
 
     <!-- Logo -->
   <%= link_to root_path, class: "navbar-hakuna-brand-landing" do %>
     <%= image_tag "hakuna-logo-small.png" %>
   <% end %>
     
-    <!-- Our Food link -->
-    <h4><%= link_to "OUR FOOD", ourfood_path, class: "navbar-hakuna-link-landing" %></h4>
+    <!-- The About link -->
+    <h4><%= link_to "ABOUT", ourfood_path(:anchor => "about"), class: "navbar-hakuna-link-landing" %></h4>
+  
     <!-- Order link -->
     <h4><%= link_to "ORDER", orderform_path, class: "navbar-hakuna-link-landing" %></h4>
   </div>

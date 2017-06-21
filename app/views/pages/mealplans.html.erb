@@ -7,10 +7,9 @@
 	<h4>1. CHOOSE YOUR MEAL PLAN</h4>
 </div>
 <div class="meal-plans-section">
-
-  <div class="meal-plans meal-plans-row">
-  <% meal_plan_index = 1 %>
-  <% @meal_plans.each do |meal_plan| %>
+	<div class="meal-plans meal-plans-row">
+	  <% meal_plan_index = 1 %>
+	  <% @meal_plans.each do |meal_plan| %>
 		<div class=<%= "meal-plan-#{meal_plan.name.downcase}-box" %>>
 			<div class=<%= "meal-plan-#{meal_plan.name.downcase}" %>>
 				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494324592/Burger_and_Chips_ox3jej.jpg" %>
@@ -24,20 +23,19 @@
 					<br></br>
 					<i>From £<%= meal_plan.daily_price %> a day</i></p>
 				</div>
-        <button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase}-btn" %>>
-          VIEW PLAN
-        </button>
+        		<button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase}-btn" %>>VIEW PLAN
+        		</button>
 				<%= link_to orderform_path, class: "book-#{meal_plan.name.downcase}-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
 		</div>
-    <% meal_plan_index += 1 %>
-    <% case meal_plan_index %>
-      <% when 4 %>
-        </div>
-        <div class="meal-plans meal-plans-row">
-      <% when 7 %>
+	    <% meal_plan_index += 1 %>
+	    <% case meal_plan_index %>
+	    <% when 4 %>
+	       </div>
+	       <div class="meal-plans meal-plans-row">
+	    <% when 7 %>
         </div>
         <div class="meal-plans meal-plans-row">
     <% end %>
@@ -48,9 +46,9 @@
 <div class="prepare-section">
 	<div class="icon-large text-center padded">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396196/Tailor_jfrk1a.png" %>
-		<h4>2. WE EXPERTLY PREPARE FRESH <br>AND TASTY FOOD</h4>
-		<p>We use a selection of trusted suppliers who supply the highest quality produce.</p>
-		<p><%= link_to "Learn more about our food", ourfood_path %></p>
+		<h4>2. WE EXPERTLY PREPARE YOUR MEALS</h4>
+		<p>Using a selection of trusted suppliers who provide the highest quality fresh produce we expertly  create meals and juices that are specifically tailored to your programme requirements.</p>
+		<p><%= link_to "LEARN MORE ABOUT OUR FOOD", ourfood_path, class: "small-red-btn" %></p>
 	</div>
 	<div class="prepare-images">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495016410/miso_v6g0zh.png", class: "prepare-image" %>

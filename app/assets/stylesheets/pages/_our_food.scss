@@ -1,9 +1,12 @@
 .our-food {
-    margin: 100px 0 49px 0;
+    margin: 75px 0 49px 0;
     z-index: 20;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     p {
         font-weight: lighter;
-        padding: 0 200px;
+        width: 850px;
     }
     hr {
         border-bottom: 3px solid #DE4C4B;
@@ -25,9 +28,12 @@
 .nutrition-section {
     margin: 100px 0 49px 0;
     z-index: 20;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     p {
         font-weight: lighter;
-        padding: 0 200px;
+        width: 850px;
     }
     hr {
         border-bottom: 3px solid #5DB035;
@@ -122,8 +128,11 @@
 .about-intro {
     margin: 100px 0 49px 0;
     z-index: 20;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     p {
-        padding: 0 350px;
+        width: 850px;
         font-weight: lighter;
     }
     hr {
