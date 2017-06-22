@@ -61,21 +61,107 @@
 		<% end %>
 	</div>
 </div>
+
 <%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
 <div class="example-menus text-center">
 	<h3>EXAMPLE MENUS</h3>
 	<hr>
-	<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493374913/Asset_4_ibmpqh.jpg" %>
-	<div class="menu-scroll">
-		<%= link_to "" do %>
-  			<i class="fa fa-angle-left"></i>
-		<% end %>
-		<h4>MEAL NAME</h4>
-		<%= link_to "" do %>
-  			<i class="fa fa-angle-right"></i>
-		<% end %>
+<!-- EXAMPLE MENUS -->
+<!-- MENU 1 -->
+	<div class="example-menu-1">
+		<div class="example-menu-images">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168293/223_yigyay.jpg" %>
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168488/w_aww3sd.jpg" %>
+		</div>
+		<div class="menu-scroll">
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-left left-arrow-1"></i>
+			<% end %>
+			<h4>MEAL NAME</h4>
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-right right-arrow-1"></i>
+			<% end %>
+		</div>
+		<p>Chia Breakfast Pot, Maple Blueberries, Coconut Yoghurt, Bee Pollen
+		<br>–<br>
+		Sweetcorn Chilli Fritters, Avocado, Soft Boiled Egg, Massaged Kale, Kimchi</p>
 	</div>
-	<p>Ingredient, ingredient, ingredient</p>
+<!-- MENU 2 -->
+	<div class="example-menu-2 hidden">
+		<div class="example-menu-images">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498169799/Tuna_ojgpnt.png" %>
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168280/3_zhurhe.jpg" %>
+		</div>
+		<div class="menu-scroll">
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-left left-arrow-2"></i>
+			<% end %>
+			<h4>MEAL NAME</h4>
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-right right-arrow-2"></i>
+			<% end %>
+		</div>
+		<p>Sashimi Snack Pot, Edamame Beans, Seaweed, Pickled Ginger, Sesame Seeds, Wasabi
+		<br>–<br>
+		Green Alkalising Soup, Cashew Cream, Tamari Pumpkin Seeds</p>
+	</div>
+<!-- MENU 3 -->
+	<div class="example-menu-3 hidden">
+		<div class="example-menu-images">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168284/2_ble3zq.jpg" %>
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498163167/4a_s91hbz.jpg" %>
+		</div>
+		<div class="menu-scroll">
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-left left-arrow-3"></i>
+			<% end %>
+			<h4>MEAL NAME</h4>
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-right right-arrow-3"></i>
+			<% end %>
+		</div>
+		<p>Lime Harissa Chicken, Pistachio and Pomegranate Quinoa Pilaf, Griddled Courgettes, Tahini
+		<br>–<br>
+		Tuna Poke Bowl, Black Sesame Rice, Spring Onion, Carrot, Radish, Cucumber, Lime</p>
+	</div>
+<!-- MENU 4 -->
+	<div class="example-menu-4 hidden">
+		<div class="example-menu-images">
+			<%= image_tag "" %>
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168735/ss_tnyyds.jpg" %>
+		</div>
+		<div class="menu-scroll">
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-left left-arrow-4"></i>
+			<% end %>
+			<h4>MEAL NAME</h4>
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-right right-arrow-4"></i>
+			<% end %>
+		</div>
+		<p>Pistachio, Cacao and Date Bites
+		<br>–<br>
+		Banana Chia Dougnuts</p>
+	</div>
+<!-- MENU 5 -->
+	<div class="example-menu-5 hidden">
+		<div class="example-menu-images">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168285/21_aeve0m.jpg" %>
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168294/65_skyl7a.jpg" %>
+		</div>
+		<div class="menu-scroll">
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-left left-arrow-5"></i>
+			<% end %>
+			<h4>MEAL NAME</h4>
+			<%= link_to "" do %>
+	  			<i class="fa fa-angle-right right-arrow-5"></i>
+			<% end %>
+		</div>
+		<p>Wild Mushroom Miso Ramen, Marinated Tofu, Buckwheat Noodles and Shoyu Tamago
+		<br>–<br>
+		Hakuna Burger, Paprika Swede and Celeriac Chips, Kimchi, Pickled Radish and Watercress</p>
+	</div>
 </div>
 <div class="choose-plan-btn">
 	<%= link_to "CHOOSE YOUR MEAL PLAN", mealplans_path, class: "landing-btn-red" %>
