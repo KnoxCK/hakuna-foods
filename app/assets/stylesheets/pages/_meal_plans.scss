@@ -7,6 +7,7 @@
 	p {
 		font-weight: lighter;
 		padding-top: 20px;
+		width: 600px
 	}
 }
 .meal-plans-section {
@@ -103,7 +104,7 @@
 }
 .prepare-section {
 	display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 80px;
     margin-left: 60px;
 }
@@ -113,7 +114,7 @@
 }
 .deliver-section {
 	display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 80px;
     margin-left: 115px;
