@@ -26,6 +26,13 @@ class PaymentsController < ApplicationController
           )
       end
 
+      Stripe::InvoiceItem.create(
+        customer: customer.id,
+        amount: 2500,
+        currency: "gbp",
+        description: "deposit for box"
+        )
+
       Stripe::Subscription.create(
         customer: customer.id,
         plan: plan.id,
@@ -35,7 +42,7 @@ class PaymentsController < ApplicationController
 
       charge = Stripe::Charge.create(
         customer: customer.id,
-        amount: @order.total_price_pennies,
+        amount: (@order.total_price_pennies + 2500),
         description:  "Payment from #{@customer.full_name} for order ##{@order.id}",
         currency:     "gbp",
         )
