@@ -34,7 +34,7 @@
         </ul>
         <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
-        <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3>
+        <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3><p>(+ £25 one-off refundable deposit)</p>
 
         <h2><%= @order.state %></h2>
       </div>
