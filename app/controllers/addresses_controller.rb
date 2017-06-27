@@ -9,9 +9,12 @@ class AddressesController < ApplicationController
   def create
     @address = Address.create(address_params)
     @address.customer_id = @customer.id
-    @address.save
-    return redirect_to bespoke_path if @customer.customer_plan.meal_plan_id == 6
-    redirect_to customer_path(@customer)
+    if @address.save
+      return redirect_to bespoke_path if @customer.customer_plan.meal_plan_id == 6
+      redirect_to customer_path(@customer)
+    else
+      redirect_to new_customer_address_path(@customer)
+    end
   end
 
   def edit

@@ -15,7 +15,7 @@
 	    <%= f.input :address_line1, label: 'Address Line 1' %>
 	    <%= f.input :address_line2, label: 'Address Line 2' %>
 	    <%= f.input :address_line3, label: 'Address Line 3' %>
-	    <%= f.input :postcode, label: 'Postcode' %>
+	    <%= f.input :postcode, label: 'Postcode', error: 'You must enter your postcode' %>
 	    <%= f.input :delivery_instructions, as: :text, label: 'Delivery Instructions' %>
 	    <%= f.button :submit, 'Submit', class: 'view-plan-btn' %>
 	  <% end %>
