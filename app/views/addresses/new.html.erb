@@ -1,7 +1,7 @@
 <%= render 'shared/navbar_general' %>
-<div class="order-form-image" style="background-image: linear-gradient(
+<!-- <div class="order-form-image" style="background-image: linear-gradient(
   rgba(0, 0, 0, 0.75),
-  rgba(0, 0, 0, 0.75)), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');">
+  rgba(0, 0, 0, 0.75)), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');"> -->
   <div class="order-form">
     <div class="back-link">
       <p><i class="fa fa-arrow-left">&nbsp; </i>
@@ -15,11 +15,11 @@
 	    <%= f.input :address_line1, label: 'Address Line 1' %>
 	    <%= f.input :address_line2, label: 'Address Line 2' %>
 	    <%= f.input :address_line3, label: 'Address Line 3' %>
-	    <%= f.input :postcode, label: 'Postcode' %>
+	    <%= f.input :postcode, label: 'Postcode', error: 'You must enter your postcode' %>
 	    <%= f.input :delivery_instructions, as: :text, label: 'Delivery Instructions' %>
 	    <%= f.button :submit, 'Submit', class: 'view-plan-btn' %>
 	  <% end %>
   </div>
-</div>
+<!-- </div> -->
 
 

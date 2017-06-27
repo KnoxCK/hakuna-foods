@@ -9,9 +9,16 @@ class AddressesController < ApplicationController
   def create
     @address = Address.create(address_params)
     @address.customer_id = @customer.id
-    @address.save
-    return redirect_to bespoke_path if @customer.customer_plan.meal_plan_id == 6
-    redirect_to customer_path(@customer)
+    if @address.save
+      if @customer.customer_plan.meal_plan_id == 6
+        OrderMailer.bespoke_request(@customer).deliver_now
+        redirect_to bespoke_path
+      else
+        redirect_to customer_path(@customer)
+      end
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -20,7 +27,12 @@ class AddressesController < ApplicationController
 
   def update
     @customer.address.update(address_params)
-    redirect_to customer_path(@customer)
+    @address = @customer.address
+    if @address.save
+      redirect_to customer_path(@customer)
+    else
+      render 'edit'
+    end
   end
 
   private

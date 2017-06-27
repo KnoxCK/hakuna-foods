@@ -7,8 +7,9 @@ class CustomersController < ApplicationController
 
   def create
     # Customer.where(email: customer_params[:email]) ? @customer = Customer.where(email: customer_params[:email]).first :
-    @customer = Customer.create(customer_params)
-    if @customer.save
+    @customer = Customer.new(customer_params)
+    if @customer.email != "" && @customer.postcode != ""
+      @customer.save(validate: false)
       if @customer.check_postcode(customer_params[:postcode])
         @customer.valid_postcode = true
         @customer.save
@@ -28,11 +29,18 @@ class CustomersController < ApplicationController
   end
 
   def update
-    @customer.update(customer_edit_params)
-    if @customer.customer_plan
-      redirect_to customer_path(@customer)
+    @customer.attributes = customer_edit_params
+    # if @customer.first_name == ""
+    #   @error = "You must provide your first name"
+    #   redirect_to edit_customer_path(@customer)
+    if @customer.save
+      if @customer.customer_plan
+        redirect_to customer_path(@customer)
+      else
+        redirect_to new_customer_customer_plan_path(@customer)
+      end
     else
-      redirect_to new_customer_customer_plan_path(@customer)
+      render 'edit'
     end
   end
 
