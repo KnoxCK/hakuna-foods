@@ -10,8 +10,12 @@ class AddressesController < ApplicationController
     @address = Address.create(address_params)
     @address.customer_id = @customer.id
     if @address.save
-      return redirect_to bespoke_path if @customer.customer_plan.meal_plan_id == 6
-      redirect_to customer_path(@customer)
+      if @customer.customer_plan.meal_plan_id == 6
+        OrderMailer.bespoke_request(@customer).deliver_now
+        redirect_to bespoke_path
+      else
+        redirect_to customer_path(@customer)
+      end
     else
       render 'new'
     end
