@@ -5,6 +5,12 @@ class Customer < ApplicationRecord
   has_many :orders, through: :customer_plan
 
   validates_presence_of :postcode
+  # validates_presence_of :first_name
+  # validates_presence_of :last_name
+  # validates_presence_of :gender
+  # validates_presence_of :height
+  # validates_presence_of :weight
+  # validates_presence_of :phone
 
   def check_postcode(postcode)
     valid_postcodes = ['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',

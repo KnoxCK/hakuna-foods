@@ -1,7 +1,7 @@
 <%= render 'shared/navbar_general' %>
-<div class="order-form-image" style="background-image: linear-gradient(
+<!-- <div class="order-form-image" style="background-image: linear-gradient(
   rgba(0, 0, 0, 0.75),
-  rgba(0, 0, 0, 0.75)), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');">
+  rgba(0, 0, 0, 0.75)), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');"> -->
   <div class="order-form">
     <div class="back-link">
       <p><i class="fa fa-arrow-left">&nbsp; </i>
@@ -12,17 +12,17 @@
         <h4>Please enter your details below so we can tailor your plan.</h4>
       </div>
       <%= simple_form_for @customer do |f| %>
-        <%= f.input :first_name %>
-        <%= f.input :last_name %>
-        <%= f.input :gender, as: :radio_buttons, collection: ['Male', 'Female'] %>
-        <%= f.input :dob, as: :date, :order => [:day, :month, :year], label: 'DOB', start_year: 1945, end_year: 2010 %>
+        <%= f.input :first_name, required: true %>
+        <%= f.input :last_name, required: true %>
+        <%= f.input :gender, required: true, as: :radio_buttons, collection: ['Male', 'Female'] %>
+        <%= f.input :dob, required: true, as: :date, :order => [:day, :month, :year], label: 'DOB', start_year: 1945, end_year: 2010 %>
         <%= f.input :height, as: :integer, label: 'Height (cm)', placeholder: 'cm' %>
         <%= f.input :weight, as: :integer, label: 'Weight (kg)', placeholder: 'kg' %>
         <%= f.input :exercise, as: :select, collection: ['0 - 2', '2 - 4', '4 - 6', '6+' ], label: 'Exercise (Times per week)' %>
         <%= f.input :occupation %>
         <%= f.input :allergies, as: :text , label: 'Food allergies/intolerances? Do any food groups cause you anaphylactic shock?' %>
         <%= f.input :preferences, as: :text, label: 'Food dislikes? (Max 3)' %>
-        <%= f.input :phone, as: :tel %>
+        <%= f.input :phone, required: true, as: :tel %>
         <%= f.button :submit, 'Submit details', class: 'view-plan-btn' %>
       <% end %>
   </div>
