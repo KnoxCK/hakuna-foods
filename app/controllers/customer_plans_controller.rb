@@ -13,6 +13,7 @@ class CustomerPlansController < ApplicationController
     meal_plan_params[:subscription] == "Yes" ?
       @customer_plan.subscription = true : @customer_plan.subscription = false
     @customer_plan.save
+    return redirect_to new_customer_address_path(@customer) if @customer.customer_plan.meal_plan_id == 6
     redirect_to new_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
   end
 

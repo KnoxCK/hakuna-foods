@@ -1,22 +1,25 @@
+<div style="margin: 50px 50px;">
+  The following customer(id: <%= @customer.id %>) has requested a bespoke meal plan:
 
-The following customer, with id: <%= @customer.id %>, has requested a bespoke meal plan:
+  <div style="margin: 50px 50px;">
+    <h4>Personal Details:</h4>
+    <p>Name: <%= @customer.full_name %></p>
+    <p>Email: <%= @customer.email %></p>
+    <p>Gender: <%= @customer.gender %></p>
+    <p>DOB: <%= @customer.formatted_dob %></p>
+    <p>Height: <%= @customer.height %>cm</p>
+    <p>Weight: <%= @customer.weight %>kg</p>
+    <p>Exercise: <%= @customer.exercise %> times per week</p>
+    <p>Occupation: <%= @customer.occupation %></p>
+    <p>Allergies: <%= @customer.allergies %></p>
+    <p>Food dislikes: <%= @customer.preferences %></p>
+    <p>Phone: <%= @customer.phone %></p>
 
-<h4>Personal Details:</h4>
-  <p>Name: <%= @customer.full_name %></p>
-  <p>Email: <%= @customer.email %></p>
-  <p>Gender: <%= @customer.gender %></p>
-  <p>DOB: <%= @customer.formatted_dob %></p>
-  <p>Height: <%= @customer.height %>cm</p>
-  <p>Weight: <%= @customer.weight %>kg</p>
-  <p>Exercise: <%= @customer.exercise %> times per week</p>
-  <p>Occupation: <%= @customer.occupation %></p>
-  <p>Allergies: <%= @customer.allergies %></p>
-  <p>Food dislikes: <%= @customer.preferences %></p>
-  <p>Phone: <%= @customer.phone %></p>
-
-<h4>Address:</h4>
-  <p><%= @customer.address.address_line1 %></p>
-  <p><%= @customer.address.address_line2 %></p>
-  <p><%= @customer.address.address_line3 %></p>
-  <p><%= @customer.address.postcode %></p>
-  <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
+    <h4>Address:</h4>
+    <p><%= @customer.address.address_line1 %></p>
+    <p><%= @customer.address.address_line2 %></p>
+    <p><%= @customer.address.address_line3 %></p>
+    <p><%= @customer.address.postcode %></p>
+    <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
+  </div>
+</div>
