@@ -13,7 +13,7 @@ class AddressesController < ApplicationController
       return redirect_to bespoke_path if @customer.customer_plan.meal_plan_id == 6
       redirect_to customer_path(@customer)
     else
-      redirect_to new_customer_address_path(@customer)
+      render 'new'
     end
   end
 
