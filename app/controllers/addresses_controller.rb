@@ -27,7 +27,12 @@ class AddressesController < ApplicationController
 
   def update
     @customer.address.update(address_params)
-    redirect_to customer_path(@customer)
+    @address = @customer.address
+    if @address.save
+      redirect_to customer_path(@customer)
+    else
+      render 'edit'
+    end
   end
 
   private
