@@ -34,14 +34,14 @@
         </ul>
         <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
-        <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3><p><strong>(+£25 refundable deposit for packaging)</strong></p>
+        <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3><% if @customer.stripe_customer_id %><p><strong>(+£25 refundable deposit for packaging)</strong></p><% end %>
 
         <p style="margin: 20px 0;">By clicking 'Pay with Card' you are confirming that you have read and agree to our <%= link_to "Terms and Conditions", "" %></p>
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-name="<%= @customer.full_name %>"
           data-description="<%= @customer.email %>"
-          data-amount="<%= @order.total_price_pennies + 2500 %>"
+          data-amount="<%= @customer.stripe_customer_id ? @order.total_price_pennies : @order.total_price_pennies + 2500 %>"
           data-currency="gbp"></script>
       <% end %>
       </div>

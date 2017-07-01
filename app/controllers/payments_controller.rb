@@ -26,12 +26,14 @@ class PaymentsController < ApplicationController
           )
       end
 
-      Stripe::InvoiceItem.create(
-        customer: customer.id,
-        amount: 2500,
-        currency: "gbp",
-        description: "deposit for box"
-        )
+      if @customer.stripe_customer_id == nil
+        Stripe::InvoiceItem.create(
+          customer: customer.id,
+          amount: 2500,
+          currency: "gbp",
+          description: "deposit for box"
+          )
+      end
 
       Stripe::Subscription.create(
         customer: customer.id,
