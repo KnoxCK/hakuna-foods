@@ -5,6 +5,8 @@ class CustomerPlan < ApplicationRecord
   has_many :extras, through: :extra_items
   belongs_to :meal_plan
 
+  validates_presence_of :subscription
+
   monetize :total_price_pennies
 
   def create_extras(params)

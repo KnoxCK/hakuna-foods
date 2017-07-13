@@ -7,10 +7,14 @@ class Customer < ApplicationRecord
   validates_presence_of :postcode
   validates_presence_of :first_name
   validates_presence_of :last_name
+  validates_presence_of :dob
   validates_presence_of :gender
   validates_presence_of :height
   validates_presence_of :weight
   validates_presence_of :phone
+  validates_presence_of :occupation
+  validates_presence_of :exercise
+
 
   def check_postcode(postcode)
     valid_postcodes = ['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',
