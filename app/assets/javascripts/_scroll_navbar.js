@@ -11,12 +11,20 @@ $(window).scroll(function() {
 });
 
 $(function(){
- var pathname = (window.location.pathname);
-  $('.navbar-hakuna-main a').each(function() {
-    if ($(this).attr('href') === pathname) {
-      $(this).addClass('active');
-    }
-  });
+  var pathname = (window.location.pathname);
+  if ( window.location.hash === "#about") {
+    $('.navbar-hakuna-main a').each(function() {
+      $(this).removeClass('active');
+    });
+    console.log('oi');
+    $('#navbar-about').addClass('active');
+  } else {
+    $('.navbar-hakuna-main a').each(function() {
+      if ($(this).attr('href') === pathname) {
+        $(this).addClass('active');
+      }
+    });
+  }
 });
 
 $(function(){
