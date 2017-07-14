@@ -10,6 +10,7 @@ $(window).scroll(function() {
     }
 });
 
+
 $(function(){
   var pathname = (window.location.pathname);
   if ( window.location.hash === "#about") {
@@ -26,6 +27,7 @@ $(function(){
     });
   }
 });
+
 
 $(function(){
   $('#navbar-about').click(function(e){
