@@ -12,8 +12,7 @@
 	  <% @meal_plans.each do |meal_plan| %>
 		<div class=<%= "meal-plan-#{meal_plan.name.downcase}-box" %>>
 			<div class=<%= "meal-plan-#{meal_plan.name.downcase}" %>>
-				<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1494324592/Burger_and_Chips_ox3jej.jpg" %>
-        <%# cl_image_tag meal_plan.photo %>
+				<%= image_tag meal_plan.photo %>
 				<h4><%= meal_plan.name.upcase %></h4>
 			</div>
 			<div class="meal-plan-description">
