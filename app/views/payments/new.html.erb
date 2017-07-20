@@ -36,7 +36,7 @@
 
         <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3><% unless @customer.stripe_customer_id %><p><strong>(+£25 one-off refundable deposit for packaging)</strong></p><% end %>
 
-        <p style="margin: 20px 0;">By clicking 'Pay with Card' you are confirming that you have read and agree to our <%= link_to "Terms and Conditions", "" %></p>
+        <p style="margin: 20px 0;">By clicking 'Pay with Card' you are confirming that you have read and agree to our <%= link_to "Terms and Conditions", "", "data-toggle" => "modal", "data-target" => ".bs-modal-lg" %></p>
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-name="<%= @customer.full_name %>"
@@ -48,6 +48,13 @@
     </div>
 <!-- </div> -->
 
+<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      TERMS AND CONDITIONS
+    </div>
+  </div>
+</div>
 
 
 
