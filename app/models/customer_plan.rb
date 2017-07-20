@@ -5,7 +5,7 @@ class CustomerPlan < ApplicationRecord
   has_many :extras, through: :extra_items
   belongs_to :meal_plan
 
-  validates_presence_of :subscription
+  validates_inclusion_of :subscription, in: [true, false]
 
   monetize :total_price_pennies
 

@@ -9,10 +9,7 @@ class CustomerPlansController < ApplicationController
 
   def create
     @customer_plan = CustomerPlan.new(customer_id: @customer.id,
-      meal_plan_id: meal_plan_params[:meal_plan_id], days_per_week: 5)
-    meal_plan_params[:subscription] == "Yes" ?
-      @customer_plan.subscription = true : @customer_plan.subscription = false
-
+      meal_plan_id: meal_plan_params[:meal_plan_id], days_per_week: 5, subscription: meal_plan_params[:subscription])
     if @customer_plan.save
       return redirect_to new_customer_address_path(@customer) if @customer.customer_plan.meal_plan_id == 6
       redirect_to new_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
@@ -26,8 +23,7 @@ class CustomerPlansController < ApplicationController
 
   def update
     @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id]
-    meal_plan_params[:subscription] == "Yes" ?
-      @customer_plan.subscription = true : @customer_plan.subscription = false
+    @customer_plan.subscription = meal_plan_params[:subscription]
     if @customer_plan.save
       redirect_to edit_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
     else
