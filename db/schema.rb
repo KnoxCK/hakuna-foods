@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529161910) do
+ActiveRecord::Schema.define(version: 20170722121456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 20170529161910) do
     t.datetime "updated_at",         null: false
     t.string   "email",              null: false
     t.boolean  "valid_postcode"
+    t.string   "slug"
+    t.index ["slug"], name: "index_customers_on_slug", unique: true, using: :btree
   end
 
   create_table "extra_items", force: :cascade do |t|
