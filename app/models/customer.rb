@@ -15,6 +15,8 @@ class Customer < ApplicationRecord
   validates_presence_of :occupation
   validates_presence_of :exercise
 
+  extend FriendlyId
+  friendly_id :full_name, use: :slugged
 
   def check_postcode(postcode)
     valid_postcodes = ['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',
@@ -45,4 +47,9 @@ class Customer < ApplicationRecord
     self.dob.strftime("%d %B %Y")
   end
 
+  private
+
+  def should_generate_new_friendly_id?
+    slug.nil?
+  end
 end
