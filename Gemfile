@@ -30,6 +30,8 @@ gem 'carrierwave', '~> 0.11.2'
 
 gem "letter_opener", group: :development
 
+gem 'friendly_id', '~> 5.2.0'
+
 
 group :development, :test do
   gem 'binding_of_caller'
