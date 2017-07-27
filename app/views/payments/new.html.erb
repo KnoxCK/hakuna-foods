@@ -34,9 +34,9 @@
             <br>
           </div>
         </div>
-        <br>
         <div class="order-details">
-          <p>Meal Plan: <%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
+          <p style="margin-bottom: 0px">Meal Plan:</p>
+          <p> <%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
           <ul>Extras: <% @customer.customer_plan.extra_items.each do |extra| %>
             <% if extra.quantity_per_week != 0 %>
               <li><%= Extra.find(extra.extra_id).name %> - <%= extra.quantity_per_week %> per week</li>
@@ -47,7 +47,7 @@
 
           <h3>Total price per week: <span><%= humanized_money_with_symbol(@order.total_price) %></span></h3><% unless @customer.stripe_customer_id %><p><strong>(+£25 one-off refundable deposit for packaging)</strong></p><% end %>
 
-          <p id="terms">By clicking 'Pay with Card' you are confirming that you have read and agree to our <%= link_to "Terms and Conditions", "", "data-toggle" => "modal", "data-target" => ".bs-modal-lg" %></p>
+          <p>By clicking 'Pay with Card' you are confirming that you have read and agree to our <%= link_to "Terms and Conditions", "", "data-toggle" => "modal", "data-target" => ".bs-modal-lg" %></p>
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-name="<%= @customer.full_name %>"

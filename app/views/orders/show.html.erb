@@ -10,7 +10,7 @@
         <%= link_to "  Back to homepage", root_path %></p>
       </div>
       <div class="text-center order-form-title">
-        <h1>Your Order:</h1>
+        <h2>Your Order:</h2>
       </div>
       <div class="order-confirmation">
         <div class="order-customer-details">
@@ -32,7 +32,8 @@
           </div>
         </div>
         <div class="order-details">
-          <p><span>Meal Plan:</span> <%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
+          <p style="margin-bottom: 0px;">Meal Plan:</p>
+          <p><%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
           <ul><span>Extras:</span> <% @customer.customer_plan.extra_items.each do |extra| %>
             <% if extra.quantity_per_week != 0 %>
               <li><%= Extra.find(extra.extra_id).name %> - <%= extra.quantity_per_week %> per week</li>
