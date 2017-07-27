@@ -27,8 +27,8 @@
             <p><%= @customer.address.address_line2 %></p>
             <p><%= @customer.address.address_line3 %></p>
             <p><%= @customer.address.postcode %></p>
-            <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
-            <br>
+            <% if @customer.address.delivery_instructions != "" %><p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
+            <% end %>
           </div>
         </div>
         <div class="order-details">
