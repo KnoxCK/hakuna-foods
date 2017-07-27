@@ -3,40 +3,49 @@
 <!-- <div class="order-form-image" style="background-image: linear-gradient(
   rgba(0, 0, 0, 0.75),
   rgba(0, 0, 0, 0.75)), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1493209533/HakunaFoods_landing_image_jgnjha.jpg');"> -->
-  <div class="order-form">
+  <div class="order-show">
   <%= render 'shared/flashes' %>
     <div class="back-link">
       <p><i class="fa fa-arrow-left">&nbsp; </i>
         <%= link_to "  Back to homepage", root_path %></p>
       </div>
       <div class="text-center order-form-title">
-        <h1>Your Order:</h1>
+        <h2>Your Order:</h2>
       </div>
-      <div class="order-confirmation-form">
-        <p>Name: <%= @customer.full_name %></p>
-        <p>Email: <%= @customer.email %></p>
-        <p>Phone: <%= @customer.phone %></p>
-
-        <h4><strong>Delivery Address:</strong></h4>
-        <p><%= @customer.address.address_line1 %></p>
-        <p><%= @customer.address.address_line2 %></p>
-        <p><%= @customer.address.address_line3 %></p>
-        <p><%= @customer.address.postcode %></p>
-        <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
-        <br>
-
-        <p>Meal Plan: <%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
-        <ul>Extras: <% @customer.customer_plan.extra_items.each do |extra| %>
-          <% if extra.quantity_per_week != 0 %>
-            <li><%= Extra.find(extra.extra_id).name %> - <%= extra.quantity_per_week %> per week</li>
+      <div class="order-confirmation">
+        <div class="order-customer-details">
+          <div class="order-customer">
+            <table>
+              <tr><td><p>Name:</p></td><td><p><%= @customer.full_name %></p></td></tr>
+              <tr><td><p>Email:</p></td><td><p><%= @customer.email %></p></td></tr>
+              <tr><td><p>Phone:</p></td><td><p><%= @customer.phone %></p></td></tr>
+            </table>
+          </div>
+          <div class="order-address">
+            <h5>Delivery Address:</h5>
+            <p><%= @customer.address.address_line1 %></p>
+            <p><%= @customer.address.address_line2 %></p>
+            <p><%= @customer.address.address_line3 %></p>
+            <p><%= @customer.address.postcode %></p>
+            <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
+            <br>
+          </div>
+        </div>
+        <div class="order-details">
+          <p style="margin-bottom: 0px;">Meal Plan:</p>
+          <p><%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
+          <ul><span>Extras:</span> <% @customer.customer_plan.extra_items.each do |extra| %>
+            <% if extra.quantity_per_week != 0 %>
+              <li><%= Extra.find(extra.extra_id).name %> - <%= extra.quantity_per_week %> per week</li>
+            <% end %>
           <% end %>
-        <% end %>
-        </ul>
-        <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
+          </ul>
+          <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
-        <h3>Total price per week: <%= humanized_money_with_symbol(@order.total_price) %></h3><p>(+ £25 one-off refundable deposit)</p>
+          <h3>Total price per week: <span><%= humanized_money_with_symbol(@order.total_price) %></span></h3><p><strong>(+ £25 one-off refundable deposit)</strong></p>
 
-        <h2><%= @order.state %></h2>
+          <h2><%= @order.state %></h2>
+        </div>
       </div>
     </div>
   </div>
