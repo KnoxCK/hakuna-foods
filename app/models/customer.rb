@@ -50,6 +50,6 @@ class Customer < ApplicationRecord
   private
 
   def should_generate_new_friendly_id?
-    slug.nil?
+    self.slug.nil?
   end
 end
