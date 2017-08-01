@@ -63,7 +63,7 @@
 		font-weight: lighter;
 		margin-top: 25px;
 	}
-} 
+}
 .one-week-programme {
 	padding-right: 60px;
 }
@@ -100,7 +100,7 @@
     	padding: 0 90px;
     	letter-spacing: 1px;
     	z-index: 100;
-    }	
+    }
     i {
     	font-size: 24px;
     	margin-top: 9px;
@@ -112,4 +112,12 @@
     i:hover {
     	opacity: 0.5;
     }
+}
+
+@media only screen and (max-width: 1284px) {
+    .what-we-do p {
+        font-weight: lighter;
+        /* padding: 0 288px; */
+        width: 750px;
+     }
 }
