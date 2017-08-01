@@ -113,3 +113,12 @@
     	opacity: 0.5;
     }
 }
+
+
+@media only screen and (max-width: 1284px) {
+	.what-we-do p {
+	    font-weight: lighter;
+	    /* padding: 0 288px; */
+	    width: 750px;
+	 }
+}
