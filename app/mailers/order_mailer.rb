@@ -9,7 +9,7 @@ class OrderMailer < ApplicationMailer
   def bespoke_request(customer)
     @customer = customer
 
-    mail(to: "info@hakunafoods.co.uk",
-          subject: "You have a request for a bespoke meal plan")
+    mail(to: "govinder.marwaha@gmail.com",
+          subject: "You have been sent a request for a bespoke meal plan")
   end
 end
