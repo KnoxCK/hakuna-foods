@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
   private
 
   def set_customer
-    @customer = Customer.find(params[:customer_id])
+    @customer = Customer.friendly.find(params[:customer_id])
   end
 
   def set_customer_plan

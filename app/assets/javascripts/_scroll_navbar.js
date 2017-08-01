@@ -28,7 +28,6 @@ $(function(){
   }
 });
 
-
 $(function(){
   $('#navbar-about').click(function(e){
     $('.navbar-hakuna-main a').each(function() {
@@ -37,3 +36,5 @@ $(function(){
     $(this).addClass('active');
   });
 });
+
+
