@@ -9,8 +9,8 @@
 		</div>
 		<div class="col-two">
 			<p><%= link_to "Order", orderform_path %><br>
-			FAQS<br>
-			Privacy Policy</p>
+			<%= link_to "FAQs", faqs_path %><br>
+			<%= link_to "Privacy Policy", privacy_policy_path %></p>
 		</div>
 	</div>
 	<%= link_to root_path, class: "footer-hakuna-brand footer-child" do %>
@@ -25,7 +25,7 @@
 	</div>
 	<div class="footer-child footer-contact">
 		<h6>CONTACT</h6>
-		<p><%= link_to "info@hakunafoods.co.uk", "mailto:info@addingtoncapital.com" %>
+		<p><%= link_to "info@hakunafoods.co.uk", "mailto:info@hakunafoods.co.uk" %>
 		</p>
 	</div>
 </div>

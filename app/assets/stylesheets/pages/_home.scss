@@ -86,26 +86,30 @@
     	width: 100px;
 	}
 }
-.menu-scroll {
+.arrow-white {
 	background-color: white;
 	background: rgba(255, 255, 255, 0.7);
-    padding: 10px 0;
-    position: absolute;
-    bottom: 106px;
-    left: 38%;
-    z-index: 100;
+	padding: 10px;
+}
+.menu-scroll {
     display: flex;
+    align-content: center;
+    justify-content: center;
     z-index: 10;
+    margin-top: -73px;
     h4 {
     	padding: 0 90px;
     	letter-spacing: 1px;
     	z-index: 100;
     }	
+    p {
+    	padding-top: 60px;
+    }
     i {
     	font-size: 24px;
     	margin-top: 9px;
-    	margin-bottom: 11px;
-    	padding: 0 20px;
+    	margin-bottom: -36px;
+    	padding: 20px 30px;
     	text-decoration: none;
     	color: #333332;
     }

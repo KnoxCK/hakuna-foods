@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'orderform', to: 'pages#orderform'
   get 'bespoke', to: 'pages#bespoke'
+  get 'privacy_policy', to: 'pages#privacy_policy'
+  get 'faqs', to: 'pages#faqs'
 
   resources :customers, only: [:create, :edit, :update, :show] do
     resources :addresses, only: [:new, :create, :edit, :update]
