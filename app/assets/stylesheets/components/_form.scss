@@ -7,8 +7,10 @@
 	}
 }
 
-.form-required {
-  display: none;
+.form-group {
+  abbr {
+    display: none;
+  }
 }
 .order-form {
 	padding: 40px 200px 60px 200px;
