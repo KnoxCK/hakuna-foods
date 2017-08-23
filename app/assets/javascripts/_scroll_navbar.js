@@ -17,7 +17,6 @@ $(function(){
     $('.navbar-hakuna-main a').each(function() {
       $(this).removeClass('active');
     });
-    console.log('oi');
     $('#navbar-about').addClass('active');
   } else {
     $('.navbar-hakuna-main a').each(function() {

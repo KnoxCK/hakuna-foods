@@ -2,6 +2,7 @@ class Customer < ApplicationRecord
 
   has_one :address, dependent: :destroy
   has_one :customer_plan
+  has_one :meal_plan, through: :customer_plan
   has_many :orders, through: :customer_plan
 
   validates_presence_of :postcode
