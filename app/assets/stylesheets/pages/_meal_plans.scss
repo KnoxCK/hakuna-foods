@@ -1,5 +1,4 @@
 .icon-large {
-    margin: 0 63px;
 	img {
 		margin-bottom: 20px;
 		height: 100px;
@@ -7,7 +6,7 @@
 	p {
 		font-weight: lighter;
 		padding-top: 20px;
-		width: 600px
+		width: 600px;
 	}
 }
 .meal-plans-section {
@@ -105,12 +104,11 @@
 .prepare-section {
 	display: flex;
     justify-content: center;
-    margin-top: 80px;
-    margin-left: 60px;
+    margin: 80px 115px 0 50px;
+    padding-left: 60px;
 }
 .prepare-image {
 	width: 400px;
-	margin-right: 80px;
 }
 .deliver-section {
 	display: flex;
@@ -120,10 +118,79 @@
     margin-left: 115px;
 	margin-right: 50px;
 }
-.icon-deliver {
-	padding-left: 42px;
-	padding-right: 42px;
-}
 .deliver-image {
 	width: 400px;
 }
+@media only screen and (max-width: 1226px) {
+	.icon-large {
+	    p {
+	    	width: auto;
+	    }
+	}
+	.prepare-section { 
+		justify-content: space-around;
+	    margin: 0;
+	    padding: 50px;
+	}
+	.deliver-section {
+		justify-content: space-around;
+		margin: 0;
+	    padding: 50px;
+	}
+}
+@media only screen and (max-width: 1098px) {
+	.meal-plan-description {
+    	width: 200px;
+    }
+}
+@media only screen and (max-width: 946px) {
+	.prepare-section {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.prepare-image {
+		margin-left: 25px;
+	}
+	.deliver-section {
+		flex-direction: column;
+		padding-bottom: 0;
+	}
+	.icon-large {
+		padding-bottom: 0;
+	}
+}
+@media only screen and (max-width: 630px) {
+	.meal-plan-description {
+    	width: 350px;
+    }
+    .meal-plans-row {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+@media only screen and (max-width: 498px) {
+	.prepare-image {
+	    margin-left: 16px;
+	    width: 212px;
+	}
+	.deliver-image {
+    	width: 225px;
+    }
+}
+@media only screen and (max-width: 362px) {
+	.meal-plan-description {
+    	width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
