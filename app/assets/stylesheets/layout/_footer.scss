@@ -2,6 +2,9 @@
 	background-color: #333332;
 	display: flex;
 	justify-content: center;
+	width: 100vw;
+	align-items: center;
+	padding-left: 69px;
 	h6 {
 		color: white;
 	}
@@ -16,20 +19,87 @@
 	}
 }
 .footer-child {
-	padding: 40px;
+	margin: 40px;
 }
 .footer-goto {
 	display: flex;
 }
 .col-one {
 	padding-right: 30px;
-	padding-left: 50px;
 }
 .col-two {
-	padding-left: 30px;
 	padding-top: 36px;
 }
 .footer-hakuna-brand img {
 	margin-top: 18px;
     height: 80px;
 }
+.footer-hakuna-brand-responsive {
+	margin-top: 18px;
+	display: none;
+	img {
+    	height: 80px;
+    }
+}
+@media only screen and (max-width: 985px) {
+	.footer {
+		flex-wrap: wrap;
+		padding-right: 60px;
+	}
+	.footer-hakuna-brand {
+	    margin-top: 18px;
+	    height: 80px;
+	    display: none;
+	    padding: 0;
+	}
+	.footer-hakuna-brand-responsive img {
+	    display: block;
+	    flex-direction: column;
+	    margin-top: 0;
+	    height: 80px;
+	}
+}
+@media only screen and (max-width: 804px) {
+	.footer {
+		flex-direction: column;
+		align-items: left;
+    	padding: 20px 10vw;
+	}
+	.footer-child {
+		margin: 0;
+		text-align: left;
+	}
+	.col-one {
+		padding-left: 0;
+	}
+	.footer-hakuna-brand-responsive img {
+	    flex-direction: column;
+	    margin-top: 0;
+	}
+}	
+@media only screen and (max-width: 559px) {
+	.footer {
+    	padding-right: 0; 
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
