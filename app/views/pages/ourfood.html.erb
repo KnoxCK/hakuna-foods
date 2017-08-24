@@ -3,27 +3,38 @@
 <div class="ourfood_banner">
 </div>
 <%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
+<div class="wrapper">
 <div class="our-food text-center">
 	<h3>OUR FOOD</h3>
 	<hr>
 	<p>The HAKUNA meal delivery programme is based on a diet full of fruits, vegetables, whole grains, nuts, legumes and modest intakes of animal and fish products. Our nutritional beliefs are the basis of each and every meal that is delivered to your door. All of our meal plans consist of a Cold Press Juice, Breakfast, Morning Snack, Lunch, Afternoon Snack and Supper.
-	There is the option to add on:	<br></br><strong>Kombucha</strong>		- A cure-all that detoxifies your body, aids digestion and reenergizes the mind. When drunk daily, Kombuchas healing properties can lower cholestral, aid weight loss and create an overall sense of well being.  <br></br><strong>Cold Brew Coffee</strong>	- Not willing to give up your daily dose of hot coffee? Try Hakuna’s 24 hour cold brewed alternative made with Monmouth coffee beans and homemade nut milk. With a lower pH level than your regular coffee and a sweeter smoother finish, your body and mind will remain in balanced acidic vs alkaline state, allowing it to better function and heal.<br></br><strong>A Sweet Treat</strong> - If you can’t kick that sugar craving then sign up for our sweet treats. All gluten, dairy and refined sugar free, perfect with a mug of herbal tea!
- 
- 	</p>
+	There is the option to add on:</p>
+	<div class="extras">
+		<div class="extra-para">
+			<h5>Kombucha</h5>
+			<p>A cure-all that detoxifies your body, aids digestion and reenergizes the mind. When drunk daily, Kombuchas healing properties can lower cholestral, aid weight loss and create an overall sense of well being.</p>
+		</div>
+		<div class="extra-para middle-extra">
+			<h5>Cold Brew Coffee</h5>
+			<p>Not willing to give up your daily dose of hot coffee? Try Hakuna’s 24 hour cold brewed alternative made with Monmouth coffee beans and homemade nut milk. With a lower pH level than your regular coffee and a sweeter smoother finish, your body and mind will remain in balanced acidic vs alkaline state, allowing it to better function and heal.</p>
+		</div>
+		<div class="extra-para">
+			<h5>A Sweet Treat</h5>
+			<p>If you can’t kick that sugar craving then sign up for our sweet treats. All gluten, dairy and refined sugar free, perfect with a mug of herbal tea!</p>
+		</div>
+	</div>
 </div>
 <div class="balanced-diet-section">
-	<div class="deliver-image">
-		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495492841/d_l7m1y5.jpg", class: "deliver-image" %>
-	</div>
-	<div class="icon-large icon-deliver text-center">
+	<div class="balanced-diet diet text-center">
 		<h4>A BALANCED DIET</h4>
 		<p>Fat is essential to human wellbeing, it provides energy and makes you feel full. Our bodies require both saturated and unsaturated fats in order to absorb vitamins A, D, E and K.  We make sure to include both fats in your meals: saturated fat, mostly found in animal foods and unsaturated, mostly found in plant foods. The amount of fat in your diet will be calculated and reflected in your food boxes. 
 		<br></br> 
 		Most of your meals will contain complex carbohydrates. These do an excellent job of keeping you full and are less fattening because they take longer for our bodies to metabolise them. Most of the carbohydrates in our menus derive from plenty of seeds, green and root vegetables, pseudocereals and grains. Using this knowledge we create meals which aid your body in regulating its blood sugar levels. 
 		<br></br>
 		Protein is integral to our daily menus as they are the building blocks of life. We need protein in our diet to help repair cells and regenerate new ones. We all require a certain amount of protein to maintain good health, whether in the form or animal or plant protein. Animal proteins include meats, fish and eggs, whilst plant sources include soy, beans, legumes, nut butters and pseudocereals.
-</p>
+		</p>
 	</div>
+	<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495492841/d_l7m1y5.jpg", class: "diet-image" %>
 </div>
 <div class="nutrition-section text-center">
 	<h3>NUTRITION</h3>
@@ -65,19 +76,19 @@
 	</div>
 </div>
 <div class="nutrition-images-bottom">
-	<div class="nutrition-box grains-box">
+	<div class="nutrition-box grains-box grains-bottom">
 		<!--<<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495487357/Screen_Shot_2017-05-22_at_19.28.40_jfgbn9.jpg", class: "nutrition-image" %>-->
-		<div class="nutrition-text">
+		<div class="nutrition-text bottom-text">
 			<h6>GRAINS, PSEUDOCEREALS, NUTS, SEEDS AND LEGUMES</h6>
-			<p>The only grains we use in our meals are black, brown and red rice. Other than that we focus on pseudocereals; buckwheat, amaranth and quinoa. These are free from gluten and rich in amino acids.  You will see nuts and seed scattered all over our menus and we like to use legumes as a source of added protein.
+			<p>The only grains we use in our meals are black, brown and red rice. Other than that we focus on pseudocereals; buckwheat, amaranth and quinoa. These are free from gluten and rich in amino acids.  You wi ll see nuts and seed scattered all over our menus and we like to use legumes as a source of added protein.
 			<br></br> 
 			All grains, pseudocereals, nuts, seeds and legumes have a natural, protective layer called phytic acid – an anti nutrient that irritates the gut. Although a small amount of phytic acid is healthy, we activate these ingredients by soaking them. This starts the germination process and reduces the amount of phytic acid, which makes their nutrients easier to absorb and digest by your body. 
 			</p>
 		</div>
 	</div>
-	<div class="nutrition-box fruit-box">
+	<div class="nutrition-box fruit-box grains-bottom">
 		<!--<<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1495487357/Screen_Shot_2017-05-22_at_19.28.4_bnhozj.jpg", class: "nutrition-image" %>-->
-		<div class="nutrition-text">
+		<div class="nutrition-text bottom-text">
 			<h6>FRUIT AND VEGETABLES</h6>
 			<p>Fruit and more notably vegetables make up so much of our menus. Vegetables are full of nutrients and are incredibly alkalizing which helps our bodies to function at their best. <br></br>
 			We make sure to provide your body with a rainbow of vegetables and fruits, which keeps meals interesting and balanced. We also aim to buy seasonally to ensure you are getting the very best produce. When we have a glut of fruits or vegetables we put them through our HAKUNA fermentation or pickling process. Fermented (or cultured) foods are essential to good health, enhancing immune function and improving digestion. Our homemade cultured vegetables provide your body with a concentrated form of natural probiotics. </p>
@@ -112,6 +123,7 @@
 		Alongside Personal Trainers and Nutritional Advisors Annabel has been providing highly bespoke menus for top tier clients within Film, Music, Commerce and Aristocracy for the past few years. With successful 
 		aesthetic and nutritional results achieved, she wants to share her knowledge and experience to help you achieve your goals too!</p>
 	</div>
+</div>
 </div>
 <div class="choose-plan-btn">
 	<%= link_to "CHOOSE YOUR MEAL PLAN", mealplans_path, class: "landing-btn-red" %>

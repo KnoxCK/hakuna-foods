@@ -35,13 +35,12 @@
 .navbar-hakuna-link {
   color: #333332;
   width: 200px;
-  padding: 0 10px 5px;
   margin: 0 30px;
   font-size: 14px;
   letter-spacing: 2px;
   line-height: 0.5px;
   &.active {
-  border-bottom: solid 3px #DE605F;
+  border-bottom: solid 2px #DE605F;
   }
 }
 .navbar-hakuna-link:hover {

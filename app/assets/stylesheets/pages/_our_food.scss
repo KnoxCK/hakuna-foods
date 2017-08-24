@@ -1,33 +1,64 @@
-.our-food {
-    margin: 75px 0 49px 0;
-    z-index: 20;
+.wrapper {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 40px 0 60px 0;
+}
+.our-food {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
     p {
         font-weight: lighter;
-        width: 850px;
+        padding: 10px;
+        text-align: justify;
     }
     hr {
         border-bottom: 3px solid #DE4C4B;
         width: 100px;
     }
 }
-.balanced-diet-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.extras {
     display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    justify-content: center;
+    h5 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    p {
+        width: 300px;
+        text-align: justify;
+    }
+}   
+.middle-extra p {
+    width: 400px;
+}                    
+.extra-para {
+    flex-direction: column;
+}
+.balanced-diet-section {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 115px;
-    margin-right: 50px;
+    padding-top: 30px;
+}
+.balanced-diet {
+    width: auto;
+    p {
+        font-weight: lighter;
+        text-align: left;
+        width: 520px;
+        margin-top: 30px;
+    }
+}
+.diet-image {
+    height: 400px;
+    margin-left: 43px;
 }
 .nutrition-section {
     margin: 100px 0 49px 0;
-    z-index: 20;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -53,36 +84,31 @@
 .nutrition-box {
     margin: 0 5px;
     position: relative;
+    height: 320px;
 }
 .meat-box {
     background-color: #DE4C4B;
-    width: 280px;
-    height: 300px;
+    width: 230px;
 }
 .fish-box {
     background-color: #36A9E0;
-    width: 280px;
-    height: 300px;
+    width: 230px;
 }
 .dairy-box {
     background-color: #DDDDDD;
-    width: 280px;
-    height: 300px;
+    width: 230px;
 }
 .flavour-box {
     background-color: #FED309;
-    width: 280px;
-    height: 300px;
+    width: 230px;
 }
 .grains-box {
     background-color: #FED309;
-    width: 570px;
-    height: 300px;
+    width: 470px;
 }
 .fruit-box {
     background-color: #5DB035;
-    width: 570px;
-    height: 300px;
+    width: 470px;
 }
 // .nutrition-image {
 //     z-index: -100;
@@ -96,7 +122,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100;
     h6 {
         letter-spacing: 1px;
         background-color: white;
@@ -112,7 +137,7 @@
         font-weight: lighter;
         font-size: 14px;
         padding: 10px;
-        height: 245px;
+        height: 320px;
     }
 }
 // .nutrition-text:hover {
@@ -127,7 +152,6 @@
 // }
 .about-intro {
     margin: 100px 0 49px 0;
-    z-index: 20;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -147,6 +171,7 @@
     font-weight: lighter;
 }
 .our-phil {
+    width: 950px;
     padding: 40px;
     margin-left: 60px;
     margin-right: 60px;
@@ -170,3 +195,183 @@
     height: 40vh;
     width: auto;
 }
+@media only screen and (max-width: 1150px) {
+    .our-food { 
+        width: 800px;
+    }
+    .extras p {
+        width: 220px;
+        text-align: justify;
+    }
+    .middle-extra p {
+        width: 300px;
+    }     
+    .balanced-diet-section {
+        flex-direction: column-reverse;
+    }   
+    .balanced-diet p {
+        text-align: justify;
+        width: 760px;
+    }  
+    .diet-image {
+        margin-left: 0;
+    }
+    .nutrition-section p {
+        width: 750px;
+    }
+    .about-intro p {
+        width: 800px;
+    }
+    .our-phil {
+        width: 800px;
+    }
+    .nutrition-box {
+        height: 370px;
+    }
+    .meat-box {
+        background-color: #DE4C4B;
+        width: 190px;
+    }
+    .fish-box {
+        background-color: #36A9E0;
+        width: 190px;
+    }
+    .dairy-box {
+        background-color: #DDDDDD;
+        width: 190px;
+    }
+    .flavour-box {
+        background-color: #FED309;
+        width: 190px;
+    }
+    .grains-box {
+        background-color: #FED309;
+        width: 390px;
+    }
+    .fruit-box {
+        background-color: #5DB035;
+        width: 390px;
+    }
+}
+@media only screen and (max-width: 928px) {
+    .diet-image {
+        margin-left: 0;
+        height: 200px;
+    }
+    .nutrition-section p {
+        width: auto;
+    }
+    .nutrition-images-top {
+        flex-direction: column;
+        margin: 0;
+    }
+    .nutrition-box {
+        margin: 5px 0;
+        position: relative;
+        height: 170px;
+    }
+    .nutrition-images-bottom {
+        flex-direction: column-reverse;
+        margin: 10px 0;
+    }
+    .meat-box {
+        width: 600px;
+    }
+    .fish-box {
+        width: 600px;
+    }
+    .dairy-box {
+        width: 600px;
+    }
+    .flavour-box {
+        width: 600px;
+    }
+    .grains-box {
+        width: 600px;
+    }
+    .fruit-box {
+        width: 600px;
+    }
+    .grains-bottom {
+        height: 262px;
+    }
+    .nutrition-text {       
+        p {
+            height: 206px;
+        }
+    }
+    .our-phil {
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .our-food { 
+        width: auto;
+        padding: 0 10vw;
+    }
+    .extras {
+        flex-direction: column;
+        align-items: center;
+    }
+    .extras {
+        p {
+            width: auto;
+        }
+    }  
+    .middle-extra p {
+        width: auto;               
+    }
+    .balanced-diet p {
+        width: auto;
+        padding: 0 10vw;
+    } 
+    .nutrition-section {
+        width: auto;
+        padding: 0 10vw;
+    }
+    .about-intro p {
+        width: auto;
+        padding: 0 10vw;
+    }
+    .our-phil {
+        width: auto;
+    }
+    .nutrition-box {
+        margin: 5px 0;
+        position: relative;
+        height: 240px;
+    }
+    .meat-box {
+        width: 300px;
+    }
+    .fish-box {
+        width: 300px;
+    }
+    .dairy-box {
+        width: 300px;
+    }
+    .flavour-box {
+        width: 300px;
+    }
+    .grains-box {
+        width: 300px;
+    }
+    .fruit-box {
+        width: 300px;
+    }
+    .grains-bottom {
+        height: 448px;
+    }
+    .bottom-text p {
+        height: 394px;
+    }
+    .our-phil {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
