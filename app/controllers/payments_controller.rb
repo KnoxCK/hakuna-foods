@@ -53,7 +53,7 @@ class PaymentsController < ApplicationController
 
     @customer.update(stripe_customer_id: customer.id)
     @order.update(state: 'Paid')
-    # OrderMailer.order_confirmation(@customer).deliver_now
+    OrderMailer.order_confirmation(@customer).deliver_now
     flash[:notice] = "Thank you, your payment was successful."
     redirect_to customer_customer_plan_order_path(@customer, @customer_plan, @order)
 
