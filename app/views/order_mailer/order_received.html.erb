@@ -23,8 +23,7 @@
     <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
 
     <h4>Order:</h4>
-    <p><%= @customer.meal_plan %></p>
+    <p><%= @customer.meal_plan.name %></p>
     <p>Customer plan id: <%= @customer.customer_plan.id %></p>
-    <p><%= @customer.address.address_line3 %></p>
   </div>
 </div>
