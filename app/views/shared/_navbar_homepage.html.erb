@@ -28,9 +28,9 @@
         <a class="fa fa-bars dropdown-toggle" data-toggle="dropdown" href="#"></a>
         <ul class="dropdown-menu dropdown-menu-main .navbar-hakuna-dropdown-menu">
           <li><%= link_to "MEAL PLANS", mealplans_path, class: "navbar-hakuna-link-landing" %></li>
-           <li><%= link_to "ABOUT", "", class: "navbar-hakuna-link-landing", id: "about-navbar" %></li>
-          <li><%= link_to "OUR FOOD", "", class: "navbar-hakuna-link-landing" %></li>
-          <li><%= link_to "ORDER", "", class: "navbar-hakuna-link-landing" %></li>
+           <li><%= link_to "ABOUT", ourfood_path(:anchor => "about"), class: "navbar-hakuna-link-landing", id: "about-navbar" %></li>
+          <li><%= link_to "OUR FOOD", ourfood_path, class: "navbar-hakuna-link-landing" %></li>
+          <li><%= link_to "ORDER", orderform_path, class: "navbar-hakuna-link-landing" %></li>
           <li><%= link_to "FACEBOOK", "https://www.facebook.com/", class: "navbar-hakuna-link-landing", target: "blank" %></li>
           <li><%= link_to "INSTAGRAM", "https://www.instagram.com/", class: "navbar-hakuna-link-landing", target: "blank" %></li>
           <li><%= link_to "TWITTER", "https://www.twitter.com/", class: "navbar-hakuna-link-landing", target: "blank" %></li>
