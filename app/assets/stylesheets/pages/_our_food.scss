@@ -13,7 +13,7 @@
     p {
         font-weight: lighter;
         padding: 10px;
-        text-align: justify;
+        text-align: center;
     }
     hr {
         border-bottom: 3px solid #DE4C4B;
@@ -29,14 +29,15 @@
     }
     p {
         width: 265px;
-        text-align: justify;
+        text-align: center;
     }
 }                   
 .extra-para {
     flex-direction: column;
     background-color: #F7F7F7;
-    margin: 5px 10px 5px 10px;
+    margin: 15px 10px 30px 10px;
     padding: 25px 25px;
+
 }
 .balanced-diet-section {
     display: flex;
@@ -201,13 +202,13 @@
     }
     .extras p {
         width: 197px;
-        text-align: justify;
+        text-align: center;
     }     
     .balanced-diet-section {
         flex-direction: column-reverse;
     }   
     .balanced-diet p {
-        text-align: justify;
+        text-align: center;
         width: 760px;
     }  
     .diet-image {
