@@ -47,6 +47,7 @@ class PaymentsController < ApplicationController
         amount: (@order.total_price_pennies + 2500),
         description:  "Payment from #{@customer.full_name} for order ##{@order.id}",
         currency:     "gbp",
+        receipt_email: @customer.email,
         )
 
     end
