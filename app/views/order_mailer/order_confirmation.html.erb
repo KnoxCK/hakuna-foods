@@ -1,7 +1,9 @@
 
 <p>Hi <%= @customer.first_name %>,
-
+<br>
+<br>
 Your order with Hakuna Foods has been confirmed.
+<br>
 <br>
 You have ordered
 <% if @customer.customer_plan.subscription %>
@@ -12,8 +14,11 @@ one week of the
  <%= @customer.customer_plan.meal_plan.name.upcase %> plan
 to <%= @customer.address.address_line1 %>, <%= @customer.address.address_line2 %>, <%= @customer.address.postcode %>.
 <br>
+<br>
 Your first cool bag will be on your doorstep on Monday. Remember to return it to your delivery spot at the end of the day so that our night owls can replace your empty cool bag with a full one!
 <br>
-If you have any questions or need to amend your order, please feel free to email us at info@hakunafoods.co.uk
+<br>
+If you have any questions or need to amend your order, please feel free to email us at <a href="mailto:info@hakunafoods.co.uk">info@hakunafoods.co.uk</a>
+<br>
 <br>
 Thanks!</p>
