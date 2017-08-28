@@ -3,7 +3,7 @@ class OrderMailer < ApplicationMailer
     @customer = customer
 
     mail(to: @customer.email,
-          subject: "Your Hakuna Foods Order Confirmation")
+          subject: "A GREAT BIG THANK YOU!")
   end
 
   def order_received(customer)
