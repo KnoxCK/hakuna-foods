@@ -10,6 +10,12 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  h6 {
+    color: #333332;
+    font-size: 12px;
+    font-weight: lighter;
+    padding-bottom: 20px;
+  }
 }
 .banner-content {
   width: 744px;
@@ -47,7 +53,7 @@
     height: calc(81.5vh);
   }
 }
-@media only screen and (max-width: 1271px) {
+@media only screen and (max-width: 1300px) {
   .banner-content {
     width: 500px;
     padding: 0;
@@ -62,6 +68,9 @@
   .banner {
     background-image: url('http://res.cloudinary.com/depgwjsnd/image/upload/v1503482505/HakunaFoods_landing_image_jgnjha_2_j0dx5i_s4ejpx.jpg');
     height: auto;
+    h6 {
+      padding-top: 20px;
+    }
   }
 }
 @media only screen and (max-width: 585px) {
