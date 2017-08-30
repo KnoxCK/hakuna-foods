@@ -10,8 +10,10 @@
 	<div class="meal-plans meal-plans-row">
 	  <% meal_plan_index = 1 %>
 	  <% @meal_plans.each do |meal_plan| %>
+
 		<div class=<%= "meal-plan-#{meal_plan.name.downcase.gsub(" ", "-")}-box" %>>
-			<div class=<%= "meal-plan-#{meal_plan.name.downcase.gsub(" ", "-")}" %>>
+			<div class=<%= "meal-plan" %>>
+
 				<%= image_tag meal_plan.photo %>
 				<h4><%= meal_plan.name.upcase %></h4>
 			</div>
