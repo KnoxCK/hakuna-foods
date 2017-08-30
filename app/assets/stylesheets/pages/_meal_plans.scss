@@ -141,9 +141,22 @@
 	    padding: 50px;
 	}
 }
-@media only screen and (max-width: 1098px) {
+@media only screen and (min-width: 825px) and (max-width: 1098px) {
 	.meal-plan-description {
-    	width: 200px;
+    	width: 270px;
+    }
+    .meal-plans-section {
+    	margin-top: 50px;
+    	p {
+    		height: 120px;
+    	}
+    	img {
+    		width: 250px;
+    	}
+    }
+    .meal-plan h4 {
+    	margin-top: 75px;
+    	margin-left: 44px;
     }
 }
 @media only screen and (max-width: 946px) {
@@ -162,7 +175,7 @@
 		padding-bottom: 0;
 	}
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 825px) {
 	.meal-plan-description {
     	width: 350px;
     }
@@ -182,7 +195,16 @@
 }
 @media only screen and (max-width: 362px) {
 	.meal-plan-description {
-    	width: 300px;
+    	width: 100%;
+    }
+    .meal-plan h4 {
+    	margin-top: 50px;
+    	margin-left: 25px;
+	}
+	.meal-plans-section {
+    	img {
+    		width: 100%;
+    	}
     }
 }
 
