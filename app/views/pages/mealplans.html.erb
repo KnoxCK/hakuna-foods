@@ -10,8 +10,10 @@
 	<div class="meal-plans meal-plans-row">
 	  <% meal_plan_index = 1 %>
 	  <% @meal_plans.each do |meal_plan| %>
-		<div class=<%= "meal-plan-#{meal_plan.name.downcase}-box" %>>
+
+		<div class=<%= "meal-plan-#{meal_plan.name.downcase.gsub(" ", "-")}-box" %>>
 			<div class=<%= "meal-plan" %>>
+
 				<%= image_tag meal_plan.photo %>
 				<h4><%= meal_plan.name.upcase %></h4>
 			</div>
@@ -24,7 +26,7 @@
 				</div>
         		<button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase}-btn" %>>VIEW PLAN
         		</button>
-				<%= link_to orderform_path, class: "book-#{meal_plan.name.downcase}-btn small-red-btn hidden" do %>
+				<%= link_to orderform_path, class: "book-#{meal_plan.name.downcase.gsub(" ", "-")}-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
 				<% end %>
 			</div>
