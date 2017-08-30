@@ -134,3 +134,18 @@
     font-size: 16px;
   }
 }
+
+@media only screen and (max-width:640px){
+  .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .btn-default {
+    margin-left: 0;
+  }
+
+
+}
+
+
+
