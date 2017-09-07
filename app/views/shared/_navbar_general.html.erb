@@ -23,6 +23,9 @@
 
   <!-- Dropdown list appearing on mobile only -->
   <div class="navbar-hakuna-item hidden-md hidden-lg">
+  <%= link_to root_path, class: "navbar-hakuna-brand-mobile" do %>
+        <%= image_tag "hakuna-logo-small.png" %>
+      <% end %>
       <div class="dropdown dropdown-toggle-black">
         <a class="fa fa-bars dropdown-toggle" data-toggle="dropdown" href="#"></a>
         <ul class="dropdown-menu dropdown-menu-main .navbar-hakuna-dropdown-menu">
