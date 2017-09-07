@@ -164,6 +164,13 @@
         border-bottom: 3px solid #FED309;
         width: 100px;
     }
+    a {
+        color: #3E4144;
+    }
+    a:hover {
+        text-decoration: none;
+        color: #FED309;
+    }
 }
 .about-section {
     display: flex;
