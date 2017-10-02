@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def mealplans
-    @meal_plans = MealPlan.all
+    @meal_plans = MealPlan.all.order(:created_at)
   end
 
   def about
