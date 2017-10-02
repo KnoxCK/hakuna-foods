@@ -45,7 +45,7 @@
           </ul>
           <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
-          <h3>Total price per week: <span><%= humanized_money_with_symbol(@order.total_price) %></span></h3><% unless @customer.stripe_customer_id %><p><strong>(+£25 one-off refundable deposit for packaging)</strong></p><% end %>
+          <h3>Total price per week: <span><%= humanized_money_with_symbol(@order.total_price) %></span></h3><% unless @customer.stripe_customer_id %><p><strong>(+£25 refundable deposit  for two Hakuna cool bags and ice packs. This deposit will be returned to you at the end of the week on the return of your bags)</strong></p><% end %>
 
           <p>By clicking 'Pay with Card' you are confirming that you have read and agree to our <%= link_to "Terms and Conditions", "", "data-toggle" => "modal", "data-target" => ".bs-modal-lg" %></p>
 
