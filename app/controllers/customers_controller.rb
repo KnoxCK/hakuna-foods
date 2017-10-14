@@ -26,6 +26,7 @@ class CustomersController < ApplicationController
   end
 
   def edit
+    # @customer_plan = CustomerPlan.new
   end
 
   def update

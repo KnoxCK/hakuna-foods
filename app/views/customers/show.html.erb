@@ -37,12 +37,12 @@
         <br>
         <h4><strong>Order details:</strong></h4>
         <p>Meal Plan: <%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
-        <ul>Extras: <% @customer.customer_plan.extra_items.each do |extra| %>
-          <% if extra.quantity_per_week != 0 %>
-            <li><%= Extra.find(extra.extra_id).name %> - <%= extra.quantity_per_week %> per week</li>
-          <% end %>
-        <% end %>
-        </ul>
+        <!-- <ul>Extras: <%# @customer.customer_plan.extra_items.each do |extra| %>
+          <%# if extra.quantity_per_week != 0 %>
+            <li><%# Extra.find(extra.extra_id).name %> - <%# extra.quantity_per_week %> per week</li>
+          <%# end %>
+        <%# end %>
+        </ul> -->
         <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
         <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
