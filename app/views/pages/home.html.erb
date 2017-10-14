@@ -173,3 +173,24 @@
 <div class="choose-plan-btn">
 	<%= link_to "CHOOSE YOUR MEAL PLAN", mealplans_path, class: "landing-btn-red" %>
 </div>
+<div class="modal fade" id="#subscriptionModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Subscribe to Our Newsletter</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @newsletter_subscription do |f| %>
+          <%= f.input :email %>
+      </div>
+      <div class="modal-footer">
+          <%= f.submit "Subscribe" %>
+        <% end %>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
