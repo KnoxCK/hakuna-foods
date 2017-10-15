@@ -32,10 +32,7 @@ class CustomersController < ApplicationController
   def update
     @customer.update(customer_edit_params)
     @customer_plan = @customer.build_customer_plan(customer_plan_params)
-    # @customer.customer_plan.save
-    # if @customer.first_name == ""
-    #   @error = "You must provide your first name"
-    #   redirect_to edit_customer_path(@customer)
+
     if @customer.save && @customer_plan.save
       if @customer.address
         redirect_to customer_path(@customer)
