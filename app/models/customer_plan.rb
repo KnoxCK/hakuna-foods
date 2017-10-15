@@ -5,9 +5,11 @@ class CustomerPlan < ApplicationRecord
   has_many :extras, through: :extra_items
   belongs_to :meal_plan
 
-  # validates_inclusion_of :subscription, in: [true, false]
+  validates_inclusion_of :subscription, in: [true, false]
 
   monetize :total_price_pennies
+
+  after_create :calculate_total_price
 
   def create_extras(params)
     extras = Extra.pluck(:name)
@@ -25,22 +27,6 @@ class CustomerPlan < ApplicationRecord
   end
 
   def update_extras(params)
-    # extras = Extra.pluck(:name)
-    # extra_items = []
-    # params.each do |key, value|
-    #   if extras.include?(key)
-    #     extra_items << [Extra.where(name: key).first.id, value]
-    #   end
-    # end
-
-    # extra_items.each do |extra|
-    #   if ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0])
-    #     ExtraItem.where(customer_plan_id: self.id, extra_id: extra[0]).update(quantity_per_week: extra[1].to_i)
-    #   else
-    #     ExtraItem.create(customer_plan_id: self.id, extra_id: extra[0],
-    #    quantity_per_week: extra[1].to_i)
-    #   end
-    # end
     ExtraItem.where(customer_plan_id: self.id).destroy_all
 
     extras = Extra.pluck(:name)
