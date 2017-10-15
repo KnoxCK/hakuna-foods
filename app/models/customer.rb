@@ -11,6 +11,7 @@ class Customer < ApplicationRecord
   validates_presence_of :dob
   validates_presence_of :gender
 
+  accepts_nested_attributes_for :customer_plan
 
   extend FriendlyId
   friendly_id :full_name, use: :slugged

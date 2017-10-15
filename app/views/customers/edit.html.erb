@@ -16,6 +16,12 @@
         <%= f.input :last_name, required: true %>
         <%= f.input :gender, required: true, as: :radio_buttons, collection: ['Male', 'Female'] %>
         <%= f.input :dob, required: true, as: :date, :order => [:day, :month, :year], label: 'DOB', start_year: 1945, end_year: 2010 %>
+
+          <%= f.simple_fields_for @customer.customer_plan do |cpf| %>
+            <%= cpf.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, label: 'Select your meal plan:' %>
+            <%= cpf.input :subscription, as: :radio_buttons, collection: [ ['Yes', true] , ['No - One week only', false]], label: 'Would you like a weekly subscription?' %>
+
+        <% end %>
         <%= f.button :submit, 'Submit details', class: 'view-plan-btn' %>
       <% end %>
   </div>
