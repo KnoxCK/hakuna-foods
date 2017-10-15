@@ -11,8 +11,7 @@ class CustomerPlansController < ApplicationController
     @customer_plan = CustomerPlan.new(customer_id: @customer.id,
       meal_plan_id: meal_plan_params[:meal_plan_id], days_per_week: 5, subscription: meal_plan_params[:subscription])
     if @customer_plan.save
-      return redirect_to new_customer_address_path(@customer) if @customer.customer_plan.meal_plan_id == 6
-      redirect_to new_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
+      redirect_to new_customer_address_path(@customer)
     else
       render 'new'
     end
@@ -25,7 +24,7 @@ class CustomerPlansController < ApplicationController
     @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id]
     @customer_plan.subscription = meal_plan_params[:subscription]
     if @customer_plan.save
-      redirect_to edit_customer_customer_plan_extra_item_path(@customer.id, @customer_plan.id)
+      redirect_to customer_path(@customer)
     else
       render 'edit'
     end

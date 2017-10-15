@@ -10,11 +10,8 @@ class Customer < ApplicationRecord
   validates_presence_of :last_name
   validates_presence_of :dob
   validates_presence_of :gender
-  validates_presence_of :height
-  validates_presence_of :weight
-  validates_presence_of :phone
-  validates_presence_of :occupation
-  validates_presence_of :exercise
+
+  accepts_nested_attributes_for :customer_plan
 
   extend FriendlyId
   friendly_id :full_name, use: :slugged

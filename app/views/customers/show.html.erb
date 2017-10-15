@@ -17,15 +17,9 @@
         <p>Email: <%= @customer.email %></p>
         <p>Gender: <%= @customer.gender %></p>
         <p>DOB: <%= @customer.formatted_dob %></p>
-        <p>Height: <%= @customer.height %>cm</p>
-        <p>Weight: <%= @customer.weight %>kg</p>
-        <p>Exercise: <%= @customer.exercise %> times per week</p>
-        <p>Occupation: <%= @customer.occupation %></p>
-        <p>Allergies: <%= @customer.allergies %></p>
-        <p>Food dislikes: <%= @customer.preferences %></p>
-        <p>Phone: <%= @customer.phone %></p>
 
         <%= link_to "Edit personal details", edit_customer_path(@customer) %>
+        <br>
         <br>
         <h4><strong>Delivery Address:</strong></h4>
         <p><%= @customer.address.address_line1 %></p>
@@ -35,14 +29,15 @@
         <p>Delivery Instructions: <%= @customer.address.delivery_instructions %></p>
         <%= link_to "Edit delivery address", edit_customer_address_path(@customer) %>
         <br>
+        <br>
         <h4><strong>Order details:</strong></h4>
         <p>Meal Plan: <%= MealPlan.find(@customer.customer_plan.meal_plan_id).name %> - <%= @customer.customer_plan.days_per_week %> days per week.</p>
-        <ul>Extras: <% @customer.customer_plan.extra_items.each do |extra| %>
-          <% if extra.quantity_per_week != 0 %>
-            <li><%= Extra.find(extra.extra_id).name %> - <%= extra.quantity_per_week %> per week</li>
-          <% end %>
-        <% end %>
-        </ul>
+        <!-- <ul>Extras: <%# @customer.customer_plan.extra_items.each do |extra| %>
+          <%# if extra.quantity_per_week != 0 %>
+            <li><%# Extra.find(extra.extra_id).name %> - <%# extra.quantity_per_week %> per week</li>
+          <%# end %>
+        <%# end %>
+        </ul> -->
         <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
         <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
