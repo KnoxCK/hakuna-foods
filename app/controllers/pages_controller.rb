@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :mealplans, :ourfood, :order, :about, :orderform, :faqs, :privacy_policy ]
 
   def home
+    @newsletter_subscription = NewsletterSubscription.new
   end
 
   def mealplans
