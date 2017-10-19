@@ -26,18 +26,18 @@ class CustomersController < ApplicationController
   end
 
   def edit
+    @customer.build_customer_plan
   end
 
   def update
-    @customer.attributes = customer_edit_params
-    # if @customer.first_name == ""
-    #   @error = "You must provide your first name"
-    #   redirect_to edit_customer_path(@customer)
-    if @customer.save
-      if @customer.customer_plan
+    @customer.update(customer_edit_params)
+    @customer_plan = @customer.build_customer_plan(customer_plan_params)
+
+    if @customer.save && @customer_plan.save
+      if @customer.address
         redirect_to customer_path(@customer)
       else
-        redirect_to new_customer_customer_plan_path(@customer)
+        redirect_to new_customer_address_path(@customer)
       end
     else
       render 'edit'
@@ -53,7 +53,11 @@ class CustomersController < ApplicationController
   def customer_edit_params
     params.require(:customer).permit(:first_name, :last_name,
      :gender, :dob, :height, :weight, :exercise, :occupation, :allergies,
-      :preferences, :phone)
+      :preferences, :phone, customer_plan_attributes: [:meal_plan_id, :subscription])
+  end
+
+  def customer_plan_params
+    params.require(:customer).require(:customer_plan).permit(:subscription, :meal_plan_id)
   end
 
   def set_customer
