@@ -1,6 +1,6 @@
 class CustomerPlan < ApplicationRecord
   belongs_to :customer
-  has_one :order
+  has_one :order, dependent: :destroy
   has_many :extra_items
   has_many :extras, through: :extra_items
   belongs_to :meal_plan
