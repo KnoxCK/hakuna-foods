@@ -22,7 +22,7 @@
 				<div class="meal-plan-read-more slideDown hidden" id=<%= "#{meal_plan.name.downcase}" %>>
 					<p><%= meal_plan.detailed_description %>
 					<br></br>
-					<i>From £<%= meal_plan.daily_price %> a day</i></p>
+					<i>£<%= meal_plan.daily_price %> a day</i></p>
 				</div>
         		<button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase}-btn" %>>VIEW PLAN
         		</button>
