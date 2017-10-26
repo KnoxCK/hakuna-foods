@@ -28,7 +28,7 @@
 					  <i>£<%= meal_plan.daily_price %> a day</i></p>
           <% end %>
 				</div>
-        		<button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase}-btn" %>>VIEW PLAN
+        		<button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase.gsub(" ", "-")}-btn" %>>VIEW PLAN
         		</button>
 				<%= link_to orderform_path, class: "book-#{meal_plan.name.downcase.gsub(" ", "-")}-btn small-red-btn hidden" do %>
 					BOOK NOW &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
