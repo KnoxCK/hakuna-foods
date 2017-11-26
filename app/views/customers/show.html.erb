@@ -17,6 +17,8 @@
         <p>Email: <%= @customer.email %></p>
         <p>Gender: <%= @customer.gender %></p>
         <p>DOB: <%= @customer.formatted_dob %></p>
+        <p>Allergies: <%= @customer.allergies %></p>
+        <p>Preferences: <%= @customer.preferences %></p>
 
         <%= link_to "Edit personal details", edit_customer_path(@customer) %>
         <br>
