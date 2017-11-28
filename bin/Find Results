@@ -1,0 +1,989 @@
+Searching 3070 files for "ruby"
+
+/Users/clarissaknox/code/projects/hakuna-foods/Gemfile:
+    1: source 'https://rubygems.org'
+    2: ruby '2.4.2'
+    3  
+    4  gem 'rails', '5.0.0.1'
+
+/Users/clarissaknox/code/projects/hakuna-foods/Gemfile.lock:
+    6  
+    7  GEM
+    8:   remote: https://rubygems.org/
+    9    specs:
+   10      actioncable (5.0.0.1)
+   ..
+   41        arel (~> 7.0)
+   42      activesupport (5.0.0.1)
+   43:       concurrent-ruby (~> 1.0, >= 1.0.2)
+   44        i18n (~> 0.7)
+   45        minitest (~> 5.1)
+   ..
+   80        execjs
+   81      coffee-script-source (1.12.2)
+   82:     concurrent-ruby (1.0.5)
+   83      debug_inspector (0.0.2)
+   84      devise (4.2.1)
+   ..
+  145      money (6.8.2)
+  146        i18n (>= 0.6.4, < 0.9)
+  147:       sixarm_ruby_unaccent (>= 1.1.1, < 2)
+  148      money-rails (1.8.0)
+  149        activesupport (>= 3.0)
+  ...
+  240        actionpack (> 4, < 5.1)
+  241        activemodel (> 4, < 5.1)
+  242:     sixarm_ruby_unaccent (1.1.1)
+  243      slop (3.6.0)
+  244      spring (2.0.1)
+  ...
+  248        spring (>= 1.2, < 3.0)
+  249      sprockets (3.7.1)
+  250:       concurrent-ruby (~> 1.0)
+  251        rack (> 1, < 3)
+  252      sprockets-rails (3.2.0)
+  ...
+  273  
+  274  PLATFORMS
+  275:   ruby
+  276  
+  277  DEPENDENCIES
+  ...
+  308    uglifier
+  309  
+  310: RUBY VERSION
+  311:    ruby 2.3.1p112
+  312  
+  313  BUNDLED WITH
+
+/Users/clarissaknox/code/projects/hakuna-foods/app/assets/stylesheets/README.md:
+    3  Ensure you have the following gems in your Rails `Gemfile`
+    4  
+    5: ```ruby
+    6  # Gemfile
+    7  gem 'bootstrap-sass'
+
+/Users/clarissaknox/code/projects/hakuna-foods/bin/bundle:
+    1: #!/usr/bin/env ruby
+    2  ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+    3  load Gem.bin_path('bundler', 'bundle')
+
+/Users/clarissaknox/code/projects/hakuna-foods/bin/rails:
+    1: #!/usr/bin/env ruby
+    2  begin
+    3    load File.expand_path('../spring', __FILE__)
+
+/Users/clarissaknox/code/projects/hakuna-foods/bin/rake:
+    1: #!/usr/bin/env ruby
+    2  begin
+    3    load File.expand_path('../spring', __FILE__)
+
+/Users/clarissaknox/code/projects/hakuna-foods/bin/setup:
+    1: #!/usr/bin/env ruby
+    2  require 'pathname'
+    3  require 'fileutils'
+
+/Users/clarissaknox/code/projects/hakuna-foods/bin/spring:
+    1: #!/usr/bin/env ruby
+    2  
+    3  # This file loads spring without using Bundler, in order to be fast.
+    .
+    5  
+    6  unless defined?(Spring)
+    7:   require 'rubygems'
+    8    require 'bundler'
+    9  
+
+/Users/clarissaknox/code/projects/hakuna-foods/bin/update:
+    1: #!/usr/bin/env ruby
+    2  require 'pathname'
+    3  require 'fileutils'
+
+/Users/clarissaknox/code/projects/hakuna-foods/config/database.yml:
+   19    encoding: unicode
+   20    # For details on connection pooling, see rails configuration guide
+   21:   # http://guides.rubyonrails.org/configuring.html#database-pooling
+   22    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+   23  
+   ..
+   65  #
+   66  # Instead, provide the password as a unix environment variable when you boot
+   67: # the app. Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
+   68  # for a full rundown on how to provide these environment variables in a
+   69  # production deployment.
+
+/Users/clarissaknox/code/projects/hakuna-foods/config/puma.rb:
+   19  # Workers are forked webserver processes. If using threads and workers together
+   20  # the concurrency of the application would be max `threads` * `workers`.
+   21: # Workers do not work on JRuby or Windows (both of which do not support
+   22  # processes).
+   23  #
+   ..
+   37  # process is booted this block will be run, if you are using `preload_app!`
+   38  # option you will want to use this block to reconnect to any threads
+   39: # or connections that may have been created at application boot, Ruby
+   40  # cannot share connections between processes.
+   41  #
+
+/Users/clarissaknox/code/projects/hakuna-foods/config/routes.rb:
+   24    resources :newsletter_subscriptions, only: :create
+   25    patch '/customers/:customer_id/customer_plans/:customer_plan_id/extra_items', to: 'extra_items#update'
+   26:   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+   27  end
+   28  
+
+/Users/clarissaknox/code/projects/hakuna-foods/config/spring.rb:
+    1  %w(
+    2:   .ruby-version
+    3    .rbenv-vars
+    4    tmp/restart.txt
+
+/Users/clarissaknox/code/projects/hakuna-foods/config/initializers/new_framework_defaults.rb:
+   11  Rails.application.config.action_controller.forgery_protection_origin_check = true
+   12  
+   13: # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.
+   14  # Previous versions had false.
+   15  ActiveSupport.to_time_preserves_timezone = true
+
+/Users/clarissaknox/code/projects/hakuna-foods/config/locales/en.yml:
+   18  #
+   19  # To learn more, please read the Rails Internationalization guide
+   20: # available at http://guides.rubyonrails.org/i18n.html.
+   21  
+   22  en:
+
+/Users/clarissaknox/code/projects/hakuna-foods/log/development.log:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/-l/-L46YWwx49XaBKVzQljtE85-GB2qh8iXyp9vEhJigDg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/-r/-rbZTUM_ZrVWnIHL2KaLZdbhZ1ahCHrBkd4fNlTes7w.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/06/06BTeSN_xSXRO6KAy4OOLa3X0Px80uhH2jpGMsZmENQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/0E/0EpISbRwYmXAub9kVwYjLekBYuQguJpPemUmHDTYaFE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/0n/0nCLIVpLcmHugn_iyT4FD--UrBnNymB0urnnjCAWIZM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/0P/0pXbzapPw2lBNSvMv9M5pXLtTrUTjP71_nwWreBVpTo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/0U/0uYCk0v9gOF-V70HqQ3r5n9ETzuIQQMLL8Z5BtnAA5c.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/0w/0WxvyDhxXxoS8RcA8-FvYmChmfymKBicGgzUI-HA57I.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/17/17TAlxX3c-Rv0jbu6Oa22b6MEfhKutdL1jPJMOYsnIk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/17/17UfxAxk6qXjYTllumXoLEHr_ZFrG_U5UsHmgOxWoP8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/1b/1bwT4SSZCLEBPnDn7IYhhWDIE6DNrmwYnZMBmbHXqE4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/1e/1eXwmcjyCuBoE1TjIBcU5KbZ5__g09-fu6OP0Hkm3II.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/1f/1FZ2ICpr612z7uE1w24REZFH0EojIQEt9Oh5rWpXi4s.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/1G/1GLw4158ki4pP3O0VXaJY45qChDPapWrglPJ9QxlxpY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/1h/1h82HrCQkvfSxbV4Q4FmIuiNfd2ABgtmzyhhR1lxNag.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/1r/1r-G5O4DjzDS7k0YlV2W2v1OI4Ws7KU28VtXwoYwgM8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/27/27UmXYaRGkubgHZBb5jb4SW3zVRSc_1omdPCcM4JBuA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/2A/2aeTvvB412DAbHcXSjbae3LdwZVU62mNQQ0ReFD1JPs.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/2E/2egjI9Jnm2GY_ODtrAOe8-d9tiYRwhRL3Ex0chhx0-8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/2N/2Nm9uZ20_b7mizvr2llhntw_mH8iLNqvh4zJG7Ohy-8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/2s/2SkvRCULiT47QAlXZYw28O8DaYnLBFjb9bI4yp46cRw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/32/32w8bnbSE3c4be8vjx4zyqAhCq-N_ysift_ciXHU5s8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/3R/3rtZq7-iIrCbmql8_Ao1t2GT7sZjEr_acEcDLzJwcJ8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/3U/3UZB_5cLO_UXnNWLqxP3E8NJDDrZx2ff8gbFIVfc97M.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/4V/4V9jSVuNShKjodK3wWaxO2ZoU7EWZJxBO2vuc-MMof8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/4X/4XLOycxcUSb0oQpRqM1vCc2LxpikOxpVndFJQoQp0wc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/4X/4XO0yAb8W10X6zjcb41ISXMYZgcv1lMZ1MOfkSq_E0o.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/58/58v9GAe2TVnvidJjc5orSQ9x9vvLnRjnPeh6uPXv6oQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/5B/5BBeAPFP82C5u8nqrLnDLoRCz_ef-lCV12ZCID6a7GY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/5J/5JEvB9jY0TgYd1P847aennktXcD5coaCEfzZ1Ez4b0Y.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/5P/5PCcRTYnIVIi4lGT_9ztl-Sn3jXN7pBEJzcW7LDn_-M.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/5s/5S4qQufGgUguzqBaaYdrI8j3S1gEHERVda_In1qClcI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/5v/5vQLrP6lH1wfKYiBxiYGgO_ovQJljZK_qHYUme-oYX4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/5w/5w2fm1vG4Mp_luDePhpW5BWFzBz-QMw199aMd4tH3V4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/6_/6_ZE4cLAGdv-hayIvF-5JPdoGqKqY_R3wNlKXmSNyl8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/6I/6iq3SYnzx5zcaGDfpr8s-QYsnbTc_joALOrPdRYFQfQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/6Q/6QQ-06VWjpgnFrqW7qonS903Ijf-L-WFXiqaWzFiA-g.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/6R/6Ru7oiwXBWyVHs4o_xrHXS4kTisPYxlnIeLQa6NJRHY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/6v/6vHFoOc1IK5hZmlEh_7DaNNkhSHhcSNh_nLVFZNkuLg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/6z/6zDIi_12hatVASYE2_2ApCUj1kdGwM0qjBggTO70OeE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/72/72NgzuKGjkdCzR6OjrcyHEhbU3k1f3lvIi1YJNDxcRo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/7h/7He3FyUZw2QMIpwK1oEVXlQgE2ClaM2mYwx8rlG6peI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/7i/7INpDsGAhvl-PGiWNckecbINzSTOxAfTbo0r-T8sSr8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/7i/7iZXM2_2EUFw95wHQJMwFgQGYjZURmmDlRxPk64-0z0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/88/88AQUStOZX2JLXb48_xQJcamLDf9JPU8rSPHcbtsKck.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/8f/8fCO-JCHzJMpk3c5ALE-Tiu_5R4uvHmCPt7dvd3I-Ag.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/8j/8jrx1N3OEj5kq5qQ9FI0II6vqw4n5mrqbA6J_fMohO8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/8m/8mIVWiy193RZQakcNFvsjyVaFGcAkQrDPViBtDnz4rQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/8m/8MpFUORxUfeq-u57N-uKLvPqEOGtIqMYhR0w1YfRs4A.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/9f/9fkqEudAO7OWaXXRRxS7439FiB8nPvAnAHbSFJhTEQ4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/9X/9XAVRzUDUbyABQkR4sS31uJ5-Vl_BV-aAJd4aVPLJZk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/_b/_B9xXXDrDAoKJXPbtYhouWfvto9shyl615MLxLwRcpE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/_O/_OGZWYaEF_wiRQTmVsDxNiPziBPEFWbCSvtPC4LuamY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/_P/_Pa1rpOH7NZvvpvHEbvLkho8609TJgC5unHYoW7YFIY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/a-/a-FvYGYR0NtRZ2F7JCWTPTH7QImlglEMI3IaD0nhmtg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/A3/A3hGJjH6ADgoKl0dRgnyRL2Bg3hXe7WYfmap9RGRYzg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/a9/a99q-lmQSFDmLdDruZpVFm65WxnHKpiC5QsmETB0Xd0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Aa/aA_hlPwNKBSwlQ97RPNHLwVVqgWnvW_7lbXsVfCbXAM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Ab/AbCvvzNeIAXukzUeZQKTvlhdgnQYhpud-iFGTC5nRy4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Ag/Ag904RvUasE9SjsAxejVJKQhuwgjOi4M59rJJU76cCE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/aK/AkCWynzI1OaJ2qtJmtsJ8qokKdTGLxbn6-YGraazTXk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/as/asmhdqgPoX-QACCC90CJzKvDuLGNO39Uu69Lwd3ezBI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/b1/B1Ch26uNpVK5t-ASH5CSwJHDngw24wKopbho0FOij1o.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/b1/b1tPaaKIf7I5fwPEAKJqaRQirvjZEr6ghvTGeHuDtG0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/B2/b2eygnR6sCjGI5QVEbkpTXpGDUmFeja4kDW5fgZlZ4g.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/b5/B5NSj1_nDHpWTKZNPlV_NcKTYl2VStxDB7UNIgTUaVw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/b6/B6v67uLQfElpRd23nYW2Jfr3rlbud12F1Qeh5M4mq8g.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/bA/BAej6p89Wy4hnjAgRsu7lDCK4y9OmgsbM5G5Zq-B5jk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/bg/bgxmD9hsUwmtjHo8a0p2p1gNxQpk8KW3HqyM4Io1HeA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Bi/Biobf0WOkr--Awavf-JuFalaxYe7kbLVAqUfnrqX7AI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/bJ/BjgGooj4IayCSeXy5M2tLPDFA8cL6GBthd152YGH8wk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/bO/BO4pKoMU2gWHSfLMxQJaJO2yidMR93gidiV4MuWzo34.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/bt/btGz9rOkmFKIh3NQOqMPBCOlHXuRdCvHmP7QVS_LN-E.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Bw/bWpZVFD9TqYooa3ZYHm2AD1G_-vjm1roXw0jKGG6niw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/BZ/BzfFJlxikZSOtq5QTEnqckEkEmFb5WG-5gdoSRdml7s.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/C-/C-Ef8luIOZ_TWVxHM7jsEAnN0pNj9iXKmmHWqw6DugI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/C0/C0QfagJdv4X3B1ZYkFakijehMp5uEBCbc2At8tWe3DM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/C7/c7e2ytghu207Mqrb6MKZIM4UXVi2kWWxAUgc_v2B9us.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/c8/c8pgSjH0-Zx1FBwjzXufF9nEb5Sb1AJhyr6o_msGFIQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Cb/CbEEybjlhKQBVOgY6jquNbLhkWBbnrUaa8jazRvosIE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Cd/cDBIAcRsVl4Fgt34M_5z1qPh8I3dA5mOTEgPn56QtAk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Ce/cEbzNBamyi3S_t9AM7tXgEHtkjF9RuR8d1FfKFRQPV0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/CK/Ckq4juvQ3HYreuLDZdq4JIVIoCgiG5RNYGHuLNvb4Zs.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/CT/ctLXd7Xx4r9C2McYx4HRprSzL1ad4l-YR0FxdTj0-yQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/dA/DApOqghy_RNGUNTSZEPtpLFjBqV-s87Yu3jIWKTPjOE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Db/dBq6d_SSJz3eUAMb1CtB-p7cp943T3uyAJVnoUjJYlc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Dd/ddFQGlMLlSelLMH61J3t2bIebr6TfXiS7Urf2V-n5i0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/De/deewKoHWIELcjeuTi9ba5lrI2iaX1Yuw-L_L-DkzXVE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Dj/DjdCnvngNaBWDmRqk-c-o7MWSK-qWjprT9rantCpibA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/dl/DlAxmOh_pkLc_wfGChMntu0vdBHy5qbpq1gvPf2Q27s.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/DM/DMMtoVnzmJxeIrdnal36_y89QbgUK6PWWxu9Nuo6D-Q.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/do/DOJyI2HMq8u9NX5NIulfPdIjpynhJvgPtQw_yiEpDgQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/dy/Dy_shZzAMkclQI3eVhlsxTDMvR5jbq8V-syr8hbAKy8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/dy/dYee0rgDDwujUxzL68ZaWe5Rj5y6ubgR5VhLB-XMuX4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/e7/e7WU_WPCI_0eR-fHf68LTrOCwaamE9aiNQuc8ywFmLM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Ec/eCeelIa2WXpE6pBupc9hr6vde4gEbzwexih9d2PhsU4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Eg/egQKSTVYtgD_46BIcOVt-wSd-omad4BpZj7mPcEaM44.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/EH/EHUaEZEEsW7T738LMpYamKOdDuLWQmibLgOEjJq9axU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/ek/EKiqR6Qa6uZqmG1AZyMBrf_KxmTI_J8MgquxMlw0O2s.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/eL/elsfPNlNgczQnoxDmxwZIH9DC4W8I1oFhFaEjdKvPas.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/EQ/EqMOnBumXIKpfU0HWX4Jb9E7TptjSjWcjWEUXTsdpDQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/ES/eSM99F8bMDodcZRmZwRzxfbpWyL53xSVoiX8oQ5cOFw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/f0/f0GosicCU8ILppWsSSu-Y3hV46s_Dc_fTNuhVU3Fw2Y.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/F2/f29ftjiiRa_W2sSQYhl6XdGIQSj9ETMkE-U_6ikBHg8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/f7/f7htchR7d_fAC9zcYls9JGvrzBZY4o_sAEeEEwJqt70.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/fh/fh-cLksENBWat9ZBhjbA4PhTLCgD_X6ZvSkSFykZJMo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/FI/fI3pdjDfyWxDxafHCXqb4Ag5QQ6qFupqdr_SaeZoyMY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/fl/fLW_3wPYC_nwNeSQa-LYXPNWuWWFCQmFTJNrriZxunw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/fo/fodHw3K5TkQVJjxAln-7QN7O-6sIP7VoTgJ_472RTVM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Fp/FpcZBCRiZFD0YFzCd23Ltfqr_B34tdygYBKsQ9eO2PY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/G6/G6Xfb2BohZMZP8tl1BwDbkwBs5kBed_Lv2FUiRxl8-g.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/GD/gdp8dauGGWoQu5Hs03bEXBsZHloZzLL6qT1dlHRxyxs.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/gH/ghKjG9Hf-vXduSuhOOUHcxBhqrl56YculCmz4H7E33A.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/GM/GMM3cegg9ypk4KWZhMlVCBI3vq7mv8KdH-2KojusAA8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Gt/gtxTILirvJfok9lYn6KUUep4kZGhbEy4KTQdd7x-S38.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/h-/h-mxg5o_idPmEZ_4LjBz3NWz1ZXF6hcb8C_mIH9Z_fY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/h4/h4RgNJlAmeRA_EN8DpUoB31cWWBmlxmgh6sfmMPo4ec.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/hb/hbP95F1iu5IdMkWTlk_lY5GIt0mn9hlf005PW6C5Sw8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Hd/Hd2XrvptuJmIiJlZR2F2MdYBIa-0btoPlnVWg8khcWg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/hI/hIcXywIrm8R75EcMRVg7DNyxZ75D-D4V7rg75pZO2JI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/hK/hKkKTIzmsH0IT6M73ixBJIwnBHeNa9Ickb-STAPvKQg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/hK/hKW7cxIiGdo-QeH56zEuMX-4ADoqN5rIyCBk2tmXm-A.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/hr/HrzWXOptLYpy9ZJquG-tAQNQgi2Bico1JVGRxjdxNmo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/hs/HsUBa0_ahm_NgOj0HajL6nxq9nJqPDhkHj1V6JwcH5c.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/hW/hWfsQzIKFTTPSpvUnsY5sAH5HtazJMbcQ_bkzTGwIHw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/i1/i1ER35lZtPoqeWJm2v0Vytp_Oux97W32UsHYApBAWsc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/ia/IAZs58AygdUk3S8rxs8yZZ2odWCTcGwy2jjR-3nX_1Y.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/iB/IBpSSLYXURj5o7EIRdbcySBCu3BdAbjKCEqIgt7jDRg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/IK/ik1s3axRqcGwoNUtIVstiy_TxOe0g_qXFLuEVQwV0DU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/IL/ilpuUTAdcmSl6a9IFm2kMDHueWpwDLJaSs_-7i4Gcy4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/iq/iQMH4shEIkwqv4OGjloDP61TC1U9VezTMQF4ycYKHMk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/IR/IRLsJjkC7H-9xiQSR39X67iLwUEO-YWmbY0FNKjYMx0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/IS/Isjrk0ItgO98Gm9UCkmOLIfOf1ct125sV1emqkVVJzk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/iZ/IZ7QWQLXFR8xDWrbAA4MsvEvf6uyGpiNX8dsL79WlCc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/j0/j0zNCasUMQMFYYDNVqrn6aXrQAy2F28mhrxht8uQOds.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/J2/j2uLhEDcQ0Hk0TheLsP51itCdOPrdNaaMOC4TLWUtbk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/j5/j5HmHC9rF6NhoYR1uVPelSC2BkkYE4x4xYqvJaT5Q5Q.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/jd/JDsN8-EimT9IstjL6POAynGOKLxSaDUI38qeIFeHNcw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/JI/JIJPNiF1RSXd3XBGceerfdVEdQ3hS6j5KPu8A8sQ498.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/jn/JnSDX06syXMnvvW2m53SnSC7sjNNCrncfabNHI8lGf0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Jq/jqEu3y4vaTOvvtKdMcPf-0_eo_PUT5HrXBa6HLJF0lQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Jq/jqwANNcmECqds6Gi2CvSvvlcYNpQrMD1Vt2774ajANc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/JV/JV4bBxhmNNwqfX89xEk_zjO6aakoDHmN-qnFGA4L2QU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/jY/jYMMSsLhwPf4GfInENqk4D8EMrXe_9BFfMPQ5ieT5ZA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/jZ/JZ7-iFZIpgWFCt-qvzWdtTXcubcV1JQQmVJ-9IWVIlQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/K2/K2alz31DeYCxIbD2CGCUGAWKFq5-iNr7TOAH_FELsYI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/km/KMnnTnQrtob3oKm55CRmhgM-hyOZ1xZviWu2nIhaUy8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/KR/kRQfL833G5w21lT4VCRJJhIImhgfuFkTlHEpxXOeBYs.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/kX/KX8dNdWzf7L7QhhcQFQLLAAnMiVfdKoFb-orha8fapM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/ky/kYqQzWScZ84L2f0mQyay79Au7z7vXiOKJEJ706Lt4q4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Kz/KZDl6st_OwPCPnUyWmp8hua6I9z9XHugGJVQRfiexs8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/l2/l20kuQx6JZKlbkFw8ahzqF3E67ih3ZNZLwy8AUVT5SI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Lh/Lh87HZlJNAcFIYVot5Zsb7fw-YTeWX6yU0Yr_HzBT5U.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/ll/llif4ou_zXwdeAFrqNLl_WS4RD4lcrIjk3BVuxyrulM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/LN/lnUIKM2iEVJRFsZEN2tn3GLbZ8wfQsfD_lo29Tm9QbU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/lx/LxPciogNYGgtAlRdzWbvoInNG8fuFTr1CvD8NsliFtc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/m_/m_RQzJ2ZlRKIEfVtzw_90vYG0xTBKFJajeTzuufgWhE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Mf/Mfc64t7-vRVhw12_E3ogN1MqB_KzdFuhWuMSZcpjOUo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/MG/Mg6qQ3P2_ED5RKFBvZhQqAiz4SC3sF-oTAVrZ7Tt_Uc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/MG/MG_GmQyOFtETa0wSKiaWZQ-Q9D422ALy_kF2qtmeRa0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/MG/MgiKXCIK_kBpfNmJckS5TqlVUwo9kbkFwM7JXf-tuQo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/mk/MKivkiiBVAqUkAi3aHuQEkGwurZz4hqln4fNVVsb29E.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Mx/mx55P8Hazyvk9aq4lcl2HpXdg0QPQIqgxQNmzMQ-V60.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/mY/My4I4076xOBmaD6LZGrCdmeLadStLEOcr7zCc9IS66M.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/mY/MystoQVHV1U1j7hSlfsMuvEJCJLSEe0eQRptvEdVUBk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/mY/mYyTzZwbTvl0lLQdrK11zJvQmj1JQKoe_G2lbG1m2wg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/N3/N3Fet-gOvXWNErMuhGwS6Cwv_l5t5LmRczxh6BijJWw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/n5/n5i4gzgHySLTXvw-YqP3xIOJricA4rwxwrUX_LUEJhU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Ne/NePYAXtAisb4xm_yopTgWm_Wl2IZExjlxu95hBbZBjc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/nh/NH5RcxEmOpmBqCX3xlOkWJNVyGXMoiNqbPA06R5oUWA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/nL/Nl9-Lm50UCfDCgHK1X0uKu-A4DZ3DoVQNg9RIfYJOKk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Ns/NS08ssXwYatc2c0_UBrgZn0GQ_qGJXtoPY7iJaH7WUQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/o1/O1a6csUvcyPcodxpTNqvS7otDfCBHsZYzO23H5unBTg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/o4/O41HTQ0EME8R4bXxtAFjS1AxZgNKfNgHtnYXebX6kcU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/OA/OA09rKfVgrro5-wf8RcLe3s39XPGVOdwLPxoPVD8vlY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Od/Od6_f-FsGnYpf_2BDiYZveV0Mk7UhR1Pc3iUHoIZmZs.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/oH/oHm9gfH1jjUaUnZmjzpxVieAqhJsRhfzgOn80H9Drqo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/oH/OhvrkXlBQofssSWk_wyKTD-UZQTizgI9hUcHj0DnW2A.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Oi/OIclO1wUNFeiZg5UHuiGx1z0E0T1jjsPlezkyEHdqiQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/ok/ok8xsRQN1jqMr3O5oWzbhUrOjrwlq0XpHnoStQRsYUQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/OO/OozSXvV24ePFKveFkXLmf6zj5PAPV9XMz5SthcTTZPo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/OT/otZ_IJjEbCmTeHScVgYPJD6cypN9W_CjwRnmjxbj__0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/oY/OYu2i4n0tEk7zuwC2HmFsAqy5R3J1aeZONr1vWu7cCw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/p7/p77vLseCyI_b_Vt1L-Uc6PqvFHPOy307Cw057HrsswE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/PB/PBvQGCfU89QYq-6JtD_KitPbRNJh7lqTCjEdJk3VYnk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/PE/pePa2IMM4QS5oggVOklPaVs5M2AiIp3M-HospnXA7PI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/PH/Ph1pnygqacbrEKU75-q8G3-0508KQFpyF9wOMdPUcSI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/pj/pjAkES1crndttOqsDPX94ceFqklmgyFc9KE0MBCBJpM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/pj/pJEhz0FaOuyU3tNTiWt80XJ08Amh_onQ4YK9p8IFzS4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/po/POT-nMk6NBdFQtMUTbBO5B5bKPBLSniz_qkpa2XHTzI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/pR/pRa9Zo24-WM7gwdTp5jD6xr1HrCK97j3WZUJm6bi-As.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/pt/ptkkcLdv2cGwo2EVmjCal8ciPRJ4BxnheGguKKy3Y_I.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/pu/puVL3QQC4pkWyg8LDupw9Rg3wAEO9F1IDLwMxdDOXcY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/q4/q4Gbkc7W50RPN-4Mz7xfz2-TELA-QyftpdQh0jHL_S4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Q6/Q6r2kUIFB1TjtEjqo4XUfSDF_tfXrL68SublFhvuzKE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/qI/qIlkf8q2wmVVajOe7NHk4LwTuWP5PT0zEMyyg4R2gmM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/QS/QSgoXIDHO5R_6Ut4IzAselIckrCNO6rLUiGjdWoJUnI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/qu/Qu23M6xyB8_8MACe_EthiT6Cb-zUi_wNzophcFtEDSQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/qw/qwNZ3blS6PhIbdcynqAAu6gb_sSoQ2X2HqZa-xa1pFo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/R1/R1e9u-0ZhabSHtF8gX14t-dXNCpJKcO6MV_lzOJToHY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/R4/r4OLamtNSPVBo0mhUR4F6uRGd2zhn_KGdctI9OV2mHU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/re/reL13eMPp4LKq0bcspzX-N8WwfnAQWZY1F9_sU_PeWI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/rM/rMYOAGhyoSmk7f1mWxSMdm19YtgOyZeZ3XnYs7J5vkI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Rq/rQHpmtMJOSF6CQUS-JFl3YlFW79iWARIqCe6YXMo48Y.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Rq/RqyHrZCbLxxew1AJm5zvISSfBg-S6poTxT5Qowt902g.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/rs/Rs2XR72vuU1iW3EYISdgZoDfgJC6aJOpMnEDaPHIBYU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/RX/RxUU_pTx9IX_8hb2ljyDxa5iZq6D_y1utgnu5wXFtco.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/S5/S5lbkMbREzAaAunZCMbKNNHOs2chBkF4XxbzTJxRNos.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/s_/s_5ZwZn3_cRkYz3jZ57VL4iXB1v2dtgT5d6pN-WSJwY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/s_/s_P3igvPSDn7LYKQKgyavJmV1AIRxB0xyB-i9DCo5Xc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Sd/Sde4qRHHq_KPRmGRn41mb3LOFxMNZ_iJsptFl-WUC_g.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Se/SeyaLb5drgYnbSanLwkDAmc427h3EI5Ob_qvWzAUsAo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/sg/sgh7s6aG1464uOrRBKFs2z_Ol1SMocjwF1QW1YRX0Lk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/SI/sIWaJXX_kt0wRdRn3HT2Cz06jGgzsmjSW1dunufdVVA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/sk/skfncAgDHWTX3YaFQjn6MQSnvHTic08flEdGXR2rkg0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/sM/sMCHvaM0R75sBWJiIdde2d9tPUHWJaRbYrJhwAiQ2Ek.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Sp/SpL01xKBS_zCU-1glpwA1IdO4_FGDlCEEyl1IOew6Ks.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/sR/sRVqO1HPC97fvxi7ZlXMFeNSw4PMuii7wfIMX112KU8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/sR/SrwZSDGHmjtv6xlK3bCwOhJ1K90mmNcVQAcwKNiHlIc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/SS/SSh5OXOuSfNDXcw9EOE4ps7xzLebixPWAENAjy71aBo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/St/St83EaDV_V0WFXP4zp7k8UEpKBeDfzlFFe1vX1OOeKk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/t5/t5SX1m3s77gaXD2Kpl8JjT43RiZoVKnF3txkqJYyVbc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/tb/TbZsbGfntlEfryiTp1vCrAhmjvHlHFNdo7vsUz_pwZA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/TF/TFY1qvXxs2qMHwCQxsu5q6avgj5Hzta68z0Kff9C4fc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/TF/TFyft-e0qkzEXgzHxap7Vi2aObSoXPS7BmJP9dMr3Gs.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/TG/TGyCTniBTJj5xGp5pHCs5G6zB4RvXQpHgxB8h3gxi34.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/TK/TkyON6sl-N-EQUTOtfoPkNn_p6ano4UC7dRxvpmsX5o.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/tp/TP5dJyM7VRTb6TEMQpPBNUU00mlCGBfrdlpvRFPPRYI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/tU/TU0hKB1QdYkDqKakjlhumfna7K1XXYw4gebx7RYU9eY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/tv/tvVmoTDWcjhgCkZOF4sOOtHJYV4-W7r9KV28lYuOwKU.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/TX/TXF2CJFV2qL8kUNjRUTn-LJwbuN0_jZYLAurlGri3l4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/tY/TY0vZ0GMf8ZT0SuJ2VhO-76NDILwWwn2nlMUCm8-sR8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/U2/u2YLX1SvCtiOPIkQOY9_OP9sxr3Dyj8N0OU7b8qUtiM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/uI/uIujYApXAUt6v0nRtyadT22Pp5GhBNfU3KxDZP875qA.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/uJ/uJwa9nDttfuahIS2UskdXa-U6hBGHOxQ_fVirYzkyMo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/uO/UO2aDwSacPZrF2BlcsnS_0YPyca2IgqpQJ1Svrj6hQk.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Up/UPZpNFINtOWfu9z8N0FFnIa6-uMm3oiOW40FZFV5m-I.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/uV/uv39-pKHYkc_EppVyaY9NvcKSFicaWeVpNWe481WnrM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/V1/V1f1wXp203lZMoJwQcPfsgInUYeBf6HIwk5Kv3L4ZUg.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Vb/VbssVhhN0Hai265M_vzoMGeE2aLYKZ7_6jsuokniEPM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Vb/VbY4WOFoYG7ZUwHfbngC64-gqODUwSnBgNfIkufnE_w.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/vN/VNHp68yEkGUSxAgFT31U6iCrolo7KN5F52vd-tPoBns.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/VT/VT5UePAh-szIJMxeXAHZ4G48w_z5z2H5GFmuhhKUHUo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Vx/vXIULRsncAjKlrvH_LfNyGNuyf0jN72p_LdxoRkZ_ds.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/VY/VyTqFrPq7KcDP0r1vx__js5bSauwP52Pyu6OdtL-swo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/w0/W0fphLwFDx2VJArMLn_DPzMxSyDyXrsVN4rBNvU3h5M.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/W3/w39dC360fiPasWZmMTgyGPIJHp2BwGHkYKCUHo9O8HI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/w6/W6JAIvI4C_1i3rlb3mwk_iyIrfBy2BX2bFESRbOxz_g.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/wd/wd41pPmoIOOLpt-1-oR3qkWBo3WExp2hR_rilT93Dt8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Wg/Wg6sYRk7Dkil6-r4RJi6jaW93aFdjfL160kPtguHQak.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/wn/Wn3AQT8WVVaCJMl_CHUB7DUtRMa9UEm1sujLNTIwHdI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/X4/X4FYI55_zHhpaTuy1aALWOJw5siax0pBMN7jGajDNWc.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/x_/x_uhhWO6vPK9PH8avL505cwMkRUT_HGYI6idX5Bd5VY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/xa/xASXG81I5sEYOhEBZeqJ2as1TaNr1NZWwtYK8mlMY6w.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/XC/Xc0wAdhxCbVG_rNnL5sOYYtav_CDtuCSMXnBJDG3uHE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Xh/XH2f8sH7qtr14KixuCT26RTmN3n-rJvdUcTEK3rhfr8.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/XO/XojmpgPddx2a6nG01kB6zwWAHVBbEScZTLa-3kydzjM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/XO/xoZ4_NddA6RC7BYqtymokYcovqRtD_nwMTT7xDwtOdI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/XR/xrJ6b7T-8zAWWheeFE_BsbigzosJWB-SmN-fKSMLEiw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/XS/xsRXdn-Kn5uK9n3B9bH3c0WyjVHRg6MlZ8-Gkog_Ta0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/XV/xvOnm0TB3NY_Sg5g_csJgQivuLnW3VpZSUSgNZ9pF2Q.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Y-/Y-GF-AtBbusw_ps5UiFvdHhHZaI936L75VMneW6tjuo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/y4/Y4Ztad8m9cuYhHizwzUZIJdPBjfXl0u-nP4vhhI5UDI.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/YB/YBnCBPiGaWx-3dhvPBUJz3ts8wTA_ZhKACkpkk1pDBE.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/yD/yDJxQhaeHMxhs_VoJJsux0qRXpSoztbn84Np8bIPx14.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Yj/YJzpyB8fL19etqfaoSKpipADI-Q2UJYqxH86FSSHVzY.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/yr/YRb8rwO42QAcsprqUM-Mtc95H-smEsB9zj6nrvxjbVQ.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/yu/YutYXD0vKUoPh06UcqCmHMpJNYEgtLyoH9iyx_BKY4A.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/yW/yWCDUzO4Vp-YYkKS-uRUbnH5ekDnX2gn8f31yroDC4o.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/YX/yXu5aAdKJWblsgKAgb8ZTwZpeOPYj-SbrRy03zionM0.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/z6/Z6BCLQMSsMqU1J9EO27kfJrB6xKG8-ou4QB34LVlbA4.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/ZD/Zd1mjJpLcHWqb8qGX5gPi8M87vDdU1aV2FIRWEuYt8k.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/Zf/zfCjHLvYHZr-7OnjQPb42H6pWmsEL0sz8PL-HftjKAo.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/zI/zI4noCVArX34MLBJBUb57Gd8NQmiUiUf1Rw9cib6iec.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/zl/Zl0JbgZlkCM7Dqoj9AJM88nPoYGKwO4fQ2xmekfOoQM.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/zl/zLOtUYaXH9Pt62AAjdtJ0zY1FGrd1prLLw56O52uNAw.cache:
+    <binary>
+
+/Users/clarissaknox/code/projects/hakuna-foods/tmp/cache/assets/sprockets/v3.0/zt/zTqNSsPyDJuTMiCX7nfbnh4eOBvv4aFPdkSCB31bfJ4.cache:
+    <binary>
+
+1024 matches across 293 files
