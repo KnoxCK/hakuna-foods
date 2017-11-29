@@ -179,10 +179,9 @@
     font-weight: lighter;
 }
 .our-phil {
-    width: 950px;
+    width: 400px;
     padding: 40px;
     margin-left: 60px;
-    margin-right: 60px;
     border: solid 2px #FED309;
     h4 {
         letter-spacing: 2px;
@@ -194,6 +193,7 @@
 }
 .our-founder {
     padding: 0 70px 0 100px;
+    width: 700px;
     h4 {
         margin: 40px 0 30px 0;
         letter-spacing: 2px;
@@ -203,7 +203,7 @@
     height: 40vh;
     width: auto;
 }
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1160px) {
     .our-food { 
         width: 800px;
     }
@@ -225,9 +225,6 @@
         width: 750px;
     }
     .about-intro p {
-        width: 800px;
-    }
-    .our-phil {
         width: 800px;
     }
     .nutrition-box {
@@ -256,6 +253,29 @@
     .fruit-box {
         background-color: #5DB035;
         width: 390px;
+    }
+    .our-founder {
+        padding-left: 60px;
+        padding-right: 30px;
+        width: 500px;
+    }
+    .annabel-img {
+        height: 30vh;
+        width: auto;
+    }
+}
+@media only screen and (max-width: 976px) {
+    .about-section {
+        flex-direction: column-reverse;
+    }
+    .our-founder {
+        padding-left: 30px;
+        width: 766px;
+    }
+    .our-phil {
+        width: 766px;
+        margin-top: 45px;
+        margin-left: 0;
     }
 }
 @media only screen and (max-width: 928px) {
@@ -305,11 +325,8 @@
             height: 206px;
         }
     }
-    .our-phil {
-        margin: 0;
-    }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     .our-food { 
         width: auto;
         padding: 0 10vw;
@@ -339,6 +356,11 @@
         padding: 0 10vw;
     }
     .our-phil {
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .our-founder {
         width: auto;
     }
     .nutrition-box {
@@ -370,8 +392,32 @@
     .bottom-text p {
         height: 394px;
     }
-    .our-phil {
+}
+@media only screen and (max-width: 650px) {
+   .our-food { 
+        width: auto;
+        padding: 0 5vw;
+    }
+    .extras {
+        flex-direction: column;
+        align-items: center;
+    }
+    .balanced-diet p {
+        width: auto;
+        padding: 0 5vw;
+    } 
+    .nutrition-section {
+        width: auto;
+        padding: 0 5vw;
+    }
+    .about-intro p {
+        width: auto;
+        padding: 0 5vw;
+    }
+    .our-founder {
+        width: auto;
         margin: 0;
+        padding: 0 5vw;
     }
 }
 
