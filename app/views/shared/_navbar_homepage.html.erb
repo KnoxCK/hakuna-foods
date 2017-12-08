@@ -20,6 +20,11 @@
 
     <!-- Order link -->
     <h4><%= link_to "ORDER", orderform_path, class: "navbar-hakuna-link-landing" %></h4>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete, class: "sign-out" do %>
+        <i class="fa fa-power-off" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
