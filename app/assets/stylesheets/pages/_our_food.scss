@@ -20,6 +20,9 @@
         width: 100px;
     }
 }
+.our-food-icons {
+    background-color: white;
+}
 .extras {
     display: flex;
     justify-content: center;
@@ -59,7 +62,7 @@
     margin-left: 43px;
 }
 .nutrition-section {
-    margin: 100px 0 49px 0;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -75,7 +78,7 @@
 .nutrition-images-top {
     display: flex;
     justify-content: center;
-    margin: 0 100px;
+    margin: 30px 100px 0 100px;
 }
 .nutrition-images-bottom {
     display: flex;
