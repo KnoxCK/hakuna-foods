@@ -46,10 +46,11 @@
         <br>
 
         <p>Do you have a promo code? Enter here:</p>
-        <%= simple_form_for @customer do |f| %>
+        <%= simple_form_for [@customer, @customer.customer_plan], remote: true do |f| %>
           <%= f.input :promo_code %>
+        <%= f.submit 'Verify Code' %>
         <% end %>
-
+        <div id="code"></div>
         <%= link_to "Confirm and proceed to checkout", customer_customer_plan_orders_path(@customer, @customer.customer_plan), method: :post, class: 'btn-default btn-order-confirmation' %>
       </div>
     </div>

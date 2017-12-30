@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20171230182452) do
     t.integer "days_per_week",       default: 5
     t.boolean "subscription"
     t.integer "total_price_pennies", default: 0, null: false
+    t.string  "promo_code"
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
     t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
   end
@@ -56,7 +57,6 @@ ActiveRecord::Schema.define(version: 20171230182452) do
     t.string   "email",              null: false
     t.boolean  "valid_postcode"
     t.string   "slug"
-    t.string   "promo_code"
     t.index ["slug"], name: "index_customers_on_slug", unique: true, using: :btree
   end
 
