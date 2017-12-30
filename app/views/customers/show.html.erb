@@ -44,6 +44,12 @@
 
         <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
         <br>
+
+        <p>Do you have a promo code? Enter here:</p>
+        <%= simple_form_for @customer do |f| %>
+          <%= f.input :promo_code %>
+        <% end %>
+
         <%= link_to "Confirm and proceed to checkout", customer_customer_plan_orders_path(@customer, @customer.customer_plan), method: :post, class: 'btn-default btn-order-confirmation' %>
       </div>
     </div>
