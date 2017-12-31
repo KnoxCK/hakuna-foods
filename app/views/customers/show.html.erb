@@ -46,15 +46,24 @@
         <br>
 
         <p>Do you have a promo code? Enter here:</p>
-        <%= simple_form_for [@customer, @customer.customer_plan], remote: true do |f| %>
-          <%= f.input :promo_code %>
-        <%= f.submit 'Verify Code' %>
-        <% end %>
+        <input type="text" id="code"><input type="submit" id="verify">
+
         <div id="code"></div>
         <%= link_to "Confirm and proceed to checkout", customer_customer_plan_orders_path(@customer, @customer.customer_plan), method: :post, class: 'btn-default btn-order-confirmation' %>
       </div>
     </div>
 </div>
-
-
-
+<% content_for :javascript do %>
+  <script>
+    $(document).ready(function(){
+      $('#verify').click(function(){
+        console.log('oi');
+        $.ajax({
+          type: 'POST',
+           url: "/customer_plans/#{@customer.customer_plan.id}/verify_promo_code",
+          data: { code: $('#code').val() }
+        })
+      })
+    })
+  </script>
+<% end %>

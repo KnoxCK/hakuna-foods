@@ -23,7 +23,7 @@ class CustomerPlansController < ApplicationController
   def update
     @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id] if meal_plan_params[:meal_plan_id]
     @customer_plan.subscription = meal_plan_params[:subscription] if meal_plan_params[:subscription]
-    @customer_plan.promo_code = meal_plan_params[:promo_code] if meal_plan_params[:promo_code]
+    PromoCode.verify(@customer_plan, meal_plan_params[:promo_code]) if meal_plan_params[:promo_code]
     if @customer_plan.save
       respond_to do |format|
         format.html { redirect_to customer_path(@customer) }
