@@ -52,7 +52,7 @@ class CustomersController < ApplicationController
 
   def customer_edit_params
     params.require(:customer).permit(:first_name, :last_name,
-     :gender, :dob, :height, :weight, :exercise, :occupation, :allergies,
+     :gender, :dob, :height, :weight, :exercise, :occupation, :promo_code, :allergies,
       :preferences, :phone, customer_plan_attributes: [:meal_plan_id, :subscription])
   end
 

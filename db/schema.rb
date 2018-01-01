@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015114504) do
+ActiveRecord::Schema.define(version: 20180101143028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,9 +32,13 @@ ActiveRecord::Schema.define(version: 20171015114504) do
     t.integer "meal_plan_id"
     t.integer "days_per_week",       default: 5
     t.boolean "subscription"
-    t.integer "total_price_pennies", default: 0, null: false
+    t.integer "total_price_pennies", default: 0,     null: false
+    t.boolean "promo_verified",      default: false
+    t.integer "promo_code_id"
+    t.boolean "discount_applied",    default: false
     t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
     t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
+    t.index ["promo_code_id"], name: "index_customer_plans_on_promo_code_id", using: :btree
   end
 
   create_table "customers", force: :cascade do |t|
@@ -102,6 +106,13 @@ ActiveRecord::Schema.define(version: 20171015114504) do
     t.index ["customer_plan_id"], name: "index_orders_on_customer_plan_id", using: :btree
   end
 
+  create_table "promo_codes", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "discount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -123,6 +134,7 @@ ActiveRecord::Schema.define(version: 20171015114504) do
   add_foreign_key "addresses", "customers"
   add_foreign_key "customer_plans", "customers"
   add_foreign_key "customer_plans", "meal_plans"
+  add_foreign_key "customer_plans", "promo_codes"
   add_foreign_key "extra_items", "customer_plans"
   add_foreign_key "extra_items", "extras"
   add_foreign_key "orders", "customer_plans"

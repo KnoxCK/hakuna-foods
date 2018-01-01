@@ -21,8 +21,8 @@ class CustomerPlansController < ApplicationController
   end
 
   def update
-    @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id]
-    @customer_plan.subscription = meal_plan_params[:subscription]
+    @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id] if meal_plan_params[:meal_plan_id]
+    @customer_plan.subscription = meal_plan_params[:subscription] if meal_plan_params[:subscription]
     if @customer_plan.save
       redirect_to customer_path(@customer)
     else

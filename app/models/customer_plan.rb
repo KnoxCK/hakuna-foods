@@ -4,6 +4,7 @@ class CustomerPlan < ApplicationRecord
   has_many :extra_items
   has_many :extras, through: :extra_items
   belongs_to :meal_plan
+  belongs_to :promo_code, optional: true
 
   validates_inclusion_of :subscription, in: [true, false]
 
@@ -60,5 +61,12 @@ class CustomerPlan < ApplicationRecord
     total_weekly_price = weekly_meal_plan_price + total_weekly_extras_price
     self.total_price = total_weekly_price.round(2)
     self.save
+  end
+
+  def update_price
+    return unless promo_code_id
+    return if discount_applied == true
+    new_price = total_price_pennies - (promo_code.discount * 100)
+    update_columns(total_price_pennies: new_price, discount_applied: true)
   end
 end
