@@ -44,11 +44,10 @@
 
         <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
         <br>
-
+        <br>
         <p>Do you have a promo code? Enter here:</p>
         <input type="hidden" value="<%= @customer.customer_plan.id %>" id="cp_id"><input type="text" id="code"><input type="submit" id="verify">
-
-        <div id="verified"></div>
+        <div id="verified" style="color: #DE605F;margin-top:5px;"> &nbsp;</div>
         <%= link_to "Confirm and proceed to checkout", customer_customer_plan_orders_path(@customer, @customer.customer_plan), method: :post, class: 'btn-default btn-order-confirmation' %>
       </div>
     </div>
