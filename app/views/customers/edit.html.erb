@@ -17,7 +17,7 @@
         <%= f.input :gender, required: true, as: :radio_buttons, collection: ['Male', 'Female'] %>
         <%= f.input :dob, required: true, as: :date, :order => [:day, :month, :year], label: 'DOB', start_year: 1945, end_year: 2010 %>
         <%= f.input :allergies, as: :text, label: 'Please let us know of any food allergies or intolerances (we are always dairy, gluten and refined sugar free).' %>
-        <%= f.input :preferences, as: :text, label: 'Do you dislike and particular foods?' %>
+        <%= f.input :preferences, as: :text, label: 'Do you dislike any particular foods?' %>
 
           <%= f.simple_fields_for @customer.customer_plan do |cpf| %>
             <%= cpf.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, label: 'Select your meal plan:' %>
