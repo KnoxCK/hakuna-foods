@@ -65,7 +65,8 @@ class CustomerPlan < ApplicationRecord
 
   def update_price
     return unless promo_code_id
+    return if discount_applied == true
     new_price = total_price_pennies - (promo_code.discount * 100)
-    update(total_price_pennies: new_price)
+    update_columns(total_price_pennies: new_price, discount_applied: true)
   end
 end
