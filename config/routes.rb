@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     end
   end
   resources :newsletter_subscriptions, only: :create
-  post '/customer_plans/:customer_plan_id/verify_promo_code', to: 'promo_codes#verify'
+  post '/verify_promo_code', to: 'promo_codes#verify'
   patch '/customers/:customer_id/customer_plans/:customer_plan_id/extra_items', to: 'extra_items#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -4,6 +4,7 @@ class CustomerPlan < ApplicationRecord
   has_many :extra_items
   has_many :extras, through: :extra_items
   belongs_to :meal_plan
+  has_one :promo_code
 
   validates_inclusion_of :subscription, in: [true, false]
 

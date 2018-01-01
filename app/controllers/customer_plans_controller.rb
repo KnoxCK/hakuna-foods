@@ -23,12 +23,8 @@ class CustomerPlansController < ApplicationController
   def update
     @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id] if meal_plan_params[:meal_plan_id]
     @customer_plan.subscription = meal_plan_params[:subscription] if meal_plan_params[:subscription]
-    PromoCode.verify(@customer_plan, meal_plan_params[:promo_code]) if meal_plan_params[:promo_code]
     if @customer_plan.save
-      respond_to do |format|
-        format.html { redirect_to customer_path(@customer) }
-        format.js
-      end
+      redirect_to customer_path(@customer)
     else
       render 'edit'
     end
@@ -45,6 +41,6 @@ class CustomerPlansController < ApplicationController
   end
 
   def meal_plan_params
-    params.require(:customer_plan).permit(:meal_plan_id, :subscription, :promo_code)
+    params.require(:customer_plan).permit(:meal_plan_id, :subscription)
   end
 end
