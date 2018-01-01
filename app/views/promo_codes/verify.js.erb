@@ -1,7 +1,2 @@
-console.log(@customer_plan.promo_verified);
-console.log('oi');
-if (@customer_plan.promo_verified) {
-  $('#verified').html('<p>Verified</p>');
-} else {
-  $('#verified').html('<p>Code invalid</p>');
-}
+
+$('#verified').html("<%= @message %>");

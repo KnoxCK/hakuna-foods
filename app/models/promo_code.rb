@@ -8,6 +8,8 @@ class PromoCode < ApplicationRecord
   end
 
   def self.set_verified(customer_plan_id, promo_code)
-    CustomerPlan.find(customer_plan_id.to_i).update(promo_code_id: PromoCode.find_by_code(promo_code).id, promo_verified: true)
+    customer_plan = CustomerPlan.find(customer_plan_id.to_i)
+    customer_plan.update(promo_code_id: PromoCode.find_by_code(promo_code).id, promo_verified: true)
+    customer_plan.update_price
   end
 end
