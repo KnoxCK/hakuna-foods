@@ -17,7 +17,7 @@
         <%= f.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, label: 'Select your meal plan:' %>
 
         <%# f.input :days_per_week, as: :radio_buttons, collection: [ 3, 5 ], label: 'How many days per week would you like your meal plan?' %>
-
+         <%= f.input :half_package, as: :radio_buttons, collection: [ ['Yes', true] , ['No', false]], label: 'Would you like a half package?' %>
         <%= f.input :subscription, as: :radio_buttons, collection: [ ['Yes', true] , ['No - One week only', false]], label: 'Would you like a weekly subscription?' %>
 
         <%= f.button :submit, class: 'view-plan-btn' %>

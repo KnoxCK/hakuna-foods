@@ -20,7 +20,9 @@
         <%= f.input :preferences, as: :text, label: 'Do you dislike any particular foods?' %>
 
           <%= f.simple_fields_for @customer.customer_plan do |cpf| %>
+            <%= cpf.hidden_field :days_per_week, value: 5 %>
             <%= cpf.association :meal_plan, as: :radio_buttons, collection: MealPlan.all, label: 'Select your meal plan:' %>
+            <%= cpf.input :half_package, as: :radio_buttons, collection: [ ['Yes', true] , ['No', false]], label: 'Would you like a half package?' %>
             <%= cpf.input :subscription, as: :radio_buttons, collection: [ ['Yes', true] , ['No - One week only', false]], label: 'Would you like a weekly subscription?' %>
 
         <% end %>

@@ -34,6 +34,7 @@ class CustomersController < ApplicationController
     @customer_plan = @customer.build_customer_plan(customer_plan_params)
 
     if @customer.save && @customer_plan.save
+      @customer_plan.calculate_total_price
       if @customer.address
         redirect_to customer_path(@customer)
       else
@@ -57,7 +58,7 @@ class CustomersController < ApplicationController
   end
 
   def customer_plan_params
-    params.require(:customer).require(:customer_plan).permit(:subscription, :meal_plan_id)
+    params.require(:customer).require(:customer_plan).permit(:subscription, :meal_plan_id, :half_package, :days_per_week)
   end
 
   def set_customer

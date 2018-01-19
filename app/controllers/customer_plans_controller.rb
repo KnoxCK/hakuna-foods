@@ -23,7 +23,9 @@ class CustomerPlansController < ApplicationController
   def update
     @customer_plan.meal_plan_id = meal_plan_params[:meal_plan_id] if meal_plan_params[:meal_plan_id]
     @customer_plan.subscription = meal_plan_params[:subscription] if meal_plan_params[:subscription]
+    @customer_plan.half_package = meal_plan_params[:half_package] if meal_plan_params[:half_package]
     if @customer_plan.save
+      @customer_plan.calculate_total_price
       redirect_to customer_path(@customer)
     else
       render 'edit'
@@ -41,6 +43,6 @@ class CustomerPlansController < ApplicationController
   end
 
   def meal_plan_params
-    params.require(:customer_plan).permit(:meal_plan_id, :subscription)
+    params.require(:customer_plan).permit(:meal_plan_id, :subscription, :half_package)
   end
 end

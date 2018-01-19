@@ -1,11 +1,8 @@
 class MealPlan < ApplicationRecord
+  has_many :customer_plans
 
+  monetize :daily_price_pennies
+  monetize :half_daily_price_pennies
 
-
-has_many :customer_plans
-
-monetize :daily_price_pennies
-
-mount_uploader :photo, PhotoUploader
-
+  mount_uploader :photo, PhotoUploader
 end

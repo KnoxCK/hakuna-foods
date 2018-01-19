@@ -10,7 +10,7 @@ class CustomerPlan < ApplicationRecord
 
   monetize :total_price_pennies
 
-  after_create :calculate_total_price
+  # after_create :calculate_total_price
 
   def create_extras(params)
     extras = Extra.pluck(:name)
@@ -53,13 +53,17 @@ class CustomerPlan < ApplicationRecord
   end
 
   def calculate_total_price
-    weekly_meal_plan_price = MealPlan.find(self.meal_plan_id).daily_price * self.days_per_week
-    total_weekly_extras_price = 0
-    self.extra_items.each do |item|
-      total_weekly_extras_price += item.weekly_price
+    if half_package?
+      weekly_meal_plan_price = MealPlan.find(self.meal_plan_id).half_daily_price * self.days_per_week
+    else
+      weekly_meal_plan_price = MealPlan.find(self.meal_plan_id).daily_price * self.days_per_week
     end
-    total_weekly_price = weekly_meal_plan_price + total_weekly_extras_price
-    self.total_price = total_weekly_price.round(2)
+    # total_weekly_extras_price = 0
+    # self.extra_items.each do |item|
+    #   total_weekly_extras_price += item.weekly_price
+    # end
+    # total_weekly_price = weekly_meal_plan_price + total_weekly_extras_price
+    self.total_price = weekly_meal_plan_price.round(2)
     self.save
   end
 

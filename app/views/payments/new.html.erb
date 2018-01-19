@@ -43,6 +43,7 @@
             <%# end %>
           <%# end %>
           </ul> -->
+          <p><strong><%= @customer.customer_plan.half_package ? "Half Package" : "Full package" %></strong></p>
           <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
           <h3>Total price per week: <span><%= humanized_money_with_symbol(@order.total_price) %></span></h3>

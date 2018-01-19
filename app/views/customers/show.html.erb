@@ -40,6 +40,7 @@
           <%# end %>
         <%# end %>
         </ul> -->
+        <p><strong><%= @customer.customer_plan.half_package ? "Half Package" : "Full package" %></strong></p>
         <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
 
         <%= link_to "Edit order details", edit_customer_customer_plan_path(@customer, @customer.customer_plan) %>
