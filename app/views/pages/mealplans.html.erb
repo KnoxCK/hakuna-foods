@@ -25,7 +25,9 @@
           <% if meal_plan.id == 6 %>
             <i>POA</i></p>
           <% else %>
-					  <i>£<%= meal_plan.daily_price %> a day</i></p>
+					  FULL PACKAGE (3 Meals, 2 Snacks + Juice):<br><i>£<%= meal_plan.daily_price %> a day</i><br>
+					  HALF PACKAGE (2 Meals + 1 Snack, calories pro-rated):<br><i>£<%= meal_plan.half_daily_price %> a day</i>
+					</p>
           <% end %>
 				</div>
         		<button class="small-red-btn" id="view-plan" data-target=<%= "##{meal_plan.name.downcase}" %> data-button=<%= ".book-#{meal_plan.name.downcase.gsub(" ", "-")}-btn" %>>VIEW PLAN
