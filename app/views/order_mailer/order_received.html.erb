@@ -25,6 +25,7 @@
     <h4>Order:</h4>
     <p><%= @customer.meal_plan.name %></p>
     <p>Customer plan id: <%= @customer.customer_plan.id %></p>
+    <p><strong><%= @customer.customer_plan.half_package ? "Half Package" : "Full package" %></strong></p>
     <p><strong><%= @customer.customer_plan.subscription ? "Weekly subscription" : "One week only" %></strong></p>
   </div>
 </div>
