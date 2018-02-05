@@ -15,6 +15,11 @@
 		font-weight: lighter;
 	}
 }
+.icons-free {
+	.icon {
+		margin: 0 30px;
+	}
+}
 .landing-images {
 	display: flex;
 	justify-content: space-between;
@@ -136,24 +141,31 @@
 		height: 200px;
 	}
 }
+@media only screen and (max-width: 1157px) {
+	.balanced-diet {
+		margin-top: 34px;
+	}
+}
 @media only screen and (max-width: 1067px) {
 	.what-we-do p {
 		width: auto;
 		padding: 0 200px;
 	}
 }
-@media(max-width: 980px){
-	.icons {
-		flex-direction: column;
-		align-items: center;
-		align-content: center;
-		justify-content: center;
-	}
+@media only screen and (max-width: 980px){ 
 	.icon {
 		margin: 20px 0;
 	}
+	.icons-free {
+		.icon {
+			margin: 20px 0;
+		}
+	}
+	.nutrition-section {
+    	margin-top: 0;
+    }
 } 
-@media (max-width: 893px) {
+@media only screen and (max-width: 893px) {
 	.landing-order-now {
 		flex-direction: column;
 	}
@@ -165,8 +177,17 @@
 		padding-top: 20px;
 		padding-left: 0;
 	}
+	// .icons {
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// 	align-content: center;
+	// 	justify-content: center;
+	// }
+	.our-food-icons-second {
+		padding-top: 0;
+	}
 }
-@media (max-width: 812px) {
+@media only screen and (max-width: 812px) {
     .landing-image img {
 	    height: 140px;
 	}
@@ -190,6 +211,12 @@
     .example-menus p {
     	padding: 40px 20px 0px 20px;
     }
+    .icons-main {
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
 } 
 @media only screen and (max-width: 458px) {
 	.what-we-do {
