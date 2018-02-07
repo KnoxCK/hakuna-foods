@@ -51,17 +51,21 @@
 }
 @media only screen and (max-width: 1000px) {
   .banner {
-    background-image: url('http://res.cloudinary.com/depgwjsnd/image/upload/v1518009853/HakunaFoods_landing_image_small_eqf7hh.jpg');
+    background-image: linear-gradient(-225deg, rgba(255, 255, 255, 0.4)50%, rgba(255, 255, 255, 0.4)80%), url('http://res.cloudinary.com/depgwjsnd/image/upload/v1518025539/HakunaFoods_landing_image_small_ydbv4g.jpg');
     height: auto;
   }
-.banner-content {
+  .banner-content {
+    margin-top: 16vh;
+    margin-bottom: 16vh;
+    // background-color: white;
+    // background: rgba(255, 255, 255, 0.7);
     h2 {
-      margin-top: 200px;
+      margin: 60px 20px 0 20px;
     }
   }
-.subscribe {
-    margin-bottom: 60px;
-  } 
+  // .subscribe {
+  //   margin-bottom: 60px;
+  // } 
 }
 @media only screen and (max-width: 1000px) {
   .banner-content {
