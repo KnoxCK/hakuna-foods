@@ -159,7 +159,11 @@
     padding: 10px 10vw;
   }
 }
-
+@media only screen and (max-width: 1000px) {
+  .navbar-hakuna-main {
+    margin-right: 60px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
     left: -60px;

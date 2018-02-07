@@ -78,7 +78,7 @@
 .nutrition-images-top {
     display: flex;
     justify-content: center;
-    margin: 30px 100px 0 100px;
+    margin-top: 30px;
 }
 .nutrition-images-bottom {
     display: flex;
@@ -373,6 +373,62 @@
     .our-founder {
         width: auto;
     }
+    // .nutrition-box {
+    //     margin: 5px 0;
+    //     position: relative;
+    //     height: 240px;
+    // }
+    // .meat-box {
+    //     width: 300px;
+    // }
+    // .fish-box {
+    //     width: 300px;
+    // }
+    // .dairy-box {
+    //     width: 300px;
+    // }
+    // .flavour-box {
+    //     width: 300px;
+    // }
+    // .grains-box {
+    //     width: 300px;
+    // }
+    // .fruit-box {
+    //     width: 300px;
+    // }
+    // .grains-bottom {
+    //     height: 448px;
+    // }
+    // .bottom-text p {
+    //     height: 394px;
+    // }
+}
+@media only screen and (max-width: 650px) {
+   .our-food { 
+        width: auto;
+        padding: 0 5vw;
+    }
+    .extras {
+        flex-direction: column;
+        align-items: center;
+    }
+    .balanced-diet p {
+        width: auto;
+        padding: 0 5vw;
+    } 
+    .nutrition-section {
+        width: auto;
+        padding: 0 5vw;
+    }
+    .about-intro p {
+        width: auto;
+        padding: 0 5vw;
+    }
+    .our-founder {
+        width: auto;
+        margin: 0;
+        padding: 0 5vw;
+    }
     .nutrition-box {
         margin: 5px 0;
         position: relative;
@@ -401,33 +457,6 @@
     }
     .bottom-text p {
         height: 394px;
-    }
-}
-@media only screen and (max-width: 650px) {
-   .our-food { 
-        width: auto;
-        padding: 0 5vw;
-    }
-    .extras {
-        flex-direction: column;
-        align-items: center;
-    }
-    .balanced-diet p {
-        width: auto;
-        padding: 0 5vw;
-    } 
-    .nutrition-section {
-        width: auto;
-        padding: 0 5vw;
-    }
-    .about-intro p {
-        width: auto;
-        padding: 0 5vw;
-    }
-    .our-founder {
-        width: auto;
-        margin: 0;
-        padding: 0 5vw;
     }
 }
 

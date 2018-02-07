@@ -100,6 +100,14 @@
 .dropdown-toggle-black {
   color: black;
 }
+@media only screen and (max-width: 1067px) {
+  .navbar-hakuna-main-landing {
+    margin-right: 60px;
+  }
+  .navbar-hakuna-link-landing {
+    padding: 0 32px;
+  }
+}
 // On scroll only
 @media(min-width: 980px){
   .smooth-scroll {
