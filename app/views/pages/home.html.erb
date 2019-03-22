@@ -4,178 +4,66 @@
 </div>
 <div class="banner">
 	<div class="banner-content">
-		<h2>NUTRITION PROGRAMMES<br>DELIVERED TO YOUR DOOR</h2>
-		<p>PROVIDING YOU WITH NOURISHMENT, STRUCTURE AND CONSISTENCY</p>
-	<%= link_to "ORDER NOW", orderform_path, class: "landing-btn-red" %>
-	<h6 style="margin-bottom: 0px;padding-bottom:2px;">*Place your order before midnight on Thursday <br>for your Hakuna meals the following week</h6>
-  <!-- Subscription -->
-  <h4 class="subscribe"><%= link_to "SUBSCRIBE TO NEWSLETTER", "", class: "newsletter-btn", "data-toggle" => "modal", "data-target" => "#subscriptionModal"%></h4>
+		<h2>NUTRITIONAL CHEFS FOR FILM, TV AND FASHION</h2>
+		<p>ENHANCING WORKING LIVES BOTH ON AND OFF SET</p>
+	<%= link_to "GET IN TOUCH", "mailto:info@hakunafoods.co.uk", class: "landing-btn-red" %>
+  	<h5><%= link_to "VIEW OUR FOOD", ourfood_path %></h5>
+  <!-- Subscription <h4 class="subscribe"><%= link_to "SUBSCRIBE TO NEWSLETTER", "", class: "newsletter-btn", "data-toggle" => "modal", "data-target" => "#subscriptionModal"%></h4>-->
 </div>
 </div>
 <div class="icons">
 	<div class="icon text-center" id="icon-1">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396159/ChoosePlan_hhsyyv.png" %>
-		<p>1. CHOOSE YOUR<br>MEAL PLAN</p>
 	</div>
 	<div class="icon text-center" id="icon-2">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493396196/Tailor_jfrk1a.png" %>
-		<p>2. WE EXPERTLY <br>PREPARE YOUR MEALS</p>
 	</div>
 	<div class="icon text-center" id="icon-3">
 		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493378724/Delivered_zpiail.png" %>
-		<p>3. WE DELIVER <br>STRAIGHT TO YOUR DOOR</p>
 	</div>
+</div>
+<div id="film"></div>
+<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
+	<div class="what-we-do text-center">
+		<h3>FILM, TV & FASHION</h3>
+		<hr>  
+		<p>Hakuna Foods prepares a nutritionally balanced daily selection of delicious meals to Actors, Models, Musicians, Directors and Producers alike.
+		<br></br>
+		We use the latest kitchen technology and the freshest, most thoughtfully sourced ingredients, to provide individually tailored meals to enhance our clients working lives both on and off set. Whether it’s bulking up to be a superhero, shredding weight to be a ballet dancer or getting ready for the red carpet, we work closely with nutritionists, personal trainers and directors to achieve their goals and visions.
+		<br></br>
+		Making and finding the right food choices can be challenging and time consuming, add this to long days of filming with limited access to healthy options and it can be impossible. Hakuna foods is able to take this problem off your hands entirely.
+		<br></br>
+		Our kitchens are based as close as possible to our clients whether that’s on set, on location, or at a studio. We bring our kitchen to the production and are available for breakfast, lunch,  supper and absolutely anything our clients require whilst filming. 
+		<br></br>
+		Our meals are created to provide the energy and nutrients our bodies require for optimal wellbeing. We focus on incorporating nutrient rich power foods, fermentations, wild herbs, activated nuts and wholegrains into our meals, combining a vibrant and elegant presentation of flavours, textures and colours. Our meals are designed to be eaten on the go, during hair and make up or in between takes. We use environmentally friendly, de-compostable and recycled packaging. 
+	 	</p>
+	 	<div class="landing-images hidden">
+		<div class="landing-image slideRight" id="first-landing-image">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493554764/Tuna_daoetr.png" %>
+		</div>
+		<div class="landing-image slideLeft" id="third-landing-image">
+			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493554569/Berries_p1wmlh.png" %>
+		</div>
+	</div>
+	<div id="home-eco"></div>
 </div>
 <%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
-<div class="what-we-do text-center">
-	<h3>WHAT WE DO?</h3>
-	<hr>
-	<p>Hakuna Foods prepares, and then delivers, a nutritionally balanced daily selection of delicious meals and juices, created to provide the energy and nutrients your body requires for optimal wellbeing.
-	<br></br>
-	We provide you with breakfast, lunch, supper, snacks and a juice in line with your chosen meal plan. Every calorie, macro and micronutrient is accounted for using specialised software. Once calculated and prepared, we deliver your meals to your door in a temperature controlled chiller bag, every morning, before 6am, from Monday to Friday.
-	<br></br>
-	All of our food is gluten, dairy and refined sugar free. We focus on incorporating nutrient rich power foods, fermentations, wild herbs, activated nuts and wholegrains into our meals. Combining a vibrant and elegant presentation of flavours, textures and colours, our meals are designed to be eaten at home, in the office or on the go.
-	<br></br>
-	Your meals and snacks are pre prepared so they are ready to eat whenever you require them. If we think a meal will taste even more delicious when warmed through, we notify you on your daily menu.
-	<br></br>
-	Making healthy food choices can be both complicated and time consuming. We take the hassle away and do the hard work for you.
- 	</p>
- 	<div class="landing-images hidden">
-	<div class="landing-image slideRight" id="first-landing-image">
-		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493554764/Tuna_daoetr.png" %>
-	</div>
-	<div class="landing-image slideLeft" id="third-landing-image">
-		<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493554569/Berries_p1wmlh.png" %>
-	</div>
-</div>
-</div>
-
-<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
-<div class="landing-order-now text-center">
-	<div class="one-week-programme">
-		<h3>ONE WEEK PROGRAMME</h3>
-		<p>Eat the Hakuna way for 5 days from Monday through to Friday</p>
-		<%= link_to orderform_path, class: "landing-btn-clear" do %>
-  			ORDER NOW  &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-		<% end %>
-	</div>
-	<div class="weekly-subscription">
-		<h3>WEEKLY SUBSCRIPTION</h3>
-		<p>Enjoy Hakuna Foods Monday to Friday on a rolling basis</p>
-		<%= link_to orderform_path, class: "landing-btn-clear" do %>
-  			ORDER NOW  &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-		<% end %>
+<div class="landing-home-eco text-center">
+	<div class="landing-home-eco-text">
+		<h3>HOME ECONOMY</h3>
+		<hr>  
+		<p>Asides from cooking for the Top Cast, we provide on screen food for TV and film shoots. We work closely with art departments and production teams to create food in line with each specific brief. We have worked on projects of varying sizes, throughout many eras and differing themes; from canapés in space to medieval banquets!
+		<br></br>
+		We appreciate that food tells a story, and so conduct thorough research and development to provide the most appropriate food in line with the brief.
+		<br></br>
+		We are able to work either at a studio or more remotely on location. For further information, please contact us and we would be happy to discuss your requirements in more detail.</p>
 	</div>
 </div>
 
 <%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
-<div class="example-menus text-center">
-	<h3>EXAMPLE MENUS</h3>
-	<hr>
-<!-- EXAMPLE MENUS -->
-<!-- MENU 1 -->
-	<div class="example-menu-1">
-		<div class="example-menu-images">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168293/223_yigyay.jpg" %>
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168488/w_aww3sd.jpg" %>
-		</div>
-		<div class="menu-scroll">
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-left arrow-white left-arrow-1"></i>
-			<% end %>
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-right arrow-white right-arrow-1"></i>
-			<% end %>
-		</div>
-		<br></br>
-		<h4>Breakfast</h4>
-		<p>Chia Breakfast Pot, Maple Blueberries, Coconut Yoghurt, Bee Pollen
-		<br>–<br>
-		Sweetcorn Chilli Fritters, Avocado, Soft Boiled Egg, Massaged Kale, Kimchi</p>
-	</div>
-<!-- MENU 2 -->
-	<div class="example-menu-2 hidden">
-		<div class="example-menu-images">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1503505988/ss_tnyyds_jybvqc.jpg" %>
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168280/3_zhurhe.jpg" %>
-		</div>
-		<div class="menu-scroll">
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-left arrow-white left-arrow-2"></i>
-			<% end %>
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-right arrow-white right-arrow-2"></i>
-			<% end %>
-		</div>
-		<br></br>
-		<h4>Morning Snack</h4>
-		<p>Sashimi Snack Pot, Edamame Beans, Seaweed, Pickled Ginger, Sesame Seeds, Wasabi
-		<br>–<br>
-		Green Alkalising Soup, Cashew Cream, Tamari Pumpkin Seeds</p>
-	</div>
-<!-- MENU 3 -->
-	<div class="example-menu-3 hidden">
-		<div class="example-menu-images">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168284/2_ble3zq.jpg" %>
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498163167/4a_s91hbz.jpg" %>
-		</div>
-		<div class="menu-scroll">
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-left arrow-white left-arrow-3"></i>
-			<% end %>
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-right arrow-white right-arrow-3"></i>
-			<% end %>
-		</div>
-		<br></br>
-		<h4>Lunch</h4>
-		<p>Lime Harissa Chicken, Pistachio and Pomegranate Quinoa Pilaf, Griddled Courgettes, Tahini
-		<br>–<br>
-		Tuna Poke Bowl, Black Sesame Rice, Spring Onion, Carrot, Radish, Cucumber, Lime</p>
-	</div>
-<!-- MENU 4 -->
-	<div class="example-menu-4 hidden">
-		<div class="example-menu-images">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1503505988/ss_tnyyds1_erdltg.jpg" %>
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168735/ss_tnyyds.jpg" %>
-		</div>
-		<div class="menu-scroll">
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-left arrow-white left-arrow-4"></i>
-			<% end %>
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-right arrow-white right-arrow-4"></i>
-			<% end %>
-		</div>
-		<br></br>
-		<h4>Afternoon Snack</h4>
-		<p>Pistachio, Cacao and Date Bites
-		<br>–<br>
-		Banana Chia Dougnuts</p>
-	</div>
-<!-- MENU 5 -->
-	<div class="example-menu-5 hidden">
-		<div class="example-menu-images">
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168285/21_aeve0m.jpg" %>
-			<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1498168294/65_skyl7a.jpg" %>
-		</div>
-		<div class="menu-scroll">
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-left arrow-white left-arrow-5"></i>
-			<% end %>
-			<%= link_to "" do %>
-	  			<i class="fa fa-angle-right arrow-white right-arrow-5"></i>
-			<% end %>
-		</div>
-		<br></br>
-		<h4>Supper</h4>
-		<p>Wild Mushroom Miso Ramen, Marinated Tofu, Buckwheat Noodles and Shoyu Tamago
-		<br>–<br>
-		Hakuna Burger, Paprika Swede and Celeriac Chips, Kimchi, Pickled Radish and Watercress</p>
-	</div>
-</div>
+
 <div class="choose-plan-btn">
-	<%= link_to "CHOOSE YOUR MEAL PLAN", mealplans_path, class: "landing-btn-red" %>
+	<%= link_to "GET IN TOUCH", "mailto:info@hakunafoods.co.uk", class: "landing-btn-red" %>
 </div>
 <div class="modal fade" id="subscriptionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

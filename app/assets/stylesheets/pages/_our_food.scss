@@ -14,14 +14,12 @@
         font-weight: lighter;
         padding: 10px;
         text-align: center;
+        margin-bottom: 36px;
     }
     hr {
         border-bottom: 3px solid #DE4C4B;
         width: 100px;
     }
-}
-.our-food-icons {
-    background-color: white;
 }
 .extras {
     display: flex;
@@ -61,8 +59,12 @@
     height: 400px;
     margin-left: 43px;
 }
+.nutrition-wrapper {
+    background-color: #F7F7F7;
+    padding-bottom: 20px;
+}
 .nutrition-section {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -99,15 +101,15 @@
     width: 230px;
 }
 .dairy-box {
-    background-color: #DDDDDD;
+    background-color: #FED309;
     width: 230px;
 }
 .flavour-box {
-    background-color: #FED309;
+    background-color: #F0B67F;
     width: 230px;
 }
 .grains-box {
-    background-color: #FED309;
+    background-color: #D4CDC3;
     width: 470px;
 }
 .fruit-box {
@@ -198,7 +200,7 @@
     padding: 0 70px 0 100px;
     width: 700px;
     h4 {
-        margin: 40px 0 30px 0;
+        margin: 62px 0 30px 0;
         letter-spacing: 2px;
     }
     a {
@@ -224,10 +226,17 @@
     .balanced-diet-section {
         flex-direction: column-reverse;
     }   
-    .balanced-diet p {
-        text-align: center;
-        width: 760px;
-    }  
+    .balanced-diet {
+        h4 {
+            padding-top: 40px;
+        }
+        p {
+            text-align: center;
+            width: 760px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
     .diet-image {
         margin-left: 0;
     }
@@ -249,15 +258,15 @@
         width: 190px;
     }
     .dairy-box {
-        background-color: #DDDDDD;
+        background-color: #FED309;
         width: 190px;
     }
     .flavour-box {
-        background-color: #FED309;
+        background-color: #F0B67F;
         width: 190px;
     }
     .grains-box {
-        background-color: #FED309;
+        background-color: #D4CDC3;
         width: 390px;
     }
     .fruit-box {
@@ -277,6 +286,9 @@
 @media only screen and (max-width: 976px) {
     .about-section {
         flex-direction: column-reverse;
+    }
+    .about-intro {
+        margin-bottom: 0;
     }
     .our-founder {
         padding-left: 30px;
@@ -310,22 +322,22 @@
         margin: 10px 0;
     }
     .meat-box {
-        width: 600px;
+        width: 100%;
     }
     .fish-box {
-        width: 600px;
+        width: 100%;
     }
     .dairy-box {
-        width: 600px;
+        width: 100%;
     }
     .flavour-box {
-        width: 600px;
+        width: 100%;
     }
     .grains-box {
-        width: 600px;
+        width: 100%;
     }
     .fruit-box {
-        width: 600px;
+        width: 100%;
     }
     .grains-bottom {
         height: 262px;
@@ -408,6 +420,12 @@
         width: auto;
         padding: 0 5vw;
     }
+    .icons {
+        padding: 0;
+    }
+    .icon {
+        padding-top: 30px;
+    }
     .extras {
         flex-direction: column;
         align-items: center;
@@ -435,28 +453,32 @@
         height: 240px;
     }
     .meat-box {
-        width: 300px;
+        width: 100%;
     }
     .fish-box {
-        width: 300px;
+        width: 100%;
     }
     .dairy-box {
-        width: 300px;
+        width: 100%;
     }
     .flavour-box {
-        width: 300px;
+        width: 100%;
     }
     .grains-box {
-        width: 300px;
+        width: 100%;
     }
     .fruit-box {
-        width: 300px;
+        width: 100%;
     }
     .grains-bottom {
         height: 448px;
     }
     .bottom-text p {
         height: 394px;
+    }
+    .icons {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

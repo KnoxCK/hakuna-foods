@@ -34,11 +34,11 @@
 .navbar-hakuna-main-landing {
   display: flex;
   align-items: center;
-  margin-right: 80px;
+  margin-right: 40px;
 }
 .navbar-hakuna-link-landing {
   color: #333332;
-  padding: 0 40px;
+  padding: 0 20px;
   font-size: 14px;
   letter-spacing: 2px;
   line-height: 0.5px;
@@ -100,12 +100,19 @@
 .dropdown-toggle-black {
   color: black;
 }
-@media only screen and (max-width: 1080px) {
-  .navbar-hakuna-main-landing {
-    margin-right: 60px;
-  }
+@media only screen and (max-width: 1352px) {
   .navbar-hakuna-link-landing {
-    padding: 0 32px;
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 1227px) {
+  .navbar-hakuna-link-landing {
+    letter-spacing: 0px;
+  }
+}
+@media only screen and (max-width: 1117px) {
+  .navbar-hakuna-link-landing {
+    letter-spacing: 0px;
   }
 }
 // On scroll only

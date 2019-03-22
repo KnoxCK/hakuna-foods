@@ -35,12 +35,12 @@
 .navbar-hakuna-main {
   display: flex;
   align-items: center;
-  margin-right: 80px;
+  margin-right: 40px;
 }
 .navbar-hakuna-link {
   color: #333332;
   width: 200px;
-  margin: 0 30px;
+  margin: 0 20px;
   font-size: 14px;
   letter-spacing: 2px;
   line-height: 0.5px;
@@ -156,7 +156,22 @@
   margin: -27px 0 0;
   li > a {
     font-weight: 600px;
-    padding: 10px 10vw;
+    padding: 10px 0;
+  }
+}
+@media only screen and (max-width: 1352px) {
+  .navbar-hakuna-link {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 1227px) {
+  .navbar-hakuna-link {
+    letter-spacing: 0px;
+  }
+}
+@media only screen and (max-width: 1117px) {
+  .navbar-hakuna-link {
+    letter-spacing: 0px;
   }
 }
 @media only screen and (max-width: 1000px) {
