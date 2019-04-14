@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: 'pages#home'
@@ -24,5 +23,4 @@ Rails.application.routes.draw do
   resources :newsletter_subscriptions, only: :create
   post '/verify_promo_code', to: 'promo_codes#verify'
   patch '/customers/:customer_id/customer_plans/:customer_plan_id/extra_items', to: 'extra_items#update'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

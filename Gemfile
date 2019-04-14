@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'rails', '5.0.0.1'
+gem 'rails', '5.2'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
-gem 'jbuilder', '~> 2.0'
+# gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 
@@ -17,6 +17,9 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'coffee-script'
+gem 'instagram'
+gem 'faraday'
+gem 'multi_json'
 
 gem 'money-rails'
 gem 'stripe'
@@ -32,6 +35,7 @@ gem 'postmark-rails'
 gem "letter_opener", group: :development
 
 gem 'friendly_id', '~> 5.2.0'
+gem "bootsnap"
 
 
 group :development, :test do
@@ -41,7 +45,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
