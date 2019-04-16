@@ -58,7 +58,7 @@
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-name="<%= @customer.full_name %>"
             data-description="<%= @customer.email %>"
-            data-amount="<%= @customer.stripe_customer_id ? @order.total_price_pennies : @order.total_price_pennies + 2500 %>"
+            data-amount="<%= @customer.stripe_customer_id ? @order.total_price_cents : @order.total_price_cents + 2500 %>"
             data-currency="gbp"></script>
 
 

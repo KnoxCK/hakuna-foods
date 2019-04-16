@@ -22,7 +22,7 @@ class PaymentsController < ApplicationController
           id:       "#{@customer.email}-#{@order.id}",
           interval: "week",
           currency: "gbp",
-          amount:   @order.total_price_pennies,
+          amount:   @order.total_price_cents,
           )
       end
 
@@ -44,7 +44,7 @@ class PaymentsController < ApplicationController
 
       charge = Stripe::Charge.create(
         customer: customer.id,
-        amount: (@order.total_price_pennies + 2500),
+        amount: (@order.total_price_cents + 2500),
         description:  "Payment from #{@customer.full_name} for order ##{@order.id}",
         currency:     "gbp",
         receipt_email: @customer.email,
