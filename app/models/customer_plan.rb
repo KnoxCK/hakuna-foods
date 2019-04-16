@@ -8,7 +8,7 @@ class CustomerPlan < ApplicationRecord
 
   validates_inclusion_of :subscription, in: [true, false]
 
-  monetize :total_price_pennies
+  monetize :total_price_cents
 
   # after_create :calculate_total_price
 
@@ -70,7 +70,7 @@ class CustomerPlan < ApplicationRecord
   def update_price
     return unless promo_code_id
     return if discount_applied == true
-    new_price = total_price_pennies - (promo_code.discount * 100)
-    update_columns(total_price_pennies: new_price, discount_applied: true)
+    new_price = total_price_cents - (promo_code.discount * 100)
+    update_columns(total_price_cents: new_price, discount_applied: true)
   end
 end

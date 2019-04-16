@@ -14,7 +14,7 @@
 		<div class=<%= "meal-plan-#{meal_plan.name.downcase.gsub(" ", "-")}-box" %>>
 			<div class=<%= "meal-plan" %>>
 
-				<%= image_tag meal_plan.photo %>
+				<%= image_tag meal_plan.photo if meal_plan.photo? %>
 				<h4><%= meal_plan.name.upcase %></h4>
 			</div>
 			<div class="meal-plan-description">

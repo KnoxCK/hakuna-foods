@@ -10,127 +10,127 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124194457) do
+ActiveRecord::Schema.define(version: 2019_04_16_125751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "addresses", force: :cascade do |t|
-    t.string   "address_line1"
-    t.string   "address_line2"
-    t.string   "address_line3"
-    t.string   "postcode"
-    t.text     "delivery_instructions"
-    t.integer  "customer_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.index ["customer_id"], name: "index_addresses_on_customer_id", using: :btree
+  create_table "addresses", id: :serial, force: :cascade do |t|
+    t.string "address_line1"
+    t.string "address_line2"
+    t.string "address_line3"
+    t.string "postcode"
+    t.text "delivery_instructions"
+    t.integer "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_addresses_on_customer_id"
   end
 
-  create_table "customer_plans", force: :cascade do |t|
+  create_table "customer_plans", id: :serial, force: :cascade do |t|
     t.integer "customer_id"
     t.integer "meal_plan_id"
-    t.integer "days_per_week",       default: 5
+    t.integer "days_per_week", default: 5
     t.boolean "subscription"
-    t.integer "total_price_pennies", default: 0,     null: false
-    t.boolean "promo_verified",      default: false
+    t.integer "total_price_cents", default: 0, null: false
+    t.boolean "promo_verified", default: false
     t.integer "promo_code_id"
-    t.boolean "discount_applied",    default: false
-    t.boolean "half_package",        default: false
-    t.index ["customer_id"], name: "index_customer_plans_on_customer_id", using: :btree
-    t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id", using: :btree
-    t.index ["promo_code_id"], name: "index_customer_plans_on_promo_code_id", using: :btree
+    t.boolean "discount_applied", default: false
+    t.boolean "half_package", default: false
+    t.index ["customer_id"], name: "index_customer_plans_on_customer_id"
+    t.index ["meal_plan_id"], name: "index_customer_plans_on_meal_plan_id"
+    t.index ["promo_code_id"], name: "index_customer_plans_on_promo_code_id"
   end
 
-  create_table "customers", force: :cascade do |t|
-    t.string   "postcode"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "gender"
-    t.date     "dob"
-    t.integer  "height"
-    t.integer  "weight"
-    t.string   "exercise"
-    t.string   "occupation"
-    t.string   "allergies"
-    t.string   "preferences"
-    t.string   "phone"
-    t.string   "stripe_customer_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "email",              null: false
-    t.boolean  "valid_postcode"
-    t.string   "slug"
-    t.index ["slug"], name: "index_customers_on_slug", unique: true, using: :btree
+  create_table "customers", id: :serial, force: :cascade do |t|
+    t.string "postcode"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "gender"
+    t.date "dob"
+    t.integer "height"
+    t.integer "weight"
+    t.string "exercise"
+    t.string "occupation"
+    t.string "allergies"
+    t.string "preferences"
+    t.string "phone"
+    t.string "stripe_customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", null: false
+    t.boolean "valid_postcode"
+    t.string "slug"
+    t.index ["slug"], name: "index_customers_on_slug", unique: true
   end
 
-  create_table "extra_items", force: :cascade do |t|
-    t.integer  "customer_plan_id"
-    t.integer  "extra_id"
-    t.integer  "quantity_per_week"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.integer  "weekly_price_pennies", default: 0, null: false
-    t.index ["customer_plan_id"], name: "index_extra_items_on_customer_plan_id", using: :btree
-    t.index ["extra_id"], name: "index_extra_items_on_extra_id", using: :btree
+  create_table "extra_items", id: :serial, force: :cascade do |t|
+    t.integer "customer_plan_id"
+    t.integer "extra_id"
+    t.integer "quantity_per_week"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "weekly_price_cents", default: 0, null: false
+    t.index ["customer_plan_id"], name: "index_extra_items_on_customer_plan_id"
+    t.index ["extra_id"], name: "index_extra_items_on_extra_id"
   end
 
-  create_table "extras", force: :cascade do |t|
-    t.string  "name"
-    t.text    "description"
-    t.integer "unit_price_pennies", default: 0, null: false
-    t.string  "photo"
+  create_table "extras", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "unit_price_cents", default: 0, null: false
+    t.string "photo"
   end
 
-  create_table "meal_plans", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.text     "detailed_description"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.integer  "daily_price_pennies",      default: 0, null: false
-    t.string   "photo"
-    t.float    "half_daily_price_pennies"
+  create_table "meal_plans", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.text "detailed_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "daily_price_cents", default: 0, null: false
+    t.string "photo"
+    t.float "half_daily_price_cents"
   end
 
-  create_table "newsletter_subscriptions", force: :cascade do |t|
-    t.string   "email"
+  create_table "newsletter_subscriptions", id: :serial, force: :cascade do |t|
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.string   "state"
-    t.integer  "customer_plan_id"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.integer  "total_price_pennies", default: 0, null: false
-    t.index ["customer_plan_id"], name: "index_orders_on_customer_plan_id", using: :btree
+  create_table "orders", id: :serial, force: :cascade do |t|
+    t.string "state"
+    t.integer "customer_plan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "total_price_cents", default: 0, null: false
+    t.index ["customer_plan_id"], name: "index_orders_on_customer_plan_id"
   end
 
-  create_table "promo_codes", force: :cascade do |t|
-    t.string   "code"
-    t.integer  "discount"
+  create_table "promo_codes", id: :serial, force: :cascade do |t|
+    t.string "code"
+    t.integer "discount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "",    null: false
-    t.string   "encrypted_password",     default: "",    null: false
-    t.string   "reset_password_token"
+  create_table "users", id: :serial, force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.boolean  "admin",                  default: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "addresses", "customers"

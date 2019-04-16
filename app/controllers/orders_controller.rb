@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.create(customer_plan_id: @customer_plan.id,
-      state: 'Pending', total_price_pennies: @customer_plan.total_price_pennies)
+      state: 'Pending', total_price_cents: @customer_plan.total_price_cents)
 
     redirect_to new_customer_customer_plan_order_payment_path(@customer.id, @customer_plan.id, @order.id)
   end
