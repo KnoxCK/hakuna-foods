@@ -6,8 +6,8 @@
   <div class="text-center padded">
     <h1><%= @article.title %></h1>
      <%= link_to cl_image_tag(@article.image, width: 300, height: 300, crop: :fill), article_path(@article)  %>
-    <%= @article.content.html_safe %>
-    <%= link_to "edit", edit_article_path, class: "btn-default" %>
+    <p><%= @article.content.html_safe %></p>
+    <%= link_to "edit", edit_article_path, class: "landing-btn-red" %>
   </div>
 </div>
 
