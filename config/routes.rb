@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: 'pages#home'
@@ -10,7 +11,9 @@ Rails.application.routes.draw do
   get 'bespoke', to: 'pages#bespoke'
   get 'privacy_policy', to: 'pages#privacy_policy'
   get 'faqs', to: 'pages#faqs'
+  get 'blog', to: 'articles#index'
 
+  resources :articles, only: [:create, :new, :edit, :update, :show]
   resources :customers, only: [:create, :edit, :update, :show] do
     resources :addresses, only: [:new, :create, :edit, :update]
     resources :customer_plans, only: [:new, :create, :edit, :update] do

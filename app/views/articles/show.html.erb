@@ -1,0 +1,13 @@
+<%= render 'shared/navbar_general' %>
+<div class="ourfood_banner">
+</div>
+<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
+<div class="article-wrapper">
+  <div class="text-center padded">
+    <h1><%= @article.title %></h1>
+     <%= link_to cl_image_tag(@article.image, width: 300, height: 300, crop: :fill), article_path(@article)  %>
+    <%= @article.content.html_safe %>
+    <%= link_to "edit", edit_article_path, class: "btn-default" %>
+  </div>
+</div>
+

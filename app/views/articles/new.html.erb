@@ -1,0 +1,18 @@
+<%= render 'shared/navbar_general' %>
+<div class="ourfood_banner">
+</div>
+<%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
+<div class="article-wrapper">
+  <div class="text-center padded">
+    <h1>Post an article</h1>
+    <%= simple_form_for @article do |f|%>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+      <%= f.input :image %>
+      <%= f.input :image_cache, as: :hidden %>
+      <%= f.input :published %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
