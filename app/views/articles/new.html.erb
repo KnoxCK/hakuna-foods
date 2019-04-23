@@ -12,8 +12,8 @@
       <%= f.input :description %>
       <%= f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }
      %>
-      <%= f.input :image %>
-      <%= f.input :image_cache, as: :hidden %>
+      <%= f.input :cover_image %>
+      <%= f.input :cover_image_cache, as: :hidden %>
       <%= f.input :published %>
       <div class="text-center"><%= f.button :submit %></div>
     <% end %>

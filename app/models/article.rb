@@ -1,3 +1,3 @@
 class Article < ApplicationRecord
-  mount_uploader :image, PhotoUploader
+  mount_uploader :cover_image, PhotoUploader
 end
