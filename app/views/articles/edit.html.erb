@@ -3,14 +3,19 @@
 </div>
 <%= image_tag "http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png", class: "border" %>
 <div class="article-wrapper">
-  <div class="text-center padded">
+  <div class="text-center">
     <h1><%= @article.title %></h1>
+  </div>
+  <div class="article-edit">
     <%= simple_form_for @article do |f| %>
       <%= f.input :title %>
+      <%= f.input :date %>
+      <%= f.input :description %>
+      <%= f.input :image %>
       <%= f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }
          %>
       <%= f.input :published %>
-      <%= f.button :submit %>
+      <div class="text-center"><%= f.button :submit %></div>
     <% end %>
-  </div>
+</div>
 </div>
