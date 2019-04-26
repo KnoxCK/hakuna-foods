@@ -22,7 +22,6 @@ gem 'dotenv-rails'
 gem 'instagram_api_client'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip'
-gem 'flatpickr_rails'
 
 gem 'money-rails'
 gem 'stripe'
