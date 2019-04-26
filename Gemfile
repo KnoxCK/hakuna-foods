@@ -20,6 +20,8 @@ gem 'coffee-script'
 gem 'dotenv'
 gem 'dotenv-rails'
 gem 'instagram_api_client'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'paperclip'
 
 gem 'money-rails'
 gem 'stripe'

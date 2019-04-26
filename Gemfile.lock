@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: f6ce3a98b29efec16fcff7bcf34b1e4e6827d835
+  specs:
+    ckeditor (5.0.0)
+      orm_adapter (~> 0.5.0)
+
+GIT
   remote: git://github.com/mshibuya/remotipart.git
   revision: e08ea9a3aa8db9a8b2b97b6c9e7b078ed08915f2
   specs:
@@ -74,6 +81,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    climate_control (0.2.0)
     cloudinary (1.11.1)
       aws_cf_signer
       rest-client
@@ -197,6 +205,12 @@ GEM
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    paperclip (6.1.0)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      mime-types
+      mimemagic (~> 0.3.0)
+      terrapin (~> 0.6.0)
     pg (1.1.4)
     plural (0.1.0)
     postmark (1.15.0)
@@ -303,6 +317,8 @@ GEM
       faraday (~> 0.13)
       net-http-persistent (~> 3.0)
     temple (0.8.1)
+    terrapin (0.6.0)
+      climate_control (>= 0.0.3, < 1.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -329,6 +345,7 @@ DEPENDENCIES
   bootsnap
   bootstrap-sass
   carrierwave (~> 0.11.2)
+  ckeditor!
   cloudinary
   coffee-script
   devise
@@ -343,6 +360,7 @@ DEPENDENCIES
   letter_opener
   listen
   money-rails
+  paperclip
   pg
   postmark-rails
   pry-byebug

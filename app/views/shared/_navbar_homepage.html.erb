@@ -20,16 +20,18 @@
     <!-- The About link -->
     <h4><%= link_to "ABOUT", ourfood_path(:anchor => "about"), class: "navbar-hakuna-link-landing" %></h4>
 
-    <!-- Blog link 
-    <h4><%= link_to "H-LIFE", orderform_path, class: "navbar-hakuna-link-landing" %></h4>-->
+    <!-- Blog link -->
+    <!-- <h4><%#= link_to "H-LIFE", blog_path, class: "navbar-hakuna-link-landing" %></h4> -->
 
     <!-- Contact link -->
     <h4><%= link_to "CONTACT", "mailto:info@hakunafoods.co.uk", class: "navbar-hakuna-link-landing" %></h4>
-    <!-- <% if user_signed_in? %>
+
+    <% if user_signed_in? %>
+
       <%= link_to destroy_user_session_path, method: :delete, class: "sign-out" do %>
         <i class="fa fa-power-off" aria-hidden="true"></i>
       <% end %>
-    <% end %>-->
+    <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
@@ -45,8 +47,8 @@
           <li><%= link_to "HOME ECONOMY", root_path(:anchor => "home-eco"), class: "navbar-hakuna-link-landing" %></li>
            <li><%= link_to "OUR FOOD", ourfood_path, class: "navbar-hakuna-link-landing" %></li>
            <li><%= link_to "ABOUT", ourfood_path(:anchor => "about"), class: "navbar-hakuna-link-landing", id: "about-navbar" %></li>
-          <!--<li><%= link_to "H-LIFE", orderform_path, class: "navbar-hakuna-link-landing" %></li>-->
-          <li><%= link_to "CONTACT", "mailto:info@hakunafoods.co.uk", class: "navbar-hakuna-link-landing" %></li>
+          <li><%= link_to "H-LIFE", blog_path, class: "navbar-hakuna-link-landing" %></li>
+          <!--<li><%= link_to "CONTACT", "mailto:info@hakunafoods.co.uk", class: "navbar-hakuna-link-landing" %></li>-->
           <li><%= link_to "FACEBOOK", "https://www.facebook.com/hakunafoods/", class: "navbar-hakuna-link-landing", target: "blank" %></li>
           <li><%= link_to "INSTAGRAM", "www.instagram.com/hakuna_foods/", class: "navbar-hakuna-link-landing", target: "blank" %></li>
           <li><%= link_to "TWITTER", "https://twitter.com/HakunaFoods", class: "navbar-hakuna-link-landing", target: "blank" %></li>
