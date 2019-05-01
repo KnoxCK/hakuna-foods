@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'faqs', to: 'pages#faqs'
   get 'blog', to: 'articles#index'
 
-  resources :articles, only: [:create, :new, :edit, :update, :show]
+  resources :articles, only: [:create, :new, :edit, :update]
   resources :customers, only: [:create, :edit, :update, :show] do
     resources :addresses, only: [:new, :create, :edit, :update]
     resources :customer_plans, only: [:new, :create, :edit, :update] do
@@ -23,6 +23,9 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  get 'articles/:slug', to: "articles#show", as: :article_page
+
   resources :newsletter_subscriptions, only: :create
   post '/verify_promo_code', to: 'promo_codes#verify'
   patch '/customers/:customer_id/customer_plans/:customer_plan_id/extra_items', to: 'extra_items#update'

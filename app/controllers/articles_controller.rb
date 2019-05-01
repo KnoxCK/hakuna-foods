@@ -6,18 +6,18 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.all.find {|a| a.slug == params[:slug]}
+    redirect_to blog_path if @article.nil? || (!@article.published && current_user.nil?)
   end
 
   def new
     @article = Article.new
-
   end
 
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to article_path(@article)
+      redirect_to article_page_path(@article.slug)
     else
       render :new
     end
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
-      redirect_to article_path(@article)
+      redirect_to article_page_path(@article.slug)
     else
       render :new
     end
