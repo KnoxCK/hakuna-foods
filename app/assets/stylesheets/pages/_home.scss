@@ -55,7 +55,9 @@
 	}
 }
 .border {
-	width: 100%;
+	background-image: url("http://res.cloudinary.com/depgwjsnd/image/upload/v1493398612/Asset_10_bu1i0y.png");
+	background-size: cover !important;
+	height: 30px;
 }
 .landing-home-eco {
 	display: flex;
@@ -171,6 +173,10 @@
 	.weekly-subscription {
 		padding-top: 20px;
 		padding-left: 0;
+	}
+	.border {
+		
+		height: 20px;
 	}
 }
 @media (max-width: 812px) {

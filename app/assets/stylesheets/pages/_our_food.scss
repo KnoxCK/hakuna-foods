@@ -4,12 +4,12 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: 40px 0 60px 0;
 }
 .our-food {
     display: flex;
     flex-direction: column;
     width: 1000px;
+    margin-top: 30px;
     p {
         font-weight: lighter;
         padding: 10px;
@@ -94,27 +94,27 @@
 }
 .meat-box {
     background-color: #DE4C4B;
-    width: 230px;
+    width: 235px;
 }
 .fish-box {
     background-color: #36A9E0;
-    width: 230px;
+    width: 235px;
 }
 .dairy-box {
     background-color: #FED309;
-    width: 230px;
+    width: 235px;
 }
 .flavour-box {
     background-color: #F0B67F;
-    width: 230px;
+    width: 235px;
 }
 .grains-box {
     background-color: #D4CDC3;
-    width: 470px;
+    width: 480px;
 }
 .fruit-box {
     background-color: #5DB035;
-    width: 470px;
+    width: 480px;
 }
 // .nutrition-image {
 //     z-index: -100;
@@ -143,7 +143,7 @@
         font-weight: lighter;
         font-size: 14px;
         padding: 10px;
-        height: 320px;
+        height: 266px;
     }
 }
 // .nutrition-text:hover {
@@ -157,12 +157,11 @@
 //     }
 // }
 .about-intro {
-    margin: 100px 0 49px 0;
+    margin: 50px 0 49px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     p {
-        width: 850px;
         font-weight: lighter;
     }
     hr {
@@ -186,7 +185,7 @@
 .our-phil {
     width: 400px;
     padding: 40px;
-    margin-left: 60px;
+    margin-left: 130px;
     border: solid 2px #FED309;
     h4 {
         letter-spacing: 2px;
@@ -198,7 +197,7 @@
 }
 .our-founder {
     padding: 0 70px 0 100px;
-    width: 700px;
+    width: 600px;
     h4 {
         margin: 62px 0 30px 0;
         letter-spacing: 2px;
@@ -243,8 +242,11 @@
     .nutrition-section p {
         width: 750px;
     }
+    .nutrition-text p {
+        height: 317px;
+    }
     .about-intro p {
-        width: 800px;
+        width: 950px;
     }
     .nutrition-box {
         height: 370px;
@@ -273,26 +275,32 @@
         background-color: #5DB035;
         width: 390px;
     }
+    .about-intro p {
+        width: auto;
+        padding: 0 10vw;
+    }
     .our-founder {
-        padding-left: 60px;
+        padding-left: 50px;
         padding-right: 30px;
-        width: 500px;
     }
     .annabel-img {
         height: 30vh;
         width: auto;
     }
+    .our-phil {
+        margin-left: 0;
+    }
 }
 @media only screen and (max-width: 976px) {
     .about-section {
         flex-direction: column-reverse;
+        align-items: center;
     }
     .about-intro {
-        margin-bottom: 0;
+        margin-bottom: 60px;
     }
     .our-founder {
         padding-left: 30px;
-        width: 766px;
     }
     .our-phil {
         width: 766px;
@@ -316,6 +324,9 @@
         margin: 5px 0;
         position: relative;
         height: 170px;
+    }
+    .nutrition-text p {
+        padding: 20px;
     }
     .nutrition-images-bottom {
         flex-direction: column-reverse;
@@ -347,6 +358,10 @@
             height: 206px;
         }
     }
+    .about-intro {
+        margin-top: 50px;
+    }
+
 }
 @media only screen and (max-width: 850px) {
     .our-food { 
@@ -432,25 +447,18 @@
     }
     .balanced-diet p {
         width: auto;
-        padding: 0 5vw;
+        padding: 20px 5vw;
     } 
     .nutrition-section {
         width: auto;
-        padding: 0 5vw;
-    }
-    .about-intro p {
-        width: auto;
-        padding: 0 5vw;
-    }
-    .our-founder {
-        width: auto;
-        margin: 0;
-        padding: 0 5vw;
+        margin-top: 0;
+        padding: 20px 5vw;
+        background-color: #f7f7f7;
     }
     .nutrition-box {
         margin: 5px 0;
         position: relative;
-        height: 240px;
+        height: 250px;
     }
     .meat-box {
         width: 100%;
@@ -479,6 +487,19 @@
     .icons {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 20px;
+    }
+    .about-intro {
+        margin-top: 0;
+        p {
+            width: auto;
+            padding: 0 5vw;
+        }
+    }
+    .our-founder {
+        width: auto;
+        margin: 0;
+        padding: 0 5vw;
     }
 }
 
