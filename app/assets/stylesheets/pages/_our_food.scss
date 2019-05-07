@@ -44,7 +44,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 .balanced-diet {
     width: auto;
@@ -228,9 +229,10 @@
     .balanced-diet {
         h4 {
             padding-top: 40px;
+            text-align: center;
         }
         p {
-            text-align: center;
+            text-align: left;
             width: 760px;
             padding-left: 20px;
             padding-right: 20px;
