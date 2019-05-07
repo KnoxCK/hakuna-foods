@@ -47,10 +47,7 @@
 		padding-right: 60px;
 	}
 	.footer-hakuna-brand {
-	    margin-top: 18px;
-	    height: 80px;
 	    display: none;
-	    padding: 0;
 	}
 	.footer-hakuna-brand-responsive img {
 	    display: block;
@@ -60,29 +57,19 @@
 	}
 }
 @media only screen and (max-width: 804px) {
-	.footer {
-		flex-direction: column;
-		align-items: left;
-    	padding: 20px 10vw;
-	}
 	.footer-child {
-		margin: 0;
+		margin: 20px;
 		text-align: left;
 	}
-	.col-one {
-		padding-left: 0;
-	}
-	.footer-hakuna-brand-responsive img {
-	    flex-direction: column;
-	    margin-top: 0;
+	.footer {
+    	padding-right: 0; 
+    	justify-content: left;
+		padding-left: 50px;
 	}
 }	
 @media only screen and (max-width: 559px) {
-	.footer {
-    	padding-right: 0; 
-	}
+	
 }
-
 
 
 
