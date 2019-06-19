@@ -63,6 +63,7 @@
 <div class="choose-plan-btn">
 	<%= link_to "GET IN TOUCH", "mailto:info@hakunafoods.co.uk", class: "landing-btn-red" %>
 </div>
+<div class="border"></div>
 <div class="instagram-grid">
   <% @popular.data.first(10).each do |popular| %>
       <%= image_tag popular.images.low_resolution.url %>
@@ -88,3 +89,9 @@
     </div>
   </div>
 </div>
+<div class="logos">
+	<%= image_tag "https://res.cloudinary.com/depgwjsnd/image/upload/v1560960110/pixar_disney_twwrzy.png" %>
+	<%= image_tag "https://res.cloudinary.com/depgwjsnd/image/upload/v1560959804/warner_fymmev.png" %>
+	<%= image_tag "https://res.cloudinary.com/depgwjsnd/image/upload/v1560959804/netflix_vmruia.png" %>
+</div>
+
