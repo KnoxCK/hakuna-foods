@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @newsletter_subscription = NewsletterSubscription.new
-     @popular = InstagramApi.user.recent_media
+     #@popular = InstagramApi.user.recent_media UNCOMMENT INSTA HERE
   end
 
   def mealplans
