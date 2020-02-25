@@ -1,15 +1,15 @@
 GIT
-  remote: git://github.com/galetahub/ckeditor.git
-  revision: f6ce3a98b29efec16fcff7bcf34b1e4e6827d835
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: bfe47345606e5dc977f8928d9d9db207232671d6
   specs:
     ckeditor (5.0.0)
       orm_adapter (~> 0.5.0)
 
 GIT
-  remote: git://github.com/mshibuya/remotipart.git
-  revision: e08ea9a3aa8db9a8b2b97b6c9e7b078ed08915f2
+  remote: https://github.com/mshibuya/remotipart.git
+  revision: a1860d64aef484047bc1ef50e2f19ef2480eacf9
   specs:
-    remotipart (1.4.2)
+    remotipart (1.4.4)
 
 GEM
   remote: https://rubygems.org/
@@ -202,7 +202,7 @@ GEM
       connection_pool (~> 2.2)
     netrc (0.11.0)
     nio4r (2.3.1)
-    nokogiri (1.10.2)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     paperclip (6.1.0)
