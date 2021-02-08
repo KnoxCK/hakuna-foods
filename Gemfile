@@ -31,7 +31,7 @@ gem 'rails_admin', '>= 1.0.0.rc'
 
 
 gem 'cloudinary'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 
 gem 'postmark-rails'
 gem "letter_opener", group: :development
